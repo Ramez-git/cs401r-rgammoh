@@ -1,0 +1,68 @@
+== sts get-caller-identity ==
+{
+  "UserId": "AKIAIOSFODNN7EXAMPLE",
+  "Account": "000000000000",
+  "Arn": "arn:aws:iam::000000000000:root"
+}
+
+== s3 ls (recursive) ==
+2026-09-19 22:38:32+00:00  0  artifacts/
+2026-09-19 22:38:32+00:00  0  features/
+2026-09-19 22:38:32+00:00  0  processed/
+2026-09-19 22:38:32+00:00  0  raw/
+
+== iam list-roles (northstar*) ==
+[
+  "northstar-local-MLEngineer"
+]
+
+== ec2 describe-vpcs ==
+[
+  {
+    "Id": "vpc-7f0f591d4be69fc2c",
+    "CIDR": "172.31.0.0/16"
+  },
+  {
+    "Id": "vpc-46d82cd45a95687e9",
+    "CIDR": "10.0.0.0/16"
+  }
+]
+
+== ec2 describe-subnets ==
+[
+  {
+    "Id": "subnet-0acfbb838d5d9f12c",
+    "AZ": "us-east-1a",
+    "CIDR": "172.31.0.0/20"
+  },
+  {
+    "Id": "subnet-83ec4c2e3f878f7f0",
+    "AZ": "us-east-1a",
+    "CIDR": "10.0.100.0/24"
+  },
+  {
+    "Id": "subnet-bbd3699fa5dfe97aa",
+    "AZ": "us-east-1b",
+    "CIDR": "172.31.16.0/20"
+  },
+  {
+    "Id": "subnet-539a899dd88b174af",
+    "AZ": "us-east-1c",
+    "CIDR": "172.31.32.0/20"
+  },
+  {
+    "Id": "subnet-8ab4123e2e1de8904",
+    "AZ": "us-east-1d",
+    "CIDR": "172.31.48.0/20"
+  },
+  {
+    "Id": "subnet-fd58d9ae7f67a03b7",
+    "AZ": "us-east-1e",
+    "CIDR": "172.31.64.0/20"
+  },
+  {
+    "Id": "subnet-e8466dc3a0f7e26c9",
+    "AZ": "us-east-1f",
+    "CIDR": "172.31.80.0/20"
+  }
+]
