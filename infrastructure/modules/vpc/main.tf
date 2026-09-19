@@ -54,7 +54,7 @@ resource "aws_route_table_association" "public" {
 
 resource "aws_security_group" "this" {
   name        = "${var.project}-${var.environment}-sagemaker-sg"
-  description = "SageMaker Studio security group — VPC-internal traffic only"
+  description = "SageMaker Studio security group - VPC-internal traffic only"
   vpc_id      = aws_vpc.this.id
 
   ingress {

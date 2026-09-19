@@ -1,0 +1,43 @@
+
+========================================
+ NorthStar Lab 1 - Verification Script
+========================================
+
+-- Part A: AWS Environment (35 pts total in rubric) -----------------------
+  [PASS] A2 VPC exists: vpc-0092737d6a22f5137
+  [PASS] A2 Public subnet exists: subnet-0b7986342938efbc9
+  [PASS] A2 No private subnets (correct for Lab 1)
+  [PASS] A3 S3 bucket exists: northstar-dev-data-701145280839
+  [PASS] A3 S3 prefix exists: raw/
+  [PASS] A3 S3 prefix exists: processed/
+  [PASS] A3 S3 prefix exists: features/
+  [PASS] A3 S3 prefix exists: artifacts/
+  [PASS] A3 IAM role exists: northstar-dev-MLEngineer
+  [PASS] A3 IAM sim: MLEngineer can CreateTrainingJob
+  [PASS] A3 IAM sim: MLEngineer DENIED write to raw/
+  [PASS] A4 SageMaker Domain InService: d-nhi6jyzgwzo7
+
+-- Part B: Terraform IaC (Lab 1b) ------------------------------------------
+  [PASS] B1 Module exists: vpc/
+  [PASS] B1 Module exists: iam/
+  [PASS] B1 Module exists: sagemaker/
+  [PASS] B1 Module exists: storage/
+  [PASS] B4 No hardcoded 'northstar' literals in modules/
+  [PASS] B3 Remote state: S3 backend + DynamoDB lock
+  [PASS] B2 terraform apply output saved
+  [PASS] B2 apply output shows Apply complete
+  [PASS] B5 LocalStack validation output saved
+
+-- Shared Deliverables ------------------------------------------------------
+  [PASS] S .gitignore present
+  [PASS] S .gitignore covers *.tfvars
+  [PASS] S .gitignore covers .terraform/
+  [PASS] S No AWS credentials in git history (scripts/check-secrets.sh)
+  [PASS] A1 Architecture diagram submitted
+  [PASS] S Studio shutdown screenshot submitted
+  [PASS] S ADR document submitted
+  [PASS] S Cost estimate document submitted
+
+========================================
+ Results: 29 passed  0 failed
+========================================
