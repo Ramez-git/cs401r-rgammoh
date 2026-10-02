@@ -24,11 +24,14 @@ and the current tracked/untracked non-ignored files found no credentials.
 The grading tag is `lab2-submit`.
 Repository: `https://github.com/Ramez-git/cs401r-rgammoh`.
 
-The AWS stack remains deployed. After submission, perform the guide's teardown
-and save real output to `docs/lab2-destroy-output.txt`; that evidence does not yet
-exist. Do not leave the NAT gateway running unnecessarily. The grading tag should
-continue to identify the verified implementation; follow the guide's instructions
-for committing teardown evidence afterward.
+After Canvas submission, the AWS stack was destroyed on October 2, 2026.
+[Teardown evidence](lab2-destroy-output.txt) records Terraform destruction and
+the cleanup script's final checks. Independent AWS API checks confirmed no
+remaining NAT gateways, Elastic IPs, SageMaker domains, feature groups, EFS
+filesystems, Glue jobs, NorthStar VPCs, Glue databases, or lineage entities.
+Terraform state contains no remaining resources. The remote-state bucket is
+intentionally retained for Lab 3. This evidence is committed on `main`; the
+`lab2-submit` tag remains on the previously verified implementation.
 
 ## Windows portability notes
 
