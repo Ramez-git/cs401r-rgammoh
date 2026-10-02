@@ -19,3 +19,12 @@
 #   description = "ARN of the MLEngineer role"
 #   value       = module.iam.ml_engineer_role_arn
 # }
+output "s3_bucket_name" {
+  description = "LocalStack data bucket name"
+  value       = module.storage.bucket_name
+}
+
+output "vpc_id" {
+  description = "LocalStack VPC ID"
+  value       = module.vpc.vpc_id
+}

@@ -1,0 +1,12 @@
+Success! The configuration is valid.
+
+Success! The configuration is valid.
+
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'infrastructure/environments/dev/variables.tf', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'infrastructure/environments/local/main.tf', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'infrastructure/environments/local/outputs.tf', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'infrastructure/modules/storage/variables.tf', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'infrastructure/modules/vpc/variables.tf', CRLF will be replaced by LF the next time Git touches it
+PASS: formatting, both environments and all referenced modules validated

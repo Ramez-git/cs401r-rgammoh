@@ -1,0 +1,29 @@
+26/09/30 21:49:24 WARN Shell: Did not find winutils.exe: java.io.FileNotFoundException: java.io.FileNotFoundException: HADOOP_HOME and hadoop.home.dir are unset. -see https://wiki.apache.org/hadoop/WindowsProblems
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/09/30 21:49:25 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+[Stage 0:>                                                          (0 + 1) / 1]
+
+
+
+[Stage 42:>                                                         (0 + 1) / 1]
+
+
+
+[Stage 43:>                                                         (0 + 1) / 1]
+
+
+
+[Stage 44:>                                                         (0 + 1) / 1]
+
+[Stage 46:>                                                         (0 + 1) / 2]
+
+[Stage 46:=============================>                            (1 + 1) / 2]
+
+
+PASS: cleanup, median imputation, transaction grain, temporal boundaries, no future leakage, empty recent window, tier thresholds
+PASS: full sample: 163255 raw, 157627 processed, 9999 customers, churn 22.00%
+SUCCESS: The process with PID 10320 (child process of PID 2828) has been terminated.
+SUCCESS: The process with PID 2828 (child process of PID 20460) has been terminated.
+SUCCESS: The process with PID 20460 (child process of PID 19552) has been terminated.

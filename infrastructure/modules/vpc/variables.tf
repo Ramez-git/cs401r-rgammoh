@@ -27,3 +27,14 @@ variable "availability_zone" {
   type        = string
   default     = "us-east-1a"
 }
+variable "private_subnet_cidr" {
+  description = "CIDR block for private SageMaker and Glue workers"
+  type        = string
+  default     = "10.0.1.0/24"
+}
+
+variable "enable_nat_gateway" {
+  description = "Create outbound NAT; disable for LocalStack"
+  type        = bool
+  default     = true
+}

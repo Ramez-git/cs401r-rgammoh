@@ -15,3 +15,8 @@ variable "prefixes" {
   type        = list(string)
   default     = ["raw/", "processed/", "features/", "artifacts/"]
 }
+variable "force_destroy" {
+  description = "Permit teardown of all object versions for regenerable lab data"
+  type        = bool
+  default     = false
+}

@@ -13,6 +13,8 @@ resource "aws_sagemaker_domain" "this" {
   app_network_access_type = "VpcOnly"
 
   default_user_settings {
+    # AWS returns this empty block; declare it to avoid perpetual plan drift.
+    studio_web_portal_settings {}
     execution_role  = var.execution_role_arn
     security_groups = var.security_group_ids
 

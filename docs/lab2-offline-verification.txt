@@ -1,0 +1,3 @@
+Offline snapshot 1790826522.0: 0/9999 customers, 0 Parquet files
+Offline snapshot 1790826522.0: 9999/9999 customers, 54 Parquet files
+PASS: all 9999 customers and all feature values match the offline store

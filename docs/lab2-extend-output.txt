@@ -1,0 +1,148 @@
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.iam.aws_iam_role.model_monitor: Creating...
+module.iam.aws_iam_role.ml_engineer: Creating...
+module.iam.aws_iam_role.data_engineer: Creating...
+module.glue.aws_glue_catalog_database.this: Creating...
+module.vpc.aws_eip.nat[0]: Creating...
+module.iam.aws_iam_policy.ml_engineer: Creating...
+module.vpc.aws_vpc.this: Creating...
+module.storage.aws_s3_bucket.data: Creating...
+module.iam.aws_iam_policy.ml_engineer: Creation complete after 0s [id=arn:aws:iam::701145280839:policy/northstar-dev-MLEngineerPolicy]
+module.glue.aws_glue_catalog_database.this: Creation complete after 0s [id=701145280839:northstar_dev]
+module.iam.aws_iam_role.model_monitor: Creation complete after 0s [id=northstar-dev-ModelMonitor]
+module.iam.aws_iam_role_policy.model_monitor: Creating...
+module.iam.aws_iam_role.ml_engineer: Creation complete after 0s [id=northstar-dev-MLEngineer]
+module.iam.aws_iam_role_policy_attachment.ml_engineer: Creating...
+module.iam.aws_iam_role_policy.ml_feature_read: Creating...
+module.iam.aws_iam_role.data_engineer: Creation complete after 0s [id=northstar-dev-DataEngineer]
+module.iam.aws_iam_role_policy.data_engineer: Creating...
+module.iam.aws_iam_role_policy_attachment.ml_engineer: Creation complete after 1s [id=northstar-dev-MLEngineer-20261001033800536100000001]
+module.iam.aws_iam_role_policy.ml_feature_read: Creation complete after 1s [id=northstar-dev-MLEngineer:northstar-dev-FeatureRead]
+module.iam.aws_iam_role_policy.model_monitor: Creation complete after 1s [id=northstar-dev-ModelMonitor:northstar-dev-ModelMonitorPolicy]
+module.iam.aws_iam_role_policy.data_engineer: Creation complete after 1s [id=northstar-dev-DataEngineer:northstar-dev-DataEngineerPolicy]
+module.storage.aws_s3_bucket.data: Creation complete after 2s [id=northstar-dev-data-701145280839]
+module.storage.aws_s3_bucket_public_access_block.data: Creating...
+module.storage.aws_s3_bucket_versioning.data: Creating...
+module.storage.aws_s3_bucket_server_side_encryption_configuration.data: Creating...
+module.storage.aws_s3_object.prefixes["raw/"]: Creating...
+module.storage.aws_s3_object.prefixes["artifacts/"]: Creating...
+module.storage.aws_s3_object.prefixes["features/"]: Creating...
+module.storage.aws_s3_object.prefixes["processed/"]: Creating...
+module.glue.aws_glue_crawler.raw: Creating...
+module.storage.aws_s3_object.prefixes["features/"]: Creation complete after 0s [id=features/]
+module.storage.aws_s3_object.prefixes["artifacts/"]: Creation complete after 0s [id=artifacts/]
+module.storage.aws_s3_object.prefixes["raw/"]: Creation complete after 0s [id=raw/]
+module.glue.aws_s3_object.scripts["feature-engineer"]: Creating...
+module.glue.aws_s3_object.scripts["transform"]: Creating...
+module.storage.aws_s3_object.prefixes["processed/"]: Creation complete after 0s [id=processed/]
+module.vpc.aws_eip.nat[0]: Creation complete after 2s [id=eipalloc-0c5c8936c45241777]
+module.storage.aws_s3_bucket_public_access_block.data: Creation complete after 0s [id=northstar-dev-data-701145280839]
+module.storage.aws_s3_bucket_server_side_encryption_configuration.data: Creation complete after 0s [id=northstar-dev-data-701145280839]
+module.glue.aws_s3_object.scripts["transform"]: Creation complete after 0s [id=artifacts/glue/transform.py]
+module.glue.aws_s3_object.scripts["feature-engineer"]: Creation complete after 0s [id=artifacts/glue/feature_engineer.py]
+module.storage.aws_s3_bucket_versioning.data: Creation complete after 1s [id=northstar-dev-data-701145280839]
+module.storage.aws_s3_bucket_lifecycle_configuration.data[0]: Creating...
+module.vpc.aws_vpc.this: Still creating... [00m10s elapsed]
+module.glue.aws_glue_crawler.raw: Creation complete after 9s [id=northstar-dev-raw-crawler]
+module.vpc.aws_vpc.this: Creation complete after 12s [id=vpc-05a6b5a7444a04a66]
+module.vpc.aws_internet_gateway.this: Creating...
+module.vpc.aws_subnet.public: Creating...
+module.vpc.aws_subnet.private: Creating...
+module.glue.aws_security_group.glue: Creating...
+module.vpc.aws_security_group.this: Creating...
+module.vpc.aws_internet_gateway.this: Creation complete after 1s [id=igw-00cc00b914fd09cfe]
+module.vpc.aws_route_table.public: Creating...
+module.vpc.aws_subnet.private: Creation complete after 1s [id=subnet-0627c4de147d172d6]
+module.storage.aws_s3_bucket_lifecycle_configuration.data[0]: Still creating... [00m10s elapsed]
+module.vpc.aws_route_table.public: Creation complete after 1s [id=rtb-0c8bafb11c2264cae]
+module.glue.aws_security_group.glue: Creation complete after 3s [id=sg-01fdf38402c982c6b]
+module.glue.aws_glue_connection.private: Creating...
+module.vpc.aws_security_group.this: Creation complete after 3s [id=sg-0c4f2e4ae26ecc191]
+module.sagemaker.aws_sagemaker_domain.this: Creating...
+module.glue.aws_glue_connection.private: Creation complete after 0s [id=701145280839:northstar-dev-private-network]
+module.vpc.aws_subnet.public: Still creating... [00m10s elapsed]
+module.vpc.aws_subnet.public: Creation complete after 11s [id=subnet-03a7c1338d978a6e2]
+module.storage.aws_s3_bucket_lifecycle_configuration.data[0]: Still creating... [00m20s elapsed]
+module.vpc.aws_route_table_association.public: Creating...
+module.vpc.aws_nat_gateway.this[0]: Creating...
+module.vpc.aws_route_table_association.public: Creation complete after 0s [id=rtbassoc-02f43f0d6f7a665f4]
+module.sagemaker.aws_sagemaker_domain.this: Still creating... [00m10s elapsed]
+module.storage.aws_s3_bucket_lifecycle_configuration.data[0]: Still creating... [00m30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [00m10s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still creating... [00m20s elapsed]
+module.storage.aws_s3_bucket_lifecycle_configuration.data[0]: Still creating... [00m40s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [00m20s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still creating... [00m30s elapsed]
+module.storage.aws_s3_bucket_lifecycle_configuration.data[0]: Still creating... [00m50s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [00m30s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still creating... [00m40s elapsed]
+module.storage.aws_s3_bucket_lifecycle_configuration.data[0]: Creation complete after 57s [id=northstar-dev-data-701145280839]
+module.feature_store.aws_sagemaker_feature_group.customers: Creating...
+module.vpc.aws_nat_gateway.this[0]: Still creating... [00m40s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still creating... [00m50s elapsed]
+module.feature_store.aws_sagemaker_feature_group.customers: Still creating... [00m10s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [00m50s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still creating... [01m00s elapsed]
+module.feature_store.aws_sagemaker_feature_group.customers: Still creating... [00m20s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [01m00s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still creating... [01m10s elapsed]
+module.feature_store.aws_sagemaker_feature_group.customers: Still creating... [00m30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [01m10s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still creating... [01m20s elapsed]
+module.feature_store.aws_sagemaker_feature_group.customers: Creation complete after 36s [id=northstar-dev-customer-features]
+module.glue.aws_glue_job.jobs["transform"]: Creating...
+module.glue.aws_glue_job.jobs["feature-engineer"]: Creating...
+module.glue.aws_glue_job.jobs["feature-engineer"]: Creation complete after 1s [id=northstar-dev-feature-engineer]
+module.glue.aws_glue_job.jobs["transform"]: Creation complete after 1s [id=northstar-dev-transform]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [01m20s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still creating... [01m30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [01m30s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still creating... [01m40s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Creation complete after 1m34s [id=nat-0515194944fb01376]
+module.vpc.aws_route_table.private: Creating...
+module.vpc.aws_route_table.private: Creation complete after 1s [id=rtb-03a6ce74c30de8aab]
+module.vpc.aws_route_table_association.private: Creating...
+module.vpc.aws_route_table_association.private: Creation complete after 1s [id=rtbassoc-076e20017db2ab443]
+module.sagemaker.aws_sagemaker_domain.this: Still creating... [01m50s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Creation complete after 1m55s [id=d-oihlfmmcmnsq]
+module.sagemaker.aws_sagemaker_user_profile.ml_engineer: Creating...
+module.sagemaker.aws_sagemaker_user_profile.ml_engineer: Creation complete after 5s [id=arn:aws:sagemaker:us-east-1:701145280839:user-profile/d-oihlfmmcmnsq/MLEngineer]
+
+Apply complete! Resources: 39 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+feature_group_name = "northstar-dev-customer-features"
+ml_engineer_role_arn = "arn:aws:iam::701145280839:role/northstar-dev-MLEngineer"
+public_subnet_id = "subnet-03a7c1338d978a6e2"
+s3_bucket_name = "northstar-dev-data-701145280839"
+sagemaker_domain_id = "d-oihlfmmcmnsq"
+vpc_id = "vpc-05a6b5a7444a04a66"
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.storage.aws_s3_bucket.data: Modifying... [id=northstar-dev-data-701145280839]
+module.sagemaker.aws_sagemaker_domain.this: Modifying... [id=d-oihlfmmcmnsq]
+module.storage.aws_s3_bucket.data: Modifications complete after 2s [id=northstar-dev-data-701145280839]
+module.glue.aws_s3_object.scripts["transform"]: Modifying... [id=artifacts/glue/transform.py]
+module.glue.aws_s3_object.scripts["feature-engineer"]: Modifying... [id=artifacts/glue/feature_engineer.py]
+module.sagemaker.aws_sagemaker_domain.this: Modifications complete after 2s [id=d-oihlfmmcmnsq]
+module.glue.aws_s3_object.scripts["feature-engineer"]: Modifications complete after 0s [id=artifacts/glue/feature_engineer.py]
+module.glue.aws_s3_object.scripts["transform"]: Modifications complete after 0s [id=artifacts/glue/transform.py]
+
+Apply complete! Resources: 0 added, 4 changed, 0 destroyed.
+
+Outputs:
+
+feature_group_name = "northstar-dev-customer-features"
+ml_engineer_role_arn = "arn:aws:iam::701145280839:role/northstar-dev-MLEngineer"
+public_subnet_id = "subnet-03a7c1338d978a6e2"
+s3_bucket_name = "northstar-dev-data-701145280839"
+sagemaker_domain_id = "d-oihlfmmcmnsq"
+vpc_id = "vpc-05a6b5a7444a04a66"

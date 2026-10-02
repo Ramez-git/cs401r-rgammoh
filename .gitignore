@@ -2,6 +2,8 @@
 .env
 *.tfstate
 *.tfstate.backup
+*.tfplan
+.pytest_cache/
 .terraform/
 __pycache__/
 *.pyc
