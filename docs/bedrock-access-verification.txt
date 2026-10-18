@@ -1,5 +1,5 @@
 Bedrock access verification
-2026-10-17T18:16:13.902649-06:00
+2026-10-17T18:25:41.270320-06:00
 Region: us-east-1
 
 PASS  Titan embeddings        dim=1024

@@ -18,6 +18,11 @@ V2 (`amazon.titan-embed-text-v2:0`) produces normalized 1024-dimensional vectors
 FAISS IndexFlatIP performs exact cosine retrieval locally. Embeddings are cached
 by text/model hash, so changed documents are embedded again.
 
+The 220-word cap keeps individual policy provisions focused for retrieval while
+preserving short tables and their eligibility conditions. The 40-word overlap
+reduces loss of context at long-section boundaries. These are practical choices
+for this small corpus, not parameters established as optimal by an ablation.
+
 Titan keeps embedding and judge authentication inside the existing AWS account;
 there is no demonstrated need for Cohere-specific multilingual capability in
 this small English corpus. Local FAISS avoids the idle cost and setup of an
@@ -105,6 +110,16 @@ October 12 update removes the old numeric score targets from grading.
 | answer_relevancy | 0.0781 | 0.0754 | 0.0834 |
 | context_recall | 0.6333 | 0.6333 | 0.6333 |
 
+Per-customer mean and range across the three final judge runs (also exported in
+`rag-per-case-summary.csv`):
+
+| run | faithfulness_mean | faithfulness_min | faithfulness_max | answer_relevancy_mean | answer_relevancy_min | answer_relevancy_max | context_recall_mean | context_recall_min | context_recall_max |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| CUST-10000122 | 0.4583 | 0.3750 | 0.6250 | 0.0000 | 0.0000 | 0.0000 | 0.3333 | 0.3333 | 0.3333 |
+| CUST-10000317 | 0.1667 | 0.1667 | 0.1667 | 0.0000 | 0.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 |
+| CUST-10000588 | 0.3333 | 0.3333 | 0.3333 | 0.3123 | 0.3016 | 0.3335 | 1.0000 | 1.0000 | 1.0000 |
+| CUST-10000904 | 0.2000 | 0.2000 | 0.2000 | 0.0000 | 0.0000 | 0.0000 | 0.2000 | 0.2000 | 0.2000 |
+
 Per-case scores are in `rag_eval.csv`; judge traces from the diagnostic third
 run are in `ragas-traces-final-3.json`. They explain each metric's limits:
 
@@ -149,7 +164,7 @@ and human-reviewed customer-facing offers, then measure real retention outcomes.
 ## Cost and reproducibility
 
 Metered successful requests across development, evaluation, audit and the clean
-notebook total an estimated **$0.5654** in model usage.
+notebook total an estimated **$0.5876** in model usage.
 `rag-cost-summary.csv` separates pipeline and judge tokens; raw logs contain
 model IDs, request IDs, token counts and latency. The estimate uses published
 Haiku list rates with the regional/multi-region premium and Titan's US East

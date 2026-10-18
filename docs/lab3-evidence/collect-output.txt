@@ -1,4 +1,4 @@
-2026/10/17 18:16:51 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\Administrator\Documents\CS 401R\cs401r-rgammoh\.venv-lab3\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+2026/10/17 18:24:25 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\Administrator\Documents\CS 401R\cs401r-rgammoh\.venv-lab3\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
 ==> Lab 3 evidence  (track B, us-east-1)
 [1/5] Identity
   OK    account 701145280839  --  arn:aws:iam::701145280839:user/cs401r-lab
@@ -25,7 +25,7 @@
   OK    Athena query  --  d1709914-6f10-45ef-a2aa-8e9461bb290d SUCCEEDED, 727147 bytes scanned
   OK    MLflow App reuses Lab 1 infrastructure  --  northstar-dev-MLEngineer, s3://northstar-dev-data-701145280839/artifacts/mlflow/
   OK    MLflow runs  --  4 runs with params and metrics in 'northstar-churn'
-  OK    MLflow runs vary  --  max_depth, scale_pos_weight, evaluation_split, final, selected_rounds, eta, run_name, register, model_dir, output_data_dir
+  OK    MLflow runs vary  --  output_data_dir, run_name, scale_pos_weight, register, evaluation_split, selected_rounds, final, max_depth, model_dir, eta
   OK    consistency: MLflow  --  a tracked run matches auc_roc=0.7838
   OK    Model Registry  --  1 PendingManualApproval version(s); latest v1
   OK    consistency: registry  --  v1 metadata matches evaluation_metrics.json

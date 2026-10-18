@@ -48,7 +48,7 @@
           "recommendation: unsupported marketing or policy claim",
           "Recommendation must name an observed category"
         ],
-        "request_id": "4acef1a4-58d9-4b7f-aced-f061e38f3cd8"
+        "request_id": "3d8677e1-f23a-4555-a400-774af6e0f184"
       },
       {
         "draft": {
@@ -58,7 +58,7 @@
         "errors": [
           "call_to_action: unsupported marketing or policy claim"
         ],
-        "request_id": "7a5e8814-9242-4713-94fc-39b90c008151"
+        "request_id": "e196d061-8486-40f2-8b89-3ba3acb7a52f"
       }
     ],
     "safe_fallback": true,
@@ -69,7 +69,7 @@
       "cacheReadInputTokens": 0,
       "cacheWriteInputTokens": 0
     },
-    "request_id": "7a5e8814-9242-4713-94fc-39b90c008151",
+    "request_id": "e196d061-8486-40f2-8b89-3ba3acb7a52f",
     "policy_renderer": "retrieved-points-row-or-conditional-gear-credit"
   },
   {
@@ -119,7 +119,7 @@
           "call_to_action": "Browse your account to see what's waiting for you and check your current rewards balance."
         },
         "errors": [],
-        "request_id": "18578cf3-05d2-4307-b375-c39f909dc286"
+        "request_id": "a46d2e04-29b5-4a12-bae1-73c68119d80f"
       }
     ],
     "safe_fallback": false,
@@ -130,7 +130,7 @@
       "cacheReadInputTokens": 0,
       "cacheWriteInputTokens": 0
     },
-    "request_id": "18578cf3-05d2-4307-b375-c39f909dc286",
+    "request_id": "a46d2e04-29b5-4a12-bae1-73c68119d80f",
     "policy_renderer": "retrieved-points-row-or-conditional-gear-credit"
   },
   {
@@ -182,7 +182,7 @@
         "errors": [
           "call_to_action: unsupported marketing or policy claim"
         ],
-        "request_id": "67411c62-024e-4392-a6f0-ec0897278e52"
+        "request_id": "5535cead-ae7e-4216-9ad5-3f93e6019d6a"
       },
       {
         "draft": {
@@ -192,7 +192,7 @@
         "errors": [
           "call_to_action: unsupported marketing or policy claim"
         ],
-        "request_id": "961d3a48-f030-42af-bc0e-1090e39a1f2a"
+        "request_id": "5469138a-2b81-4643-a679-e2a7a9770a96"
       }
     ],
     "safe_fallback": true,
@@ -203,7 +203,7 @@
       "cacheReadInputTokens": 0,
       "cacheWriteInputTokens": 0
     },
-    "request_id": "961d3a48-f030-42af-bc0e-1090e39a1f2a",
+    "request_id": "5469138a-2b81-4643-a679-e2a7a9770a96",
     "policy_renderer": "retrieved-points-row-or-conditional-gear-credit"
   },
   {
@@ -253,7 +253,7 @@
           "call_to_action": "Browse your account to see what's waiting for you and check your rewards balance."
         },
         "errors": [],
-        "request_id": "aa59dfe7-f52c-40fa-b57b-912aa2fe10d3"
+        "request_id": "e2580010-0578-4813-9e24-ec4aab197ccc"
       }
     ],
     "safe_fallback": false,
@@ -264,7 +264,7 @@
       "cacheReadInputTokens": 0,
       "cacheWriteInputTokens": 0
     },
-    "request_id": "aa59dfe7-f52c-40fa-b57b-912aa2fe10d3",
+    "request_id": "e2580010-0578-4813-9e24-ec4aab197ccc",
     "policy_renderer": "retrieved-points-row-or-conditional-gear-credit"
   },
   {
@@ -313,7 +313,7 @@
           "call_to_action": "Browse your account to see what's waiting for you and check your rewards balance."
         },
         "errors": [],
-        "request_id": "dabb0ba2-f281-4462-a1d5-00c5cd71e404"
+        "request_id": "3c241a5b-8f6b-463a-bdb6-42c6408e8117"
       }
     ],
     "safe_fallback": false,
@@ -324,7 +324,7 @@
       "cacheReadInputTokens": 0,
       "cacheWriteInputTokens": 0
     },
-    "request_id": "dabb0ba2-f281-4462-a1d5-00c5cd71e404",
+    "request_id": "3c241a5b-8f6b-463a-bdb6-42c6408e8117",
     "policy_renderer": "retrieved-points-row-or-conditional-gear-credit"
   }
 ]

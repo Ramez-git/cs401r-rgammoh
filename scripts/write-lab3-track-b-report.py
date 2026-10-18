@@ -14,6 +14,9 @@ retrieval=all_results[all_results.run.str.startswith('baseline')].groupby('strat
 def table(frame):
     return '| '+ ' | '.join(['run']+list(frame.columns))+' |\n|---|'+'---:|'*len(frame.columns)+'\n'+'\n'.join('| '+str(ix)+' | '+' | '.join(f'{v:.4f}' for v in row)+' |' for ix,row in frame.iterrows())
 summary=pd.DataFrame({'mean':means,'minimum_run_mean':run_means.min(),'maximum_run_mean':run_means.max()})
+case_summary=results.groupby('customer_id')[metrics].agg(['mean','min','max'])
+case_summary.columns=['_'.join(column) for column in case_summary.columns]
+case_summary.to_csv(E/'rag-per-case-summary.csv')
 # Costs include all logged development, judge audit and notebook calls, not only final runs.
 usage=[]
 for filename,component in [('rag-usage.jsonl','pipeline'),('rag-judge-usage.jsonl','judge')]:
@@ -45,6 +48,11 @@ and their full texts are saved in `rag-chunk-manifest.json`. Titan Text Embeddin
 V2 (`amazon.titan-embed-text-v2:0`) produces normalized 1024-dimensional vectors.
 FAISS IndexFlatIP performs exact cosine retrieval locally. Embeddings are cached
 by text/model hash, so changed documents are embedded again.
+
+The 220-word cap keeps individual policy provisions focused for retrieval while
+preserving short tables and their eligibility conditions. The 40-word overlap
+reduces loss of context at long-section boundaries. These are practical choices
+for this small corpus, not parameters established as optimal by an ablation.
 
 Titan keeps embedding and judge authentication inside the existing AWS account;
 there is no demonstrated need for Cohere-specific multilingual capability in
@@ -118,6 +126,11 @@ October 12 update removes the old numeric score targets from grading.
 {table(run_means)}
 
 {table(summary)}
+
+Per-customer mean and range across the three final judge runs (also exported in
+`rag-per-case-summary.csv`):
+
+{table(case_summary)}
 
 Per-case scores are in `rag_eval.csv`; judge traces from the diagnostic third
 run are in `ragas-traces-final-3.json`. They explain each metric's limits:
