@@ -1,0 +1,14 @@
+{
+  "auc_roc": 0.7838,
+  "baseline_auc": 0.7229,
+  "auc_vs_baseline": 0.0609,
+  "precision_top10": 0.7233,
+  "recall_top10": 0.3288,
+  "lift_ci_low": 0.042,
+  "lift_ci_high": 0.0791,
+  "positive_rate_val": 0.22,
+  "n_val_samples": 3000,
+  "n_targeted": 300,
+  "n_train_samples": 6999,
+  "selected_rounds": 154
+}

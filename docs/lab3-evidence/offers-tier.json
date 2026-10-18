@@ -1,0 +1,178 @@
+[
+  {
+    "answer": "We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Gold member, you earn 1.5 points per dollar on every purchase\u2014that's 50% more rewards than standard members\u2014and enjoy free standard shipping on all orders, plus free return shipping if you need it. Browse our Outdoor category to find gear that matches your interests, and start earning points toward your next reward today.",
+    "contexts": [
+      "[POL-LOY-011-s09-c01] 4. Tier Benefits\n## 4. Tier Benefits | Benefit | Bronze | Silver | Gold | Platinum | |---|---|---|---|---| | Points earn rate | 1\u00d7 | 1.25\u00d7 | 1.5\u00d7 | 2\u00d7 | | Birthday reward | $5 | $10 | $20 | $40 | | Free standard shipping | $75+ | $50+ | Always | Always | | Free return shipping | No | No | Yes | Yes | | Return window | 30 days | 30 days | 30 days | **60 days** | | Early access to sales | No | 12 hours | 24 hours | 48 hours | | Free gear repair | No | No | 2 per year | Unlimited | | Dedicated support line | No | No | No | Yes | | Annual gear credit | No | No | No | $100 | Benefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 \u00a71.1).",
+      "[KB-FAQ-022-s02-c01] Loyalty\n## Loyalty **How do I move up a tier?** Tier is based on trailing 12-month merchandise spend: Bronze under $500, Silver $500, Gold $2,000, Platinum $5,000. Upgrades happen immediately when you cross a threshold. **Why did I get downgraded?** Your trailing 12-month spend fell below your tier's threshold. Downgrades are evaluated monthly, move you down only one tier at a time, and we email you 30 days beforehand. If you have held Gold or Platinum for 24 months or more, you get one automatic downgrade protection per 24-month period. **Do returns affect my tier?** Yes. A refund reduces your trailing spend and can trigger a downgrade. **When do my points expire?** 18 months after your most recent qualifying purchase \u2014 not 18 months after you earned them. Any purchase resets the clock on your whole balance. We warn you at 60 days and again at 14 days. **What are my points worth?** 100 points equals $5. Redeem in increments of 100. **Can I combine a promo code with points?** Usually yes. You cannot combine two targeted offers with each other. **My offer expired. Can you extend it?** No. Expired offers cannot be reinstated by customer service or by any automated system. **What happens to my points if I close my account?** They are forfeited immediately and are not restored if",
+      "[POL-LOY-011-s06-c01] 3. Points\n## 3. Points Members earn **1 point per $1** of qualifying merchandise spend. | Tier | Earn rate | Effective value | |---|---|---| | Bronze | 1\u00d7 | 1 point per $1 | | Silver | 1.25\u00d7 | 1.25 points per $1 | | Gold | 1.5\u00d7 | 1.5 points per $1 | | Platinum | 2\u00d7 | 2 points per $1 | **100 points = $5** in redemption value. Points may be redeemed in increments of 100, in store or online, and may be combined with promotions unless a promotion states otherwise.",
+      "[POL-LOY-011-s02-c01] 2. Tiers\n## 2. Tiers Tier is determined by **trailing 12-month spend**, evaluated on the first day of each month. | Tier | Trailing 12-month spend | Members (approx.) | |---|---|---| | **Bronze** | Under $500 | 61% | | **Silver** | $500 \u2013 $1,999.99 | 26% | | **Gold** | $2,000 \u2013 $4,999.99 | 10% | | **Platinum** | $5,000 and above | 3% | Spend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.",
+      "[POL-LOY-011-s10-c01] 4.1 Annual Gear Credit\n### 4.1 Annual Gear Credit Platinum members receive a **$100 gear credit** each January 1. The credit expires December 31 of the same year, does not carry over, has no cash value, and is forfeited if the member is downgraded below Platinum before using it. ---",
+      "[POL-LOY-011-s03-c01] 2.1 Tier Upgrades\n### 2.1 Tier Upgrades Upgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit."
+    ],
+    "chunk_ids": [
+      "POL-LOY-011-s09-c01",
+      "KB-FAQ-022-s02-c01",
+      "POL-LOY-011-s06-c01",
+      "POL-LOY-011-s02-c01",
+      "POL-LOY-011-s10-c01",
+      "POL-LOY-011-s03-c01"
+    ],
+    "profile_context": "Customer profile (observed synthetic data, not authoritative benefit eligibility): {\"avg_order_value\": 186.25, \"category_diversity_score\": 0.5, \"churn_probability\": 0.81, \"customer_id\": \"CUST-10000317\", \"days_since_last_purchase\": 47, \"loyalty_tier\": \"Gold\", \"online_to_store_ratio\": 0.72, \"top_categories\": [\"Outdoor\", \"Footwear\"], \"total_lifetime_value\": 3120.4}. Shopping pattern: mostly online; several observed categories. Stored tier is a lifetime-value approximation. Current tier, unused rewards, destination and product eligibility are unverified.",
+    "customer_profile": {
+      "churn_probability": 0.81,
+      "loyalty_tier": "Gold",
+      "days_since_last_purchase": 47,
+      "total_lifetime_value": 3120.4,
+      "avg_order_value": 186.25,
+      "category_diversity_score": 0.5,
+      "online_to_store_ratio": 0.72,
+      "top_categories": [
+        "Outdoor",
+        "Footwear"
+      ],
+      "customer_id": "CUST-10000317"
+    },
+    "strategy": "tier",
+    "usage": {
+      "inputTokens": 1960,
+      "outputTokens": 96,
+      "totalTokens": 2056,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "request_id": "3f307c4b-554e-4dcb-a539-1fc646bc99ae",
+    "question": "Generate a personalized retention offer for this at-risk Gold member who shops mostly online for outdoor gear and footwear."
+  },
+  {
+    "answer": "We'd love to see you back in store\u2014your Bronze membership earns 1 point per $1 spent on apparel, and every 100 points redeems for $5 toward your next purchase. Stop by to browse our apparel selection and keep your rewards growing.",
+    "contexts": [
+      "[POL-LOY-011-s09-c01] 4. Tier Benefits\n## 4. Tier Benefits | Benefit | Bronze | Silver | Gold | Platinum | |---|---|---|---|---| | Points earn rate | 1\u00d7 | 1.25\u00d7 | 1.5\u00d7 | 2\u00d7 | | Birthday reward | $5 | $10 | $20 | $40 | | Free standard shipping | $75+ | $50+ | Always | Always | | Free return shipping | No | No | Yes | Yes | | Return window | 30 days | 30 days | 30 days | **60 days** | | Early access to sales | No | 12 hours | 24 hours | 48 hours | | Free gear repair | No | No | 2 per year | Unlimited | | Dedicated support line | No | No | No | Yes | | Annual gear credit | No | No | No | $100 | Benefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 \u00a71.1).",
+      "[KB-FAQ-022-s02-c01] Loyalty\n## Loyalty **How do I move up a tier?** Tier is based on trailing 12-month merchandise spend: Bronze under $500, Silver $500, Gold $2,000, Platinum $5,000. Upgrades happen immediately when you cross a threshold. **Why did I get downgraded?** Your trailing 12-month spend fell below your tier's threshold. Downgrades are evaluated monthly, move you down only one tier at a time, and we email you 30 days beforehand. If you have held Gold or Platinum for 24 months or more, you get one automatic downgrade protection per 24-month period. **Do returns affect my tier?** Yes. A refund reduces your trailing spend and can trigger a downgrade. **When do my points expire?** 18 months after your most recent qualifying purchase \u2014 not 18 months after you earned them. Any purchase resets the clock on your whole balance. We warn you at 60 days and again at 14 days. **What are my points worth?** 100 points equals $5. Redeem in increments of 100. **Can I combine a promo code with points?** Usually yes. You cannot combine two targeted offers with each other. **My offer expired. Can you extend it?** No. Expired offers cannot be reinstated by customer service or by any automated system. **What happens to my points if I close my account?** They are forfeited immediately and are not restored if",
+      "[POL-LOY-011-s06-c01] 3. Points\n## 3. Points Members earn **1 point per $1** of qualifying merchandise spend. | Tier | Earn rate | Effective value | |---|---|---| | Bronze | 1\u00d7 | 1 point per $1 | | Silver | 1.25\u00d7 | 1.25 points per $1 | | Gold | 1.5\u00d7 | 1.5 points per $1 | | Platinum | 2\u00d7 | 2 points per $1 | **100 points = $5** in redemption value. Points may be redeemed in increments of 100, in store or online, and may be combined with promotions unless a promotion states otherwise.",
+      "[POL-LOY-011-s02-c01] 2. Tiers\n## 2. Tiers Tier is determined by **trailing 12-month spend**, evaluated on the first day of each month. | Tier | Trailing 12-month spend | Members (approx.) | |---|---|---| | **Bronze** | Under $500 | 61% | | **Silver** | $500 \u2013 $1,999.99 | 26% | | **Gold** | $2,000 \u2013 $4,999.99 | 10% | | **Platinum** | $5,000 and above | 3% | Spend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.",
+      "[POL-LOY-011-s10-c01] 4.1 Annual Gear Credit\n### 4.1 Annual Gear Credit Platinum members receive a **$100 gear credit** each January 1. The credit expires December 31 of the same year, does not carry over, has no cash value, and is forfeited if the member is downgraded below Platinum before using it. ---",
+      "[POL-RET-004-s02-c01] 1.1 Extended Window for Platinum Members\n### 1.1 Extended Window for Platinum Members **Platinum loyalty members receive a 60-day return window** on all eligible merchandise. This is an automatic benefit; the member does not need to request it and no approval is required. The extended window applies based on the member's tier **at the time of purchase**, not at the time of return. A customer who was Gold when they purchased and reached Platinum afterwards receives the standard 30-day window for that order."
+    ],
+    "chunk_ids": [
+      "POL-LOY-011-s09-c01",
+      "KB-FAQ-022-s02-c01",
+      "POL-LOY-011-s06-c01",
+      "POL-LOY-011-s02-c01",
+      "POL-LOY-011-s10-c01",
+      "POL-RET-004-s02-c01"
+    ],
+    "profile_context": "Customer profile (observed synthetic data, not authoritative benefit eligibility): {\"avg_order_value\": 41.15, \"category_diversity_score\": 0.125, \"churn_probability\": 0.74, \"customer_id\": \"CUST-10000904\", \"days_since_last_purchase\": 68, \"loyalty_tier\": \"Bronze\", \"online_to_store_ratio\": 0.2, \"top_categories\": [\"Apparel\"], \"total_lifetime_value\": 312.8}. Shopping pattern: mostly in store; narrow category history. Stored tier is a lifetime-value approximation. Current tier, unused rewards, destination and product eligibility are unverified.",
+    "customer_profile": {
+      "churn_probability": 0.74,
+      "loyalty_tier": "Bronze",
+      "days_since_last_purchase": 68,
+      "total_lifetime_value": 312.8,
+      "avg_order_value": 41.15,
+      "category_diversity_score": 0.125,
+      "online_to_store_ratio": 0.2,
+      "top_categories": [
+        "Apparel"
+      ],
+      "customer_id": "CUST-10000904"
+    },
+    "strategy": "tier",
+    "usage": {
+      "inputTokens": 2001,
+      "outputTokens": 63,
+      "totalTokens": 2064,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "request_id": "503a89b2-c460-4405-952b-450762982ff9",
+    "question": "Generate a retention offer for this Bronze member who shops in store, buys only apparel, and has not purchased in over two months."
+  },
+  {
+    "answer": "We appreciate your loyalty, and as a Platinum member, you're earning 2 points per dollar on every purchase\u2014which means your next order could bring you closer to $5 in rewards value for every $100 spent. We'd love to see you explore our Outdoor and Electronics categories, where your diverse interests align perfectly with our latest selections. Browse our full range today and keep building your rewards balance.",
+    "contexts": [
+      "[POL-LOY-011-s09-c01] 4. Tier Benefits\n## 4. Tier Benefits | Benefit | Bronze | Silver | Gold | Platinum | |---|---|---|---|---| | Points earn rate | 1\u00d7 | 1.25\u00d7 | 1.5\u00d7 | 2\u00d7 | | Birthday reward | $5 | $10 | $20 | $40 | | Free standard shipping | $75+ | $50+ | Always | Always | | Free return shipping | No | No | Yes | Yes | | Return window | 30 days | 30 days | 30 days | **60 days** | | Early access to sales | No | 12 hours | 24 hours | 48 hours | | Free gear repair | No | No | 2 per year | Unlimited | | Dedicated support line | No | No | No | Yes | | Annual gear credit | No | No | No | $100 | Benefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 \u00a71.1).",
+      "[KB-FAQ-022-s02-c01] Loyalty\n## Loyalty **How do I move up a tier?** Tier is based on trailing 12-month merchandise spend: Bronze under $500, Silver $500, Gold $2,000, Platinum $5,000. Upgrades happen immediately when you cross a threshold. **Why did I get downgraded?** Your trailing 12-month spend fell below your tier's threshold. Downgrades are evaluated monthly, move you down only one tier at a time, and we email you 30 days beforehand. If you have held Gold or Platinum for 24 months or more, you get one automatic downgrade protection per 24-month period. **Do returns affect my tier?** Yes. A refund reduces your trailing spend and can trigger a downgrade. **When do my points expire?** 18 months after your most recent qualifying purchase \u2014 not 18 months after you earned them. Any purchase resets the clock on your whole balance. We warn you at 60 days and again at 14 days. **What are my points worth?** 100 points equals $5. Redeem in increments of 100. **Can I combine a promo code with points?** Usually yes. You cannot combine two targeted offers with each other. **My offer expired. Can you extend it?** No. Expired offers cannot be reinstated by customer service or by any automated system. **What happens to my points if I close my account?** They are forfeited immediately and are not restored if",
+      "[POL-RET-004-s02-c01] 1.1 Extended Window for Platinum Members\n### 1.1 Extended Window for Platinum Members **Platinum loyalty members receive a 60-day return window** on all eligible merchandise. This is an automatic benefit; the member does not need to request it and no approval is required. The extended window applies based on the member's tier **at the time of purchase**, not at the time of return. A customer who was Gold when they purchased and reached Platinum afterwards receives the standard 30-day window for that order.",
+      "[POL-LOY-011-s06-c01] 3. Points\n## 3. Points Members earn **1 point per $1** of qualifying merchandise spend. | Tier | Earn rate | Effective value | |---|---|---| | Bronze | 1\u00d7 | 1 point per $1 | | Silver | 1.25\u00d7 | 1.25 points per $1 | | Gold | 1.5\u00d7 | 1.5 points per $1 | | Platinum | 2\u00d7 | 2 points per $1 | **100 points = $5** in redemption value. Points may be redeemed in increments of 100, in store or online, and may be combined with promotions unless a promotion states otherwise.",
+      "[POL-LOY-011-s10-c01] 4.1 Annual Gear Credit\n### 4.1 Annual Gear Credit Platinum members receive a **$100 gear credit** each January 1. The credit expires December 31 of the same year, does not carry over, has no cash value, and is forfeited if the member is downgraded below Platinum before using it. ---",
+      "[POL-LOY-011-s02-c01] 2. Tiers\n## 2. Tiers Tier is determined by **trailing 12-month spend**, evaluated on the first day of each month. | Tier | Trailing 12-month spend | Members (approx.) | |---|---|---| | **Bronze** | Under $500 | 61% | | **Silver** | $500 \u2013 $1,999.99 | 26% | | **Gold** | $2,000 \u2013 $4,999.99 | 10% | | **Platinum** | $5,000 and above | 3% | Spend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade."
+    ],
+    "chunk_ids": [
+      "POL-LOY-011-s09-c01",
+      "KB-FAQ-022-s02-c01",
+      "POL-RET-004-s02-c01",
+      "POL-LOY-011-s06-c01",
+      "POL-LOY-011-s10-c01",
+      "POL-LOY-011-s02-c01"
+    ],
+    "profile_context": "Customer profile (observed synthetic data, not authoritative benefit eligibility): {\"avg_order_value\": 447.0, \"category_diversity_score\": 0.75, \"churn_probability\": 0.66, \"customer_id\": \"CUST-10000122\", \"days_since_last_purchase\": 39, \"loyalty_tier\": \"Platinum\", \"online_to_store_ratio\": 0.55, \"top_categories\": [\"Outdoor\", \"Electronics\", \"Home\"], \"total_lifetime_value\": 8940.0}. Shopping pattern: mostly online; several observed categories. Stored tier is a lifetime-value approximation. Current tier, unused rewards, destination and product eligibility are unverified.",
+    "customer_profile": {
+      "churn_probability": 0.66,
+      "loyalty_tier": "Platinum",
+      "days_since_last_purchase": 39,
+      "total_lifetime_value": 8940.0,
+      "avg_order_value": 447.0,
+      "category_diversity_score": 0.75,
+      "online_to_store_ratio": 0.55,
+      "top_categories": [
+        "Outdoor",
+        "Electronics",
+        "Home"
+      ],
+      "customer_id": "CUST-10000122"
+    },
+    "strategy": "tier",
+    "usage": {
+      "inputTokens": 2001,
+      "outputTokens": 88,
+      "totalTokens": 2089,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "request_id": "ce743e61-2906-4889-a9d3-bf2f76f02f85",
+    "question": "Generate a retention offer for this high-value Platinum member with broad category interest and a large average order."
+  },
+  {
+    "answer": "We'd love to have you back\u2014as a Silver member, you earn 1.25 points per dollar spent, and your points are worth $5 per 100 points when you're ready to redeem. Browse our Home and Beauty categories, where you can rack up rewards on your next purchase and enjoy free standard shipping on orders of $50 or more.",
+    "contexts": [
+      "[POL-LOY-011-s09-c01] 4. Tier Benefits\n## 4. Tier Benefits | Benefit | Bronze | Silver | Gold | Platinum | |---|---|---|---|---| | Points earn rate | 1\u00d7 | 1.25\u00d7 | 1.5\u00d7 | 2\u00d7 | | Birthday reward | $5 | $10 | $20 | $40 | | Free standard shipping | $75+ | $50+ | Always | Always | | Free return shipping | No | No | Yes | Yes | | Return window | 30 days | 30 days | 30 days | **60 days** | | Early access to sales | No | 12 hours | 24 hours | 48 hours | | Free gear repair | No | No | 2 per year | Unlimited | | Dedicated support line | No | No | No | Yes | | Annual gear credit | No | No | No | $100 | Benefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 \u00a71.1).",
+      "[KB-FAQ-022-s02-c01] Loyalty\n## Loyalty **How do I move up a tier?** Tier is based on trailing 12-month merchandise spend: Bronze under $500, Silver $500, Gold $2,000, Platinum $5,000. Upgrades happen immediately when you cross a threshold. **Why did I get downgraded?** Your trailing 12-month spend fell below your tier's threshold. Downgrades are evaluated monthly, move you down only one tier at a time, and we email you 30 days beforehand. If you have held Gold or Platinum for 24 months or more, you get one automatic downgrade protection per 24-month period. **Do returns affect my tier?** Yes. A refund reduces your trailing spend and can trigger a downgrade. **When do my points expire?** 18 months after your most recent qualifying purchase \u2014 not 18 months after you earned them. Any purchase resets the clock on your whole balance. We warn you at 60 days and again at 14 days. **What are my points worth?** 100 points equals $5. Redeem in increments of 100. **Can I combine a promo code with points?** Usually yes. You cannot combine two targeted offers with each other. **My offer expired. Can you extend it?** No. Expired offers cannot be reinstated by customer service or by any automated system. **What happens to my points if I close my account?** They are forfeited immediately and are not restored if",
+      "[POL-LOY-011-s06-c01] 3. Points\n## 3. Points Members earn **1 point per $1** of qualifying merchandise spend. | Tier | Earn rate | Effective value | |---|---|---| | Bronze | 1\u00d7 | 1 point per $1 | | Silver | 1.25\u00d7 | 1.25 points per $1 | | Gold | 1.5\u00d7 | 1.5 points per $1 | | Platinum | 2\u00d7 | 2 points per $1 | **100 points = $5** in redemption value. Points may be redeemed in increments of 100, in store or online, and may be combined with promotions unless a promotion states otherwise.",
+      "[POL-LOY-011-s02-c01] 2. Tiers\n## 2. Tiers Tier is determined by **trailing 12-month spend**, evaluated on the first day of each month. | Tier | Trailing 12-month spend | Members (approx.) | |---|---|---| | **Bronze** | Under $500 | 61% | | **Silver** | $500 \u2013 $1,999.99 | 26% | | **Gold** | $2,000 \u2013 $4,999.99 | 10% | | **Platinum** | $5,000 and above | 3% | Spend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.",
+      "[POL-LOY-011-s10-c01] 4.1 Annual Gear Credit\n### 4.1 Annual Gear Credit Platinum members receive a **$100 gear credit** each January 1. The credit expires December 31 of the same year, does not carry over, has no cash value, and is forfeited if the member is downgraded below Platinum before using it. ---",
+      "[POL-SHP-007-s02-c01] 2. Free Shipping Thresholds\n## 2. Free Shipping Thresholds Free standard shipping applies at the following order subtotals, after discounts and before tax: | Tier | Free standard shipping at | |---|---| | Non-member | $99 | | Bronze | $75 | | Silver | $50 | | Gold | Any amount | | Platinum | Any amount | Free shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy. Gift card purchases do not count toward the free shipping threshold. ---"
+    ],
+    "chunk_ids": [
+      "POL-LOY-011-s09-c01",
+      "KB-FAQ-022-s02-c01",
+      "POL-LOY-011-s06-c01",
+      "POL-LOY-011-s02-c01",
+      "POL-LOY-011-s10-c01",
+      "POL-SHP-007-s02-c01"
+    ],
+    "profile_context": "Customer profile (observed synthetic data, not authoritative benefit eligibility): {\"avg_order_value\": 132.3, \"category_diversity_score\": 0.375, \"churn_probability\": 0.7, \"customer_id\": \"CUST-10000588\", \"days_since_last_purchase\": 52, \"loyalty_tier\": \"Silver\", \"online_to_store_ratio\": 0.61, \"top_categories\": [\"Home\", \"Beauty\"], \"total_lifetime_value\": 1985.0}. Shopping pattern: mostly online; several observed categories. Stored tier is a lifetime-value approximation. Current tier, unused rewards, destination and product eligibility are unverified.",
+    "customer_profile": {
+      "churn_probability": 0.7,
+      "loyalty_tier": "Silver",
+      "total_lifetime_value": 1985.0,
+      "days_since_last_purchase": 52,
+      "avg_order_value": 132.3,
+      "category_diversity_score": 0.375,
+      "online_to_store_ratio": 0.61,
+      "top_categories": [
+        "Home",
+        "Beauty"
+      ],
+      "customer_id": "CUST-10000588"
+    },
+    "strategy": "tier",
+    "usage": {
+      "inputTokens": 2039,
+      "outputTokens": 80,
+      "totalTokens": 2119,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "request_id": "83d0b31c-bb38-4ab2-ae8e-9a3ecea717b8",
+    "question": "Generate a retention offer for this Silver member whose lifetime value is just under the Gold threshold."
+  }
+]

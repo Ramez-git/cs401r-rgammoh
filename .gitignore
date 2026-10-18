@@ -11,3 +11,14 @@ __pycache__/
 *.zip
 .aws/
 .localstack/
+
+.venv-lab3/
+model/
+output/
+.lab3-cache/
+
+.venv-lab3-rag/
+.rag-cache/
+evaluation_results/
+
+.venv-lab3-rag312/

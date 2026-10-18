@@ -1,0 +1,85 @@
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.vpc.aws_route_table_association.public: Destroying... [id=rtbassoc-0f056a947b80fbae3]
+module.vpc.aws_route_table_association.private: Destroying... [id=rtbassoc-09c7e909bf04b8b15]
+module.glue.aws_glue_job.jobs["transform"]: Destroying... [id=northstar-dev-transform]
+module.vpc.aws_security_group.this: Destroying... [id=sg-0d24f2e71d5afd96b]
+module.glue.aws_glue_job.jobs["feature-engineer"]: Destroying... [id=northstar-dev-feature-engineer]
+module.glue.aws_glue_crawler.raw: Destroying... [id=northstar-dev-raw-crawler]
+module.glue.aws_glue_crawler.raw: Destruction complete after 0s
+module.glue.aws_glue_job.jobs["feature-engineer"]: Destruction complete after 0s
+module.glue.aws_glue_job.jobs["transform"]: Destruction complete after 0s
+module.glue.aws_glue_connection.private: Destroying... [id=701145280839:northstar-dev-private-network]
+module.glue.aws_glue_catalog_database.this: Destroying... [id=701145280839:northstar_dev]
+module.glue.aws_s3_object.scripts["feature-engineer"]: Destroying... [id=artifacts/glue/feature_engineer.py]
+module.glue.aws_s3_object.scripts["transform"]: Destroying... [id=artifacts/glue/transform.py]
+module.glue.aws_glue_connection.private: Destruction complete after 1s
+module.glue.aws_security_group.glue: Destroying... [id=sg-036df57eed211ec91]
+module.vpc.aws_route_table_association.public: Destruction complete after 1s
+module.vpc.aws_route_table.public: Destroying... [id=rtb-080032f62850c9925]
+module.vpc.aws_route_table_association.private: Destruction complete after 1s
+module.glue.aws_glue_catalog_database.this: Destruction complete after 1s
+module.vpc.aws_subnet.private: Destroying... [id=subnet-041e57efa14412118]
+module.vpc.aws_route_table.private: Destroying... [id=rtb-0926881d1c9dc9d81]
+module.glue.aws_s3_object.scripts["transform"]: Destruction complete after 1s
+module.glue.aws_s3_object.scripts["feature-engineer"]: Destruction complete after 1s
+module.vpc.aws_security_group.this: Destruction complete after 1s
+module.vpc.aws_route_table.public: Destruction complete after 0s
+module.vpc.aws_route_table.private: Destruction complete after 0s
+module.vpc.aws_nat_gateway.this[0]: Destroying... [id=nat-00128e23771b9fe79]
+module.glue.aws_security_group.glue: Still destroying... [id=sg-036df57eed211ec91, 00m10s elapsed]
+module.vpc.aws_subnet.private: Still destroying... [id=subnet-041e57efa14412118, 00m10s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-00128e23771b9fe79, 00m10s elapsed]
+module.glue.aws_security_group.glue: Still destroying... [id=sg-036df57eed211ec91, 00m20s elapsed]
+module.vpc.aws_subnet.private: Still destroying... [id=subnet-041e57efa14412118, 00m20s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-00128e23771b9fe79, 00m20s elapsed]
+module.glue.aws_security_group.glue: Still destroying... [id=sg-036df57eed211ec91, 00m30s elapsed]
+module.vpc.aws_subnet.private: Still destroying... [id=subnet-041e57efa14412118, 00m30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-00128e23771b9fe79, 00m30s elapsed]
+module.glue.aws_security_group.glue: Still destroying... [id=sg-036df57eed211ec91, 00m40s elapsed]
+module.vpc.aws_subnet.private: Still destroying... [id=subnet-041e57efa14412118, 00m40s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-00128e23771b9fe79, 00m40s elapsed]
+module.glue.aws_security_group.glue: Still destroying... [id=sg-036df57eed211ec91, 00m50s elapsed]
+module.vpc.aws_subnet.private: Still destroying... [id=subnet-041e57efa14412118, 00m50s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-00128e23771b9fe79, 00m50s elapsed]
+module.glue.aws_security_group.glue: Still destroying... [id=sg-036df57eed211ec91, 01m00s elapsed]
+module.vpc.aws_subnet.private: Still destroying... [id=subnet-041e57efa14412118, 01m00s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-00128e23771b9fe79, 01m00s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Destruction complete after 1m3s
+module.vpc.aws_internet_gateway.this: Destroying... [id=igw-087380b1d3fce95fa]
+module.vpc.aws_subnet.public: Destroying... [id=subnet-0363bee12c8aeadd8]
+module.vpc.aws_eip.nat[0]: Destroying... [id=eipalloc-0c301a783c9b0cd24]
+module.vpc.aws_internet_gateway.this: Destruction complete after 1s
+module.vpc.aws_subnet.public: Destruction complete after 1s
+module.vpc.aws_eip.nat[0]: Destruction complete after 1s
+module.glue.aws_security_group.glue: Destruction complete after 1m5s
+module.vpc.aws_subnet.private: Still destroying... [id=subnet-041e57efa14412118, 01m10s elapsed]
+module.vpc.aws_subnet.private: Destruction complete after 1m10s
+module.vpc.aws_vpc.this: Destroying... [id=vpc-04fd0a85ee74d4379]
+module.vpc.aws_vpc.this: Destruction complete after 1s
+
+Warning: Applied changes may be incomplete
+
+The plan was created with the -target option in effect, so some changes
+requested in the configuration may have been ignored and the output values
+may not be fully updated. Run the following command to verify that no other
+changes are pending:
+    terraform plan
+
+Note that the -target option is not suitable for routine use, and is provided
+only for exceptional situations such as recovering from errors or mistakes,
+or when Terraform specifically suggests to use it as part of an error
+message.
+
+Apply complete! Resources: 0 added, 0 changed, 19 destroyed.
+
+Outputs:
+
+feature_group_name = "northstar-dev-customer-features"
+ml_engineer_role_arn = "arn:aws:iam::701145280839:role/northstar-dev-MLEngineer"
+public_subnet_id = "subnet-0363bee12c8aeadd8"
+s3_bucket_name = "northstar-dev-data-701145280839"
+vpc_id = "vpc-04fd0a85ee74d4379"

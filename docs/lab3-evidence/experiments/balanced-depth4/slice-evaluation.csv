@@ -1,0 +1,5 @@
+tier,n,positives,auc,recall,too_small,recall_gap_flag
+Bronze,496,160,0.7450799851190477,0.40625,False,False
+Silver,524,109,0.735359787774953,0.22935779816513763,False,False
+Gold,248,29,0.7411431270666037,0.2413793103448276,False,False
+Platinum,132,10,0.8877049180327868,0.2,True,True

@@ -1,0 +1,2 @@
+PASS: XGBoost 1.7.6 reproduces all 3000 final held-out predictions from the registered JSON model.
+This tests model-format/runtime compatibility locally; no SageMaker endpoint was deployed.

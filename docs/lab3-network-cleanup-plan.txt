@@ -1,0 +1,629 @@
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.iam.data.aws_caller_identity.current: Reading...
+module.iam.data.aws_region.current: Reading...
+module.storage.data.aws_caller_identity.current: Reading...
+module.glue.aws_glue_catalog_database.this: Refreshing state... [id=701145280839:northstar_dev]
+module.vpc.aws_vpc.this: Refreshing state... [id=vpc-04fd0a85ee74d4379]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-0c301a783c9b0cd24]
+module.iam.aws_iam_role.data_engineer: Refreshing state... [id=northstar-dev-DataEngineer]
+module.iam.data.aws_region.current: Read complete after 0s [id=us-east-1]
+module.iam.data.aws_caller_identity.current: Read complete after 0s [id=701145280839]
+module.storage.data.aws_caller_identity.current: Read complete after 0s [id=701145280839]
+module.storage.aws_s3_bucket.data: Refreshing state... [id=northstar-dev-data-701145280839]
+module.iam.aws_iam_role_policy.data_engineer: Refreshing state... [id=northstar-dev-DataEngineer:northstar-dev-DataEngineerPolicy]
+module.vpc.aws_internet_gateway.this: Refreshing state... [id=igw-087380b1d3fce95fa]
+module.vpc.aws_subnet.private: Refreshing state... [id=subnet-041e57efa14412118]
+module.vpc.aws_security_group.this: Refreshing state... [id=sg-0d24f2e71d5afd96b]
+module.vpc.aws_subnet.public: Refreshing state... [id=subnet-0363bee12c8aeadd8]
+module.glue.aws_security_group.glue: Refreshing state... [id=sg-036df57eed211ec91]
+module.vpc.aws_route_table.public: Refreshing state... [id=rtb-080032f62850c9925]
+module.storage.aws_s3_bucket_public_access_block.data: Refreshing state... [id=northstar-dev-data-701145280839]
+module.storage.aws_s3_bucket_versioning.data: Refreshing state... [id=northstar-dev-data-701145280839]
+module.storage.aws_s3_bucket_server_side_encryption_configuration.data: Refreshing state... [id=northstar-dev-data-701145280839]
+module.glue.aws_s3_object.scripts["transform"]: Refreshing state... [id=artifacts/glue/transform.py]
+module.glue.aws_s3_object.scripts["feature-engineer"]: Refreshing state... [id=artifacts/glue/feature_engineer.py]
+module.glue.aws_glue_crawler.raw: Refreshing state... [id=northstar-dev-raw-crawler]
+module.storage.aws_s3_object.prefixes["artifacts/"]: Refreshing state... [id=artifacts/]
+module.storage.aws_s3_object.prefixes["features/"]: Refreshing state... [id=features/]
+module.storage.aws_s3_object.prefixes["processed/"]: Refreshing state... [id=processed/]
+module.storage.aws_s3_object.prefixes["raw/"]: Refreshing state... [id=raw/]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-00128e23771b9fe79]
+module.vpc.aws_route_table_association.public: Refreshing state... [id=rtbassoc-0f056a947b80fbae3]
+module.glue.aws_glue_connection.private: Refreshing state... [id=701145280839:northstar-dev-private-network]
+module.vpc.aws_route_table.private: Refreshing state... [id=rtb-0926881d1c9dc9d81]
+module.vpc.aws_route_table_association.private: Refreshing state... [id=rtbassoc-09c7e909bf04b8b15]
+module.storage.aws_s3_bucket_lifecycle_configuration.data[0]: Refreshing state... [id=northstar-dev-data-701145280839]
+module.feature_store.aws_sagemaker_feature_group.customers: Refreshing state... [id=northstar-dev-customer-features]
+module.glue.aws_glue_job.jobs["feature-engineer"]: Refreshing state... [id=northstar-dev-feature-engineer]
+module.glue.aws_glue_job.jobs["transform"]: Refreshing state... [id=northstar-dev-transform]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # module.glue.aws_glue_catalog_database.this will be destroyed
+  - resource "aws_glue_catalog_database" "this" {
+      - arn          = "arn:aws:glue:us-east-1:701145280839:database/northstar_dev" -> null
+      - catalog_id   = "701145280839" -> null
+      - id           = "701145280839:northstar_dev" -> null
+      - name         = "northstar_dev" -> null
+      - parameters   = {} -> null
+      - tags         = {} -> null
+      - tags_all     = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "northstar"
+        } -> null
+        # (2 unchanged attributes hidden)
+
+      - create_table_default_permission {
+          - permissions = [
+              - "ALL",
+            ] -> null
+
+          - principal {
+              - data_lake_principal_identifier = "IAM_ALLOWED_PRINCIPALS" -> null
+            }
+        }
+    }
+
+  # module.glue.aws_glue_connection.private will be destroyed
+  - resource "aws_glue_connection" "private" {
+      - arn                   = "arn:aws:glue:us-east-1:701145280839:connection/northstar-dev-private-network" -> null
+      - athena_properties     = (sensitive value) -> null
+      - catalog_id            = "701145280839" -> null
+      - connection_properties = (sensitive value) -> null
+      - connection_type       = "NETWORK" -> null
+      - id                    = "701145280839:northstar-dev-private-network" -> null
+      - match_criteria        = [] -> null
+      - name                  = "northstar-dev-private-network" -> null
+      - tags                  = {} -> null
+      - tags_all              = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "northstar"
+        } -> null
+        # (1 unchanged attribute hidden)
+
+      - physical_connection_requirements {
+          - availability_zone      = "us-east-1a" -> null
+          - security_group_id_list = [
+              - "sg-036df57eed211ec91",
+            ] -> null
+          - subnet_id              = "subnet-041e57efa14412118" -> null
+        }
+    }
+
+  # module.glue.aws_glue_crawler.raw will be destroyed
+  - resource "aws_glue_crawler" "raw" {
+      - arn                    = "arn:aws:glue:us-east-1:701145280839:crawler/northstar-dev-raw-crawler" -> null
+      - classifiers            = [] -> null
+      - database_name          = "northstar_dev" -> null
+      - id                     = "northstar-dev-raw-crawler" -> null
+      - name                   = "northstar-dev-raw-crawler" -> null
+      - role                   = "northstar-dev-DataEngineer" -> null
+      - tags                   = {} -> null
+      - tags_all               = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "northstar"
+        } -> null
+        # (5 unchanged attributes hidden)
+
+      - lake_formation_configuration {
+          - use_lake_formation_credentials = false -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - lineage_configuration {
+          - crawler_lineage_settings = "DISABLE" -> null
+        }
+
+      - recrawl_policy {
+          - recrawl_behavior = "CRAWL_EVERYTHING" -> null
+        }
+
+      - s3_target {
+          - exclusions          = [] -> null
+          - path                = "s3://northstar-dev-data-701145280839/raw/customers/" -> null
+          - sample_size         = 0 -> null
+            # (3 unchanged attributes hidden)
+        }
+
+      - schema_change_policy {
+          - delete_behavior = "DEPRECATE_IN_DATABASE" -> null
+          - update_behavior = "UPDATE_IN_DATABASE" -> null
+        }
+    }
+
+  # module.glue.aws_glue_job.jobs["feature-engineer"] will be destroyed
+  - resource "aws_glue_job" "jobs" {
+      - arn                       = "arn:aws:glue:us-east-1:701145280839:job/northstar-dev-feature-engineer" -> null
+      - connections               = [
+          - "northstar-dev-private-network",
+        ] -> null
+      - default_arguments         = {
+          - "--TempDir"                          = "s3://northstar-dev-data-701145280839/processed/glue-temp/"
+          - "--conf"                             = "spark.sql.ansi.enabled=false --conf spark.sql.legacy.timeParserPolicy=CORRECTED"
+          - "--enable-continuous-cloudwatch-log" = "true"
+          - "--enable-metrics"                   = "true"
+          - "--feature_group_name"               = "northstar-dev-customer-features"
+          - "--input_path"                       = "s3://northstar-dev-data-701145280839/processed/customers/"
+          - "--job-bookmark-option"              = "job-bookmark-disable"
+          - "--job-language"                     = "python"
+          - "--output_path"                      = "s3://northstar-dev-data-701145280839/features/customers/"
+          - "--region"                           = "us-east-1"
+        } -> null
+      - glue_version              = "4.0" -> null
+      - id                        = "northstar-dev-feature-engineer" -> null
+      - job_run_queuing_enabled   = false -> null
+      - max_capacity              = 2 -> null
+      - max_retries               = 0 -> null
+      - name                      = "northstar-dev-feature-engineer" -> null
+      - non_overridable_arguments = {} -> null
+      - number_of_workers         = 2 -> null
+      - role_arn                  = "arn:aws:iam::701145280839:role/northstar-dev-DataEngineer" -> null
+      - tags                      = {} -> null
+      - tags_all                  = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "northstar"
+        } -> null
+      - timeout                   = 30 -> null
+      - worker_type               = "G.1X" -> null
+        # (4 unchanged attributes hidden)
+
+      - command {
+          - name            = "glueetl" -> null
+          - python_version  = "3" -> null
+          - script_location = "s3://northstar-dev-data-701145280839/artifacts/glue/feature_engineer.py" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - execution_property {
+          - max_concurrent_runs = 1 -> null
+        }
+    }
+
+  # module.glue.aws_glue_job.jobs["transform"] will be destroyed
+  - resource "aws_glue_job" "jobs" {
+      - arn                       = "arn:aws:glue:us-east-1:701145280839:job/northstar-dev-transform" -> null
+      - connections               = [
+          - "northstar-dev-private-network",
+        ] -> null
+      - default_arguments         = {
+          - "--TempDir"                          = "s3://northstar-dev-data-701145280839/processed/glue-temp/"
+          - "--conf"                             = "spark.sql.ansi.enabled=false --conf spark.sql.legacy.timeParserPolicy=CORRECTED"
+          - "--database_name"                    = "northstar_dev"
+          - "--enable-continuous-cloudwatch-log" = "true"
+          - "--enable-metrics"                   = "true"
+          - "--job-bookmark-option"              = "job-bookmark-disable"
+          - "--job-language"                     = "python"
+          - "--output_path"                      = "s3://northstar-dev-data-701145280839/processed/customers/"
+          - "--table_name"                       = "customers"
+        } -> null
+      - glue_version              = "4.0" -> null
+      - id                        = "northstar-dev-transform" -> null
+      - job_run_queuing_enabled   = false -> null
+      - max_capacity              = 2 -> null
+      - max_retries               = 0 -> null
+      - name                      = "northstar-dev-transform" -> null
+      - non_overridable_arguments = {} -> null
+      - number_of_workers         = 2 -> null
+      - role_arn                  = "arn:aws:iam::701145280839:role/northstar-dev-DataEngineer" -> null
+      - tags                      = {} -> null
+      - tags_all                  = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "northstar"
+        } -> null
+      - timeout                   = 30 -> null
+      - worker_type               = "G.1X" -> null
+        # (4 unchanged attributes hidden)
+
+      - command {
+          - name            = "glueetl" -> null
+          - python_version  = "3" -> null
+          - script_location = "s3://northstar-dev-data-701145280839/artifacts/glue/transform.py" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - execution_property {
+          - max_concurrent_runs = 1 -> null
+        }
+    }
+
+  # module.glue.aws_s3_object.scripts["feature-engineer"] will be destroyed
+  - resource "aws_s3_object" "scripts" {
+      - arn                           = "arn:aws:s3:::northstar-dev-data-701145280839/artifacts/glue/feature_engineer.py" -> null
+      - bucket                        = "northstar-dev-data-701145280839" -> null
+      - bucket_key_enabled            = false -> null
+      - content_type                  = "application/octet-stream" -> null
+      - etag                          = "7b7c719f578176f5485a0313022dce73" -> null
+      - force_destroy                 = false -> null
+      - id                            = "artifacts/glue/feature_engineer.py" -> null
+      - key                           = "artifacts/glue/feature_engineer.py" -> null
+      - metadata                      = {} -> null
+      - server_side_encryption        = "AES256" -> null
+      - source                        = "../../modules/glue/../../../glue-scripts/feature_engineer.py" -> null
+      - source_hash                   = "7b7c719f578176f5485a0313022dce73" -> null
+      - storage_class                 = "STANDARD" -> null
+      - tags                          = {} -> null
+      - tags_all                      = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "northstar"
+        } -> null
+      - version_id                    = "FFy9fn2AU4vS6X2aUFhv.Q7e6OXmI8Ad" -> null
+        # (13 unchanged attributes hidden)
+    }
+
+  # module.glue.aws_s3_object.scripts["transform"] will be destroyed
+  - resource "aws_s3_object" "scripts" {
+      - arn                           = "arn:aws:s3:::northstar-dev-data-701145280839/artifacts/glue/transform.py" -> null
+      - bucket                        = "northstar-dev-data-701145280839" -> null
+      - bucket_key_enabled            = false -> null
+      - content_type                  = "application/octet-stream" -> null
+      - etag                          = "17b53d46aea6aa0010af164e8d2b5c6e" -> null
+      - force_destroy                 = false -> null
+      - id                            = "artifacts/glue/transform.py" -> null
+      - key                           = "artifacts/glue/transform.py" -> null
+      - metadata                      = {} -> null
+      - server_side_encryption        = "AES256" -> null
+      - source                        = "../../modules/glue/../../../glue-scripts/transform.py" -> null
+      - source_hash                   = "17b53d46aea6aa0010af164e8d2b5c6e" -> null
+      - storage_class                 = "STANDARD" -> null
+      - tags                          = {} -> null
+      - tags_all                      = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "northstar"
+        } -> null
+      - version_id                    = "GgTuq9HXn0o.BxUFvHzB5waGcWEoKGjM" -> null
+        # (13 unchanged attributes hidden)
+    }
+
+  # module.glue.aws_security_group.glue will be destroyed
+  - resource "aws_security_group" "glue" {
+      - arn                    = "arn:aws:ec2:us-east-1:701145280839:security-group/sg-036df57eed211ec91" -> null
+      - description            = "Glue worker communication and outbound AWS API access" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+                # (1 unchanged attribute hidden)
+            },
+        ] -> null
+      - id                     = "sg-036df57eed211ec91" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = []
+              - description      = "Glue workers communicate with each other"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = true
+              - to_port          = 0
+            },
+        ] -> null
+      - name                   = "northstar-dev-glue-sg" -> null
+      - owner_id               = "701145280839" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {} -> null
+      - tags_all               = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Project"     = "northstar"
+        } -> null
+      - vpc_id                 = "vpc-04fd0a85ee74d4379" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_eip.nat[0] will be destroyed
+  - resource "aws_eip" "nat" {
+      - allocation_id            = "eipalloc-0c301a783c9b0cd24" -> null
+      - arn                      = "arn:aws:ec2:us-east-1:701145280839:elastic-ip/eipalloc-0c301a783c9b0cd24" -> null
+      - association_id           = "eipassoc-0b9214714a7318ef4" -> null
+      - domain                   = "vpc" -> null
+      - id                       = "eipalloc-0c301a783c9b0cd24" -> null
+      - network_border_group     = "us-east-1" -> null
+      - network_interface        = "eni-0222a03733c252e7b" -> null
+      - private_dns              = "ip-10-0-100-245.ec2.internal" -> null
+      - private_ip               = "10.0.100.245" -> null
+      - public_dns               = "ec2-184-193-9-246.compute-1.amazonaws.com" -> null
+      - public_ip                = "184.193.9.246" -> null
+      - public_ipv4_pool         = "amazon" -> null
+      - tags                     = {
+          - "Name" = "northstar-dev-eip"
+        } -> null
+      - tags_all                 = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "northstar-dev-eip"
+          - "Project"     = "northstar"
+        } -> null
+      - vpc                      = true -> null
+        # (5 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_internet_gateway.this will be destroyed
+  - resource "aws_internet_gateway" "this" {
+      - arn      = "arn:aws:ec2:us-east-1:701145280839:internet-gateway/igw-087380b1d3fce95fa" -> null
+      - id       = "igw-087380b1d3fce95fa" -> null
+      - owner_id = "701145280839" -> null
+      - tags     = {
+          - "Name" = "northstar-dev-igw"
+        } -> null
+      - tags_all = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "northstar-dev-igw"
+          - "Project"     = "northstar"
+        } -> null
+      - vpc_id   = "vpc-04fd0a85ee74d4379" -> null
+    }
+
+  # module.vpc.aws_nat_gateway.this[0] will be destroyed
+  - resource "aws_nat_gateway" "this" {
+      - allocation_id                      = "eipalloc-0c301a783c9b0cd24" -> null
+      - association_id                     = "eipassoc-0b9214714a7318ef4" -> null
+      - connectivity_type                  = "public" -> null
+      - id                                 = "nat-00128e23771b9fe79" -> null
+      - network_interface_id               = "eni-0222a03733c252e7b" -> null
+      - private_ip                         = "10.0.100.245" -> null
+      - public_ip                          = "184.193.9.246" -> null
+      - secondary_allocation_ids           = [] -> null
+      - secondary_private_ip_address_count = 0 -> null
+      - secondary_private_ip_addresses     = [] -> null
+      - subnet_id                          = "subnet-0363bee12c8aeadd8" -> null
+      - tags                               = {
+          - "Name" = "northstar-dev-nat"
+        } -> null
+      - tags_all                           = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "northstar-dev-nat"
+          - "Project"     = "northstar"
+        } -> null
+    }
+
+  # module.vpc.aws_route_table.private will be destroyed
+  - resource "aws_route_table" "private" {
+      - arn              = "arn:aws:ec2:us-east-1:701145280839:route-table/rtb-0926881d1c9dc9d81" -> null
+      - id               = "rtb-0926881d1c9dc9d81" -> null
+      - owner_id         = "701145280839" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - nat_gateway_id             = "nat-00128e23771b9fe79"
+                # (11 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {
+          - "Name" = "northstar-dev-private-rt"
+        } -> null
+      - tags_all         = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "northstar-dev-private-rt"
+          - "Project"     = "northstar"
+        } -> null
+      - vpc_id           = "vpc-04fd0a85ee74d4379" -> null
+    }
+
+  # module.vpc.aws_route_table.public will be destroyed
+  - resource "aws_route_table" "public" {
+      - arn              = "arn:aws:ec2:us-east-1:701145280839:route-table/rtb-080032f62850c9925" -> null
+      - id               = "rtb-080032f62850c9925" -> null
+      - owner_id         = "701145280839" -> null
+      - propagating_vgws = [] -> null
+      - route            = [
+          - {
+              - cidr_block                 = "0.0.0.0/0"
+              - gateway_id                 = "igw-087380b1d3fce95fa"
+                # (11 unchanged attributes hidden)
+            },
+        ] -> null
+      - tags             = {
+          - "Name" = "northstar-dev-public-rt"
+        } -> null
+      - tags_all         = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "northstar-dev-public-rt"
+          - "Project"     = "northstar"
+        } -> null
+      - vpc_id           = "vpc-04fd0a85ee74d4379" -> null
+    }
+
+  # module.vpc.aws_route_table_association.private will be destroyed
+  - resource "aws_route_table_association" "private" {
+      - id             = "rtbassoc-09c7e909bf04b8b15" -> null
+      - route_table_id = "rtb-0926881d1c9dc9d81" -> null
+      - subnet_id      = "subnet-041e57efa14412118" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_route_table_association.public will be destroyed
+  - resource "aws_route_table_association" "public" {
+      - id             = "rtbassoc-0f056a947b80fbae3" -> null
+      - route_table_id = "rtb-080032f62850c9925" -> null
+      - subnet_id      = "subnet-0363bee12c8aeadd8" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_security_group.this will be destroyed
+  - resource "aws_security_group" "this" {
+      - arn                    = "arn:aws:ec2:us-east-1:701145280839:security-group/sg-0d24f2e71d5afd96b" -> null
+      - description            = "SageMaker Studio security group - VPC-internal traffic only" -> null
+      - egress                 = [
+          - {
+              - cidr_blocks      = [
+                  - "0.0.0.0/0",
+                ]
+              - description      = "All outbound traffic"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - id                     = "sg-0d24f2e71d5afd96b" -> null
+      - ingress                = [
+          - {
+              - cidr_blocks      = [
+                  - "10.0.0.0/16",
+                ]
+              - description      = "All traffic from within the VPC"
+              - from_port        = 0
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = []
+              - protocol         = "-1"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 0
+            },
+        ] -> null
+      - name                   = "northstar-dev-sagemaker-sg" -> null
+      - owner_id               = "701145280839" -> null
+      - revoke_rules_on_delete = false -> null
+      - tags                   = {
+          - "Name" = "northstar-dev-sagemaker-sg"
+        } -> null
+      - tags_all               = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "northstar-dev-sagemaker-sg"
+          - "Project"     = "northstar"
+        } -> null
+      - vpc_id                 = "vpc-04fd0a85ee74d4379" -> null
+        # (1 unchanged attribute hidden)
+    }
+
+  # module.vpc.aws_subnet.private will be destroyed
+  - resource "aws_subnet" "private" {
+      - arn                                            = "arn:aws:ec2:us-east-1:701145280839:subnet/subnet-041e57efa14412118" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1a" -> null
+      - availability_zone_id                           = "use1-az1" -> null
+      - cidr_block                                     = "10.0.1.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-041e57efa14412118" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = false -> null
+      - owner_id                                       = "701145280839" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name" = "northstar-dev-private-1"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "northstar-dev-private-1"
+          - "Project"     = "northstar"
+        } -> null
+      - vpc_id                                         = "vpc-04fd0a85ee74d4379" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_subnet.public will be destroyed
+  - resource "aws_subnet" "public" {
+      - arn                                            = "arn:aws:ec2:us-east-1:701145280839:subnet/subnet-0363bee12c8aeadd8" -> null
+      - assign_ipv6_address_on_creation                = false -> null
+      - availability_zone                              = "us-east-1a" -> null
+      - availability_zone_id                           = "use1-az1" -> null
+      - cidr_block                                     = "10.0.100.0/24" -> null
+      - enable_dns64                                   = false -> null
+      - enable_lni_at_device_index                     = 0 -> null
+      - enable_resource_name_dns_a_record_on_launch    = false -> null
+      - enable_resource_name_dns_aaaa_record_on_launch = false -> null
+      - id                                             = "subnet-0363bee12c8aeadd8" -> null
+      - ipv6_native                                    = false -> null
+      - map_customer_owned_ip_on_launch                = false -> null
+      - map_public_ip_on_launch                        = true -> null
+      - owner_id                                       = "701145280839" -> null
+      - private_dns_hostname_type_on_launch            = "ip-name" -> null
+      - tags                                           = {
+          - "Name" = "northstar-dev-public-1"
+        } -> null
+      - tags_all                                       = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "northstar-dev-public-1"
+          - "Project"     = "northstar"
+        } -> null
+      - vpc_id                                         = "vpc-04fd0a85ee74d4379" -> null
+        # (4 unchanged attributes hidden)
+    }
+
+  # module.vpc.aws_vpc.this will be destroyed
+  - resource "aws_vpc" "this" {
+      - arn                                  = "arn:aws:ec2:us-east-1:701145280839:vpc/vpc-04fd0a85ee74d4379" -> null
+      - assign_generated_ipv6_cidr_block     = false -> null
+      - cidr_block                           = "10.0.0.0/16" -> null
+      - default_network_acl_id               = "acl-08450a4f4f3307bcb" -> null
+      - default_route_table_id               = "rtb-076ff4cc0eacb8d5a" -> null
+      - default_security_group_id            = "sg-07201b6547f89347e" -> null
+      - dhcp_options_id                      = "dopt-0c2aa4862aeb15ead" -> null
+      - enable_dns_hostnames                 = true -> null
+      - enable_dns_support                   = true -> null
+      - enable_network_address_usage_metrics = false -> null
+      - id                                   = "vpc-04fd0a85ee74d4379" -> null
+      - instance_tenancy                     = "default" -> null
+      - ipv6_netmask_length                  = 0 -> null
+      - main_route_table_id                  = "rtb-076ff4cc0eacb8d5a" -> null
+      - owner_id                             = "701145280839" -> null
+      - tags                                 = {
+          - "Name" = "northstar-dev-vpc"
+        } -> null
+      - tags_all                             = {
+          - "Environment" = "dev"
+          - "ManagedBy"   = "terraform"
+          - "Name"        = "northstar-dev-vpc"
+          - "Project"     = "northstar"
+        } -> null
+        # (4 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 0 to change, 19 to destroy.
+
+Warning: Resource targeting is in effect
+
+You are creating a plan with the -target option, which means that the result
+of this plan may not represent all of the changes requested by the current
+configuration.
+
+The -target option is not for routine use, and is provided only for
+exceptional situations such as recovering from errors or mistakes, or when
+Terraform specifically suggests to use it as part of an error message.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Saved the plan to: lab3-network-cleanup.tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "lab3-network-cleanup.tfplan"

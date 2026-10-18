@@ -1,0 +1,365 @@
+{
+  "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
+  "publicationDate": "2026-10-16T21:08:06Z",
+  "rates": [
+    {
+      "sku": "QX8QQBVGXFDRA2HR",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Image-Customization-Storage",
+        "operation": "",
+        "feature": "Model Customization",
+        "featureType": "Storage",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModel": "Titan Embeddings G1 Image"
+      },
+      "dimension": {
+        "rateCode": "QX8QQBVGXFDRA2HR.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$1.95 per Model/month for TitanEmbeddingsG1-Image-Customization-Storage in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "Model/month",
+        "pricePerUnit": {
+          "USD": "1.9500000000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "KA7UWC8ZEWXHVTVT",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Text-ProvisionedThroughput-6months-ModelUnits",
+        "operation": "",
+        "feature": "Provisioned Throughput Inference - 6 months",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModelUnit": "Titan Embeddings G1 Text"
+      },
+      "dimension": {
+        "rateCode": "KA7UWC8ZEWXHVTVT.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$5.1 per hour for TitanEmbeddingsG1-Text-ProvisionedThroughput-6months-ModelUnit in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "hour",
+        "pricePerUnit": {
+          "USD": "5.1000000000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "SFXZJX8ET7B65629",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Image-input-image-batch",
+        "operation": "",
+        "feature": "BatchInference",
+        "inferenceType": "Input image",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModel": "Titan Embeddings G1 Image"
+      },
+      "dimension": {
+        "rateCode": "SFXZJX8ET7B65629.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$0.00003 per image for TitanEmbeddingsG1-Image-input-image-batch in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "Images Processed",
+        "pricePerUnit": {
+          "USD": "0.0000300000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "74YW8TWMEA8CVWZU",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Image-Customization-Training",
+        "operation": "",
+        "feature": "Model Customization",
+        "featureType": "Training",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModel": "Titan Embeddings G1 Image"
+      },
+      "dimension": {
+        "rateCode": "74YW8TWMEA8CVWZU.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$0.0002 per Images Processed for TitanEmbeddingsG1-Image-Customization-Training in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "Images Processed",
+        "pricePerUnit": {
+          "USD": "0.0002000000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "8WG9RB8FVXQR4STK",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Image-input-tokens",
+        "operation": "",
+        "feature": "On-demand Inference",
+        "inferenceType": "Input tokens",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModel": "Titan Embeddings G1 Image"
+      },
+      "dimension": {
+        "rateCode": "8WG9RB8FVXQR4STK.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$0.0008 per 1K tokens for TitanEmbeddingsG1-Image-input-tokens in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "1K tokens",
+        "pricePerUnit": {
+          "USD": "0.0008000000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "44TRDQ7J9BB94NMQ",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Text-ProvisionedThroughput-1month-ModelUnits",
+        "operation": "",
+        "feature": "Provisioned Throughput Inference - 1 month",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModelUnit": "Titan Embeddings G1 Text"
+      },
+      "dimension": {
+        "rateCode": "44TRDQ7J9BB94NMQ.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$6.4 per hour for TitanEmbeddingsG1-Text-ProvisionedThroughput-1month-ModelUnit in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "hour",
+        "pricePerUnit": {
+          "USD": "6.4000000000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "V7NQRPAHTNCNBSDW",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Image-ProvisionedThroughput-NoCommit-ModelUnits",
+        "operation": "",
+        "feature": "Provisioned Throughput Inference - no commit",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModelUnit": "Titan Embeddings G1 Image"
+      },
+      "dimension": {
+        "rateCode": "V7NQRPAHTNCNBSDW.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$9.38 per hour for TitanEmbeddingsG1-Image-ProvisionedThroughput-NoCommit-ModelUnit in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "hour",
+        "pricePerUnit": {
+          "USD": "9.3800000000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "RS4JPUWRVXVJCUCE",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Text-input-tokens",
+        "operation": "",
+        "feature": "On-demand Inference",
+        "inferenceType": "Input tokens",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModel": "Titan Embeddings G1 Text"
+      },
+      "dimension": {
+        "rateCode": "RS4JPUWRVXVJCUCE.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$0.0001 per 1K tokens for TitanEmbeddingsG1-Text-input-tokens in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "1K tokens",
+        "pricePerUnit": {
+          "USD": "0.0001000000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "UZY8ZEQ7G33V7UDA",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Image-input-tokens-batch",
+        "operation": "",
+        "feature": "BatchInference",
+        "inferenceType": "Input tokens",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModel": "Titan Embeddings G1 Image"
+      },
+      "dimension": {
+        "rateCode": "UZY8ZEQ7G33V7UDA.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$0.0004 per 1K tokens for TitanEmbeddingsG1-Image-input-tokens-batch in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "1K tokens",
+        "pricePerUnit": {
+          "USD": "0.0004000000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "YQ6ZSNB4ETG2RHVQ",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Image-input-image",
+        "operation": "",
+        "feature": "On-demand Inference",
+        "inferenceType": "Input image",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModel": "Titan Embeddings G1 Image"
+      },
+      "dimension": {
+        "rateCode": "YQ6ZSNB4ETG2RHVQ.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$0.00006 per image for TitanEmbeddingsG1-Image-input-image in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "Images Processed",
+        "pricePerUnit": {
+          "USD": "0.0000600000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "K8BWWBWG2N3QMH5R",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingV2-Text-input-tokens-batch",
+        "operation": "",
+        "feature": "BatchInference",
+        "inferenceType": "Input tokens",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModel": "TitanEmbeddingsV2-Text-input"
+      },
+      "dimension": {
+        "rateCode": "K8BWWBWG2N3QMH5R.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$0.00001 per 1K tokens for TitanEmbeddingV2-Text-input-tokens-batch in US East",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "1K tokens",
+        "pricePerUnit": {
+          "USD": "0.0000100000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "CF2AEBT52ZCZWBXH",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Image-ProvisionedThroughput-1month-ModelUnits",
+        "operation": "",
+        "feature": "Provisioned Throughput Inference - 1 month",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModelUnit": "Titan Embeddings G1 Image"
+      },
+      "dimension": {
+        "rateCode": "CF2AEBT52ZCZWBXH.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$8.45 per hour for TitanEmbeddingsG1-Image-ProvisionedThroughput-1month-ModelUnit in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "hour",
+        "pricePerUnit": {
+          "USD": "8.4500000000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "4M8KSACVHJP5MAYQ",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingsG1-Image-ProvisionedThroughput-6months-ModelUnits",
+        "operation": "",
+        "feature": "Provisioned Throughput Inference - 6 months",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModelUnit": "Titan Embeddings G1 Image"
+      },
+      "dimension": {
+        "rateCode": "4M8KSACVHJP5MAYQ.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$6.75 per hour for TitanEmbeddingsG1-Image-ProvisionedThroughput-6months-ModelUnit in US East (N. Virginia)",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "hour",
+        "pricePerUnit": {
+          "USD": "6.7500000000"
+        },
+        "appliesTo": []
+      }
+    },
+    {
+      "sku": "EDNQYEHQ3XQ8N7EY",
+      "attributes": {
+        "servicecode": "AmazonBedrock",
+        "location": "US East (N. Virginia)",
+        "locationType": "AWS Region",
+        "usagetype": "USE1-TitanEmbeddingV2-Text-input-tokens",
+        "operation": "InvokeModelInference",
+        "feature": "On-demand Inference",
+        "inferenceType": "Input tokens",
+        "regionCode": "us-east-1",
+        "servicename": "Amazon Bedrock",
+        "titanModel": "TitanEmbeddingsV2-Text-input"
+      },
+      "dimension": {
+        "rateCode": "EDNQYEHQ3XQ8N7EY.JRTCKXETXF.6YS6EN2CT7",
+        "description": "$0.00002 per 1K tokens for TitanEmbeddingsV2-Text-input-tokens in US East",
+        "beginRange": "0",
+        "endRange": "Inf",
+        "unit": "1K tokens",
+        "pricePerUnit": {
+          "USD": "0.0000200000"
+        },
+        "appliesTo": []
+      }
+    }
+  ]
+}

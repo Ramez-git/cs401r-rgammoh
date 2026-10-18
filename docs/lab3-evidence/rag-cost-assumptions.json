@@ -1,0 +1,11 @@
+{
+  "haiku_us_profile_estimate_per_million_input_usd": 1.1,
+  "haiku_us_profile_estimate_per_million_output_usd": 5.5,
+  "titan_v2_per_million_input_usd": 0.02,
+  "sources": [
+    "https://platform.claude.com/docs/en/about-claude/pricing",
+    "https://aws.amazon.com/bedrock/pricing/",
+    "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json"
+  ],
+  "method": "Haiku global list rates plus published 10% regional/multi-region premium. Estimate, not invoice; excludes failed/unobserved SDK retries, access checks and other AWS services."
+}

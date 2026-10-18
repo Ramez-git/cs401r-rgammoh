@@ -1,0 +1,17 @@
+Uploaded sample to s3://northstar-dev-data-701145280839/raw/customers/
+Crawler availability: READY
+Crawler: RUNNING
+Crawler: READY
+Catalog schema: [{"Name": "transaction_id", "Type": "string"}, {"Name": "customer_id", "Type": "string"}, {"Name": "purchase_date", "Type": "string"}, {"Name": "order_value", "Type": "double"}, {"Name": "num_items", "Type": "bigint"}, {"Name": "payment_method", "Type": "string"}, {"Name": "channel", "Type": "string"}, {"Name": "store_id", "Type": "string"}, {"Name": "product_category", "Type": "string"}]
+northstar-dev-transform run: jr_9e0fd5769785755cd0b0ba91ad8202cb91a3a414ab8418ff2a3f9aac37699f96
+northstar-dev-transform: RUNNING
+northstar-dev-transform: SUCCEEDED
+northstar-dev-feature-engineer run: jr_ade2490f6f707302904fbf9af7e53812069426f1c5415bda6d129424165ae40b
+northstar-dev-feature-engineer: RUNNING
+northstar-dev-feature-engineer: SUCCEEDED
+PASS: online GetRecord returned all 16 features
+Offline Parquet file count: 0
+Offline Parquet file count: 54
+PASS: Feature Store offline storage contains 54 Parquet files
+Offline snapshot 1792281202.0: 9999/9999 customers, 54 Parquet files
+PASS: all 9999 customers and all feature values match the offline store

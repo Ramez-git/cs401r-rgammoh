@@ -1,0 +1,9 @@
+2026/10/17 18:02:00 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\Administrator\Documents\CS 401R\cs401r-rgammoh\.venv-lab3\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+PASS: saved models reproduce all 3000 holdout predictions
+PASS: recomputed metrics, bootstrap confidence interval and all grading gates
+PASS: MLflow and PendingManualApproval registry evidence match the final model
+PASS: loyalty-tier counts reconcile with the held-out customers
+PASS: inference handler returns matching churn probabilities
+PASS: registered S3 model artifact is identical to the evaluated local model
+PASS: live AWS registry, MLflow and Athena agree with the saved evidence
+TASK 1 VERIFICATION PASSED

@@ -1,0 +1,31 @@
+sagemaker.config INFO - Not applying SDK defaults from location: C:\ProgramData\sagemaker\sagemaker\config.yaml
+sagemaker.config INFO - Not applying SDK defaults from location: C:\Users\Administrator\AppData\Local\sagemaker\sagemaker\config.yaml
+C:\Users\Administrator\Documents\CS 401R\cs401r-rgammoh\.venv-lab3\Lib\site-packages\sagemaker\__init__.py:86: SageMakerV2DeprecationWarning: You are using the SageMaker Python SDK v2, which is on path of deprecation. v3 is the actively developed major version.
+See https://github.com/aws/sagemaker-python-sdk/blob/master/migration.md for the migration guide. Set SAGEMAKER_SUPPRESS_V2_WARNING=1 to silence this warning.
+  warn_v2_deprecation()
+You are using the SageMaker Python SDK v2, which is on path of deprecation. v3 is the actively developed major version.
+See https://github.com/aws/sagemaker-python-sdk/blob/master/migration.md for the migration guide. Set SAGEMAKER_SUPPRESS_V2_WARNING=1 to silence this warning.
+Athena QueryExecutionId: d1709914-6f10-45ef-a2aa-8e9461bb290d
+Rows: total=9999 training=6999 evaluation=3000
+Training XGBoost with params: {"objective": "binary:logistic", "eval_metric": ["logloss", "auc"], "max_depth": 3, "eta": 0.05, "min_child_weight": 5, "subsample": 0.8, "colsample_bytree": 0.8, "scale_pos_weight": 3.544805194805195, "seed": 42, "nthread": 4}
+{
+  "auc_roc": 0.7838,
+  "baseline_auc": 0.7229,
+  "auc_vs_baseline": 0.0609,
+  "precision_top10": 0.7233,
+  "recall_top10": 0.3288,
+  "lift_ci_low": 0.042,
+  "lift_ci_high": 0.0791,
+  "positive_rate_val": 0.22,
+  "n_val_samples": 3000,
+  "n_targeted": 300,
+  "n_train_samples": 6999,
+  "selected_rounds": 154
+}
+Evaluation gates: PASS
+2026/10/17 18:01:07 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\Administrator\Documents\CS 401R\cs401r-rgammoh\.venv-lab3\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+🏃 View run final-shallow-depth3 at: https://mlflow.sagemaker.us-east-1.app.aws/#/experiments/1/runs/7f73ba1abbe44b998d7f32ed71089cf3
+🧪 View experiment at: https://mlflow.sagemaker.us-east-1.app.aws/#/experiments/1
+MLflow run ID: 7f73ba1abbe44b998d7f32ed71089cf3
+Registered PendingManualApproval: arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/1
+Training complete.

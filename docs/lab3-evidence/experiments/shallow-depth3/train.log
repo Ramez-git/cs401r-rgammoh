@@ -1,0 +1,39 @@
+sagemaker.config INFO - Not applying SDK defaults from location: C:\ProgramData\sagemaker\sagemaker\config.yaml
+sagemaker.config INFO - Not applying SDK defaults from location: C:\Users\Administrator\AppData\Local\sagemaker\sagemaker\config.yaml
+C:\Users\Administrator\Documents\CS 401R\cs401r-rgammoh\.venv-lab3\Lib\site-packages\sagemaker\__init__.py:86: SageMakerV2DeprecationWarning: You are using the SageMaker Python SDK v2, which is on path of deprecation. v3 is the actively developed major version.
+See https://github.com/aws/sagemaker-python-sdk/blob/master/migration.md for the migration guide. Set SAGEMAKER_SUPPRESS_V2_WARNING=1 to silence this warning.
+  warn_v2_deprecation()
+You are using the SageMaker Python SDK v2, which is on path of deprecation. v3 is the actively developed major version.
+See https://github.com/aws/sagemaker-python-sdk/blob/master/migration.md for the migration guide. Set SAGEMAKER_SUPPRESS_V2_WARNING=1 to silence this warning.
+Athena QueryExecutionId: 82835bf4-1d94-42cc-bc09-6feec0c04cb5
+Rows: total=9999 training=5599 evaluation=1400
+Training XGBoost with params: {"objective": "binary:logistic", "eval_metric": ["logloss", "auc"], "max_depth": 3, "eta": 0.05, "min_child_weight": 5, "subsample": 0.8, "colsample_bytree": 0.8, "scale_pos_weight": 3.544642857142857, "seed": 42, "nthread": 4}
+[0]	validation-logloss:0.68299	validation-auc:0.75944
+[25]	validation-logloss:0.56983	validation-auc:0.77117
+[50]	validation-logloss:0.54674	validation-auc:0.77480
+[75]	validation-logloss:0.53866	validation-auc:0.77948
+[100]	validation-logloss:0.53578	validation-auc:0.78090
+[125]	validation-logloss:0.53232	validation-auc:0.78202
+[150]	validation-logloss:0.53076	validation-auc:0.78308
+[173]	validation-logloss:0.52819	validation-auc:0.78196
+{
+  "auc_roc": 0.7832,
+  "baseline_auc": 0.7016,
+  "auc_vs_baseline": 0.0816,
+  "precision_top10": 0.6929,
+  "recall_top10": 0.3149,
+  "lift_ci_low": 0.0549,
+  "lift_ci_high": 0.1088,
+  "positive_rate_val": 0.22,
+  "n_val_samples": 1400,
+  "n_targeted": 140,
+  "n_train_samples": 5599,
+  "selected_rounds": 154
+}
+Evaluation gates: PASS
+2026/10/17 17:59:40 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at C:\Users\Administrator\Documents\CS 401R\cs401r-rgammoh\.venv-lab3\Lib\site-packages\mlflow\assistant\skills\instrumenting-with-mlflow-tracing\SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+2026/10/17 17:59:41 INFO mlflow.tracking.fluent: Experiment with name 'northstar-churn' does not exist. Creating a new experiment.
+🏃 View run shallow-depth3 at: https://mlflow.sagemaker.us-east-1.app.aws/#/experiments/1/runs/05641e26a701480194b9c571919b7cbb
+🧪 View experiment at: https://mlflow.sagemaker.us-east-1.app.aws/#/experiments/1
+MLflow run ID: 05641e26a701480194b9c571919b7cbb
+Training complete.

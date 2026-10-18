@@ -1,0 +1,136 @@
+Indexed 54 policy chunks using Titan + FAISS
+tier CUST-10000317 We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Gold member, you earn 1.5 points per dollar on every purchase—that's 50% more rewards than standard members—and enjoy free standard shipping on all orders, plus free return shipping if you need it. Browse our Outdoor category to find gear that matches your interests, and start earning points toward your next reward today.
+tier CUST-10000904 We'd love to see you back in store—your Bronze membership earns 1 point per $1 spent on apparel, and every 100 points redeems for $5 toward your next purchase. Stop by to browse our apparel selection and keep your rewards growing.
+tier CUST-10000122 We appreciate your loyalty, and as a Platinum member, you're earning 2 points per dollar on every purchase—which means your next order could bring you closer to $5 in rewards value for every $100 spent. We'd love to see you explore our Outdoor and Electronics categories, where your diverse interests align perfectly with our latest selections. Browse our full range today and keep building your rewards balance.
+tier CUST-10000588 We'd love to have you back—as a Silver member, you earn 1.25 points per dollar spent, and your points are worth $5 per 100 points when you're ready to redeem. Browse our Home and Beauty categories, where you can rack up rewards on your next purchase and enjoy free standard shipping on orders of $50 or more.
+constraint CUST-10000317 We've noticed it's been a while since your last visit, and we'd love to welcome you back. Your Gold membership earns you free return shipping on orders—a valuable benefit when exploring our Outdoor and Footwear categories, where quality gear deserves a risk-free try. Browse our latest outdoor and footwear selections today, and enjoy the confidence of Gold-tier returns on us.
+constraint CUST-10000904 We've noticed it's been a while since your last visit, and we'd love to welcome you back to NorthStar Retail. As a Bronze member, you'll earn 1 point per dollar spent on your next apparel purchase—points that never expire and can be redeemed toward future orders. Stop by your nearest store or browse our apparel selection online to see what's new.
+constraint CUST-10000122 We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Platinum member, you earn points on every purchase across Outdoor, Electronics, Home, and more—plus enjoy a 60-day return window on most items. Browse our Outdoor collection today and rediscover gear that matches your interests.
+constraint CUST-10000588 We've noticed it's been a while since your last visit, and we'd love to welcome you back. Your Silver membership earns points on every purchase—bring those rewards to life by exploring our Home and Beauty categories, where you'll find items perfect for your next order. Browse our collection today and enjoy the points you're building toward your next reward.
+hybrid CUST-10000317 We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Gold member, you earn 1.5 points per dollar on all qualifying purchases—that's 50% more rewards to put toward your next adventure in Outdoor or Footwear. Browse our latest collection today and start earning points toward your next $5 reward.
+hybrid CUST-10000904 We'd love to see you back in store—your next apparel purchase earns Bronze rewards at 1 point per $1 spent, redeemable for $5 credit every 100 points. Stop by to browse our apparel selection and start earning toward your next reward.
+hybrid CUST-10000122 We appreciate your loyalty, and as a Platinum member, you earn 2 points per dollar on every purchase—that's $5 in rewards value for every $250 you spend. Your Outdoor, Electronics, and Home categories all qualify, so we'd love to see you browse our latest gear and electronics to rack up points faster. Come back soon and explore what's new in these categories.
+hybrid CUST-10000588 We'd love to have you back—as a Silver member, you earn 1.25 points per dollar on every purchase, and you're just $15 away from unlocking Gold benefits like free shipping on any order. Browse our Home and Beauty categories and check your account status to see how close you are to your next tier.
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:20,  1.85s/it]
+Evaluating:  17%|█▋        | 2/12 [00:02<00:11,  1.16s/it]
+Evaluating:  25%|██▌       | 3/12 [00:03<00:08,  1.05it/s]
+Evaluating:  33%|███▎      | 4/12 [00:03<00:06,  1.20it/s]
+Evaluating:  67%|██████▋   | 8/12 [00:04<00:01,  2.37it/s]
+Evaluating:  75%|███████▌  | 9/12 [00:07<00:02,  1.11it/s]
+Evaluating:  83%|████████▎ | 10/12 [00:08<00:01,  1.23it/s]
+Evaluating: 100%|██████████| 12/12 [00:08<00:00,  1.87it/s]
+Evaluating: 100%|██████████| 12/12 [00:08<00:00,  1.43it/s]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.243  (target: 0.80)  reported (old target is not graded)
+  answer_relevancy    : 0.334  (target: 0.75)  reported (old target is not graded)
+  context_recall      : 0.404  (target: 0.70)  reported (old target is not graded)
+
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:20,  1.86s/it]
+Evaluating:  17%|█▋        | 2/12 [00:03<00:15,  1.54s/it]
+Evaluating:  33%|███▎      | 4/12 [00:03<00:06,  1.27it/s]
+Evaluating:  67%|██████▋   | 8/12 [00:04<00:01,  3.17it/s]
+Evaluating:  75%|███████▌  | 9/12 [00:06<00:02,  1.43it/s]
+Evaluating:  83%|████████▎ | 10/12 [00:06<00:01,  1.73it/s]
+Evaluating:  92%|█████████▏| 11/12 [00:07<00:00,  1.60it/s]
+Evaluating: 100%|██████████| 12/12 [00:07<00:00,  1.82it/s]
+Evaluating: 100%|██████████| 12/12 [00:07<00:00,  1.56it/s]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.113  (target: 0.80)  reported (old target is not graded)
+  answer_relevancy    : 0.273  (target: 0.75)  reported (old target is not graded)
+  context_recall      : 0.225  (target: 0.70)  reported (old target is not graded)
+
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:19,  1.81s/it]
+Evaluating:  17%|█▋        | 2/12 [00:03<00:15,  1.52s/it]
+Evaluating:  33%|███▎      | 4/12 [00:03<00:06,  1.28it/s]
+Evaluating:  67%|██████▋   | 8/12 [00:04<00:01,  2.67it/s]
+Evaluating:  75%|███████▌  | 9/12 [00:07<00:02,  1.14it/s]
+Evaluating:  83%|████████▎ | 10/12 [00:08<00:01,  1.06it/s]
+Evaluating:  92%|█████████▏| 11/12 [00:08<00:00,  1.31it/s]
+Evaluating: 100%|██████████| 12/12 [00:09<00:00,  1.49it/s]
+Evaluating: 100%|██████████| 12/12 [00:09<00:00,  1.30it/s]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.222  (target: 0.80)  reported (old target is not graded)
+  answer_relevancy    : 0.365  (target: 0.75)  reported (old target is not graded)
+  context_recall      : 0.446  (target: 0.70)  reported (old target is not graded)
+
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:20,  1.86s/it]
+Evaluating:  17%|█▋        | 2/12 [00:03<00:18,  1.89s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:04<00:02,  1.91it/s]
+Evaluating:  75%|███████▌  | 9/12 [00:07<00:02,  1.27it/s]
+Evaluating:  83%|████████▎ | 10/12 [00:09<00:01,  1.06it/s]
+Evaluating:  92%|█████████▏| 11/12 [00:09<00:00,  1.17it/s]
+Evaluating: 100%|██████████| 12/12 [00:09<00:00,  1.24it/s]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.412  (target: 0.80)  reported (old target is not graded)
+  answer_relevancy    : 0.365  (target: 0.75)  reported (old target is not graded)
+  context_recall      : 0.633  (target: 0.70)  reported (old target is not graded)
+
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:20,  1.82s/it]
+Evaluating:  17%|█▋        | 2/12 [00:03<00:15,  1.54s/it]
+Evaluating:  33%|███▎      | 4/12 [00:03<00:06,  1.29it/s]
+Evaluating:  67%|██████▋   | 8/12 [00:04<00:01,  2.50it/s]
+Evaluating:  75%|███████▌  | 9/12 [00:07<00:02,  1.05it/s]
+Evaluating:  83%|████████▎ | 10/12 [00:08<00:01,  1.06it/s]
+Evaluating:  92%|█████████▏| 11/12 [00:09<00:00,  1.05it/s]
+Evaluating: 100%|██████████| 12/12 [00:09<00:00,  1.22it/s]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.412  (target: 0.80)  reported (old target is not graded)
+  answer_relevancy    : 0.365  (target: 0.75)  reported (old target is not graded)
+  context_recall      : 0.633  (target: 0.70)  reported (old target is not graded)
+
+FINAL RUN MEANS
+         faithfulness  answer_relevancy  context_recall
+run
+final-1      0.411616          0.365425        0.633333
+final-2      0.411616          0.365425        0.633333
+OVERALL MEAN/RANGE
+      faithfulness  answer_relevancy  context_recall
+mean      0.411616          0.365425        0.633333
+min       0.411616          0.365425        0.633333
+max       0.411616          0.365425        0.633333
+Track B repeated evaluation complete.

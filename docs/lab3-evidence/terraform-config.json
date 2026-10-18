@@ -1,0 +1,6 @@
+{
+  "bucket": "northstar-dev-data-701145280839",
+  "role": "arn:aws:iam::701145280839:role/northstar-dev-MLEngineer",
+  "feature_group": "northstar-dev-customer-features",
+  "mlflow_arn": "arn:aws:sagemaker:us-east-1:701145280839:mlflow-app/app-LLYUB72HGKVS"
+}

@@ -1,0 +1,45 @@
+Indexed 54 policy chunks using Titan + FAISS
+Reusing completed evaluation: baseline-tier
+Reusing completed evaluation: baseline-constraint
+Reusing completed evaluation: baseline-hybrid
+Reusing completed evaluation: final-1
+Reusing completed evaluation: final-2
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:03<00:33,  3.06s/it]
+Evaluating:  17%|█▋        | 2/12 [00:05<00:25,  2.54s/it]
+Evaluating:  25%|██▌       | 3/12 [00:06<00:16,  1.87s/it]
+Evaluating:  33%|███▎      | 4/12 [00:08<00:17,  2.13s/it]
+Evaluating:  42%|████▏     | 5/12 [00:09<00:11,  1.63s/it]
+Evaluating:  50%|█████     | 6/12 [00:12<00:11,  1.95s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:14<00:10,  2.11s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:16<00:07,  1.98s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:17<00:05,  1.73s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:20<00:03,  1.99s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:21<00:01,  1.90s/it]
+Evaluating: 100%|██████████| 12/12 [00:23<00:00,  1.90s/it]
+Evaluating: 100%|██████████| 12/12 [00:23<00:00,  1.97s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.269  (target: 0.80)  reported (old target is not graded)
+  answer_relevancy    : 0.075  (target: 0.75)  reported (old target is not graded)
+  context_recall      : 0.633  (target: 0.70)  reported (old target is not graded)
+
+FINAL RUN MEANS
+         faithfulness  answer_relevancy  context_recall
+run
+final-1       0.33125          0.083370        0.633333
+final-2       0.26875          0.075412        0.633333
+final-3       0.26875          0.075412        0.633333
+OVERALL MEAN/RANGE
+      faithfulness  answer_relevancy  context_recall
+mean      0.289583          0.078065        0.633333
+min       0.268750          0.075412        0.633333
+max       0.331250          0.083370        0.633333
+Track B repeated evaluation complete.

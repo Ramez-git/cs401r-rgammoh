@@ -1,0 +1,6 @@
+PASS: all four cases in 3 complete final evaluations; no NaN scores
+PASS: clean demo notebook with 8 consecutive executed code cells and saved outputs
+PASS: five real top-decile examples, conditional eligibility and traceable policy chunks
+PASS: saved injection, final-sale and expired-offer boundary cases
+PASS: design declaration, approximately 700-word justification (699), and two documented failures
+TRACK B ARTIFACT VERIFICATION PASSED

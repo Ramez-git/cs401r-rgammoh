@@ -1,0 +1,19 @@
+{
+  "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/1",
+  "ResponseMetadata": {
+    "RequestId": "709e2210-44fb-414e-b24e-871da4b1f74a",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "x-amzn-requestid": "709e2210-44fb-414e-b24e-871da4b1f74a",
+      "strict-transport-security": "max-age=47304000; includeSubDomains",
+      "x-frame-options": "DENY",
+      "content-security-policy": "frame-ancestors 'none'",
+      "cache-control": "no-cache, no-store, must-revalidate",
+      "x-content-type-options": "nosniff",
+      "content-type": "application/x-amz-json-1.1",
+      "content-length": "101",
+      "date": "Sun, 18 Oct 2026 00:01:12 GMT"
+    },
+    "RetryAttempts": 0
+  }
+}
