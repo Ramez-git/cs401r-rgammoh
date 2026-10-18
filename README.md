@@ -192,6 +192,10 @@ Read [complete checks and setup](docs/lab3-checks.md),
 [design justification](docs/lab3-model-design.md), and
 [the executed notebook](notebooks/lab3-demo.ipynb).
 
+The [detailed manual review](docs/lab3-manual-review.md) records inspection scope,
+fixes and remaining limitations. Run `scripts/audit-lab3-evidence.py` with the
+Track B Python environment for full-file and numerical evidence reconciliation.
+
 Prompts: `prompt_templates/final_offer_system.md`; corpus:
 `northstar-policy-docs/`; implementation: `rag/offer_pipeline.py`.
 The two dependency lock files preserve the separate working Task 1 and Track B

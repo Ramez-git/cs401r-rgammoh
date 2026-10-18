@@ -1,5 +1,16 @@
+..C:\Users\Administrator\Documents\CS 401R\cs401r-rgammoh\evaluation_harness.py:53: DeprecationWarning: Importing answer_relevancy from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import answer_relevancy
+  from ragas.metrics import (answer_relevancy, context_recall, faithfulness)
+C:\Users\Administrator\Documents\CS 401R\cs401r-rgammoh\evaluation_harness.py:53: DeprecationWarning: Importing context_recall from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import context_recall
+  from ragas.metrics import (answer_relevancy, context_recall, faithfulness)
+C:\Users\Administrator\Documents\CS 401R\cs401r-rgammoh\evaluation_harness.py:53: DeprecationWarning: Importing faithfulness from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import faithfulness
+  from ragas.metrics import (answer_relevancy, context_recall, faithfulness)
+C:\Users\Administrator\Documents\CS 401R\cs401r-rgammoh\evaluation_harness.py:693: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y%m%dT%H%M%S")
+Track B: Offer Generation RAG Evaluation
+==================================================
+Results saved to C:\Users\ADMINI~1\AppData\Local\Temp\tmpyx1eig5m\rag_eval_20261018T003307.csv
 ........
 ----------------------------------------------------------------------
-Ran 8 tests in 0.018s
+Ran 10 tests in 2.239s
 
 OK

@@ -2,6 +2,7 @@
       Endpoint configs             OK
       Training jobs running        OK
       Processing jobs              OK
+      Transform jobs running       OK
       MLflow TRACKING SERVERS      OK
       AgentCore harnesses          OK
       AgentCore gateways           OK

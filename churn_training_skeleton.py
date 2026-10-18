@@ -150,7 +150,8 @@ def plots_and_slices(model, frame, y, scores, args, out):
     pd.DataFrame(rows).to_csv(out/'slice-evaluation.csv', index=False)
     ConfusionMatrixDisplay(confusion_matrix(y, scores >= args.threshold),
                            display_labels=['Retained', 'Churn']).plot(cmap='Blues')
-    plt.title(f'Test predictions at probability threshold {args.threshold}')
+    partition = 'Test' if args.final else 'Inner-validation'
+    plt.title(f'{partition} predictions at probability threshold {args.threshold}')
     plt.tight_layout(); plt.savefig(out/'confusion-matrix.png', dpi=150); plt.close()
     gain = model.get_score(importance_type='gain')
     imp = pd.Series({f: gain.get(f, 0) for f in FEATURE_COLUMNS}).sort_values()

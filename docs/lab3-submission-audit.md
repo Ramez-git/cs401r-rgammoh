@@ -24,11 +24,14 @@ October 12 revision. This is a readiness assessment, not a promised grade.
 | Bedrock prelab checks | 2 | Fresh Titan 1024-dimension and Haiku response checks both PASS |
 | README | 1 | Training, evaluation, setup, evidence locations and submission commands documented |
 
-Additional verification: four Task 1 tests and eight Track B tests pass; both
+Additional verification: four Task 1 tests and ten Track B tests pass; both
 Python environments pass `pip check`. The supplied collector reports
 **25 OK, 0 WARN, 0 FAIL**. Saved full and baseline models reproduce all 3,000
 holdout predictions; the inference handler agrees. Both plots were visually
 inspected. The design is 699 words excluding the track declaration.
+
+The subsequent [detailed manual review](lab3-manual-review.md) records additional
+fixes, complete evidence checks and remaining qualitative weaknesses.
 
 This audit added explicit per-customer RAGAS summary statistics and the chunking
 rationale. The notebook was rerun live, and usage/cost evidence was refreshed.

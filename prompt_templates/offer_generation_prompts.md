@@ -3,6 +3,12 @@
 
 These templates are the starting point for your RAG-based offer generation system. Your task is to evaluate them, find their weaknesses, and improve them.
 
+Implementation note: this file retains the starter's teaching templates with the
+three planted facts corrected. It is not injected into the running system.
+The evaluated prompts are `freeform_offer_system.md` (baseline) and
+`final_offer_system.md` (final). Retired score targets below are historical;
+current results and limitations are in `docs/lab3-track-b-report.md`.
+
 **How to use this file:**
 
 1. Read each template and understand what it is trying to do.
@@ -148,7 +154,7 @@ Applies to every tier:
 - Mexico orders are excluded from all free shipping thresholds.
 ```
 
-> **Three deliberate errors are planted in the block above.** They are the kind a marketing
+> **Three deliberate errors were corrected in the block above.** The original is preserved in `offer_generation_prompts.starter.md`. They are the kind a marketing
 > team introduces when it writes copy from memory instead of from the policy: two wrong
 > numbers and one benefit that does not exist at any tier.
 >

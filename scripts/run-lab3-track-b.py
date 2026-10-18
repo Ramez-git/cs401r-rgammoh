@@ -1,4 +1,4 @@
-"""Run all four supplied cases across three retrieval strategies and two final repetitions."""
+"""Run all four supplied cases across three retrieval strategies and three final repetitions."""
 import copy
 import json
 import os
@@ -38,7 +38,7 @@ for strategy in ['tier', 'constraint', 'hybrid']:
         path.write_text(json.dumps(offers, indent=2), encoding='utf-8')
     strategy_offers[strategy] = offers
 
-# Generate improved offers once, then judge the same four outputs twice.
+# Generate improved offers once, then judge the same four outputs three times.
 final_path = OUT/'offers-final.json'
 if final_path.exists():
     final_offers = json.loads(final_path.read_text(encoding='utf-8'))
@@ -63,7 +63,7 @@ for strategy, label, with_profile in experiments:
             continue
     offers = copy.deepcopy(final_offers if with_profile else strategy_offers[strategy])
     mapping = {o['customer_profile']['customer_id']: o for o in offers}
-    # The supplied harness calls with context only; fixture identity is recovered by tier.
+    # Recover the fixture identity by its unique question.
     def invoke(context, question):
         tc = next(c for c in eh.OFFER_TEST_CASES if c.question == question)
         return mapping[tc.customer_id]

@@ -10,6 +10,7 @@
 # Usage: bash scripts/teardown-lab3.sh
 set -uo pipefail
 REGION="${AWS_DEFAULT_REGION:-us-east-1}"
+export AWS_DEFAULT_REGION="$REGION"
 mkdir -p docs
 
 echo "==> Lab 3 teardown  (account $(aws sts get-caller-identity --query Account --output text))"
@@ -78,6 +79,7 @@ echo "[5/5] Verifying"
   check "Endpoint configs"      "aws sagemaker list-endpoint-configs --query 'length(EndpointConfigs)' --output text"
   check "Training jobs running" "aws sagemaker list-training-jobs --status-equals InProgress --query 'length(TrainingJobSummaries)' --output text"
   check "Processing jobs"       "aws sagemaker list-processing-jobs --status-equals InProgress --query 'length(ProcessingJobSummaries)' --output text"
+  check "Transform jobs running" "aws sagemaker list-transform-jobs --status-equals InProgress --query 'length(TransformJobSummaries)' --output text"
   # The MLflow TRACKING SERVER bills $0.60/hr until deleted -- $10 budget gone
   # in 16.7 hours, ~$43 over a weekend. It is not an endpoint, so nothing else
   # catches it. The serverless MLflow APP is free and deliberately NOT checked:

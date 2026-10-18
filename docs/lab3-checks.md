@@ -8,6 +8,7 @@ The selected tracks are A + B. Run all commands from that directory.
 ```powershell
 ./.venv-lab3/Scripts/python.exe scripts/verify-lab3-task1.py
 ./.venv-lab3-rag312/Scripts/python.exe scripts/verify-lab3-track-b.py
+./.venv-lab3-rag312/Scripts/python.exe scripts/audit-lab3-evidence.py
 ```
 
 Expected final lines are `TASK 1 VERIFICATION PASSED` and

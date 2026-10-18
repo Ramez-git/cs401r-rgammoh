@@ -177,6 +177,8 @@ class OfferRAG:
 
     @staticmethod
     def validate_copy(draft, profile):
+        if not isinstance(draft, dict):
+            return ['Draft must be an object containing two sentences']
         errors = []
         for key in ['recommendation', 'call_to_action']:
             text = draft.get(key, '')
@@ -185,7 +187,8 @@ class OfferRAG:
                 continue
             if re.search(r'\b(new|latest|missed|sale|discount|free|shipping|points|reward|credit|returns?|exclusive|off|limited|guarantee|loyal|best|perfect)\b|[\d$%]', text, re.I):
                 errors.append(key+': unsupported marketing or policy claim')
-        if not any(c.lower() in draft.get('recommendation','').lower() for c in profile['top_categories']):
+        recommendation = draft.get('recommendation', '')
+        if not isinstance(recommendation, str) or not any(c.lower() in recommendation.lower() for c in profile['top_categories']):
             errors.append('Recommendation must name an observed category')
         return errors
 

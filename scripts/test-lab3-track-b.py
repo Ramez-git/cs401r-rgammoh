@@ -35,6 +35,25 @@ class PolicyTests(unittest.TestCase):
         self.assertTrue(errors)
     def test_neutral_copy_is_accepted(self):
         self.assertFalse(OfferRAG.validate_copy({'recommendation':'Explore our Outdoor category.','call_to_action':'Browse the selection and check your account.'},self.profile))
+    def test_malformed_model_drafts_fail_closed(self):
+        for draft in [None, [], 'invalid', {'recommendation':None}, {'recommendation':123}]:
+            with self.subTest(draft=draft):
+                self.assertTrue(OfferRAG.validate_copy(draft,self.profile))
+    def test_harness_cli_uses_real_pipeline_entry_point(self):
+        import tempfile
+        from unittest.mock import patch
+        import pandas as pd
+        import evaluation_harness as harness
+        with tempfile.TemporaryDirectory() as output:
+            with patch('rag.offer_pipeline.OfferRAG') as factory:
+                def run(evaluator, cases):
+                    self.assertEqual(evaluator.rag_invoke_fn, factory.return_value.generate)
+                    self.assertEqual(len(cases), 4)
+                    return pd.DataFrame({'verified_case':[case.customer_id for case in cases]})
+                with patch.object(harness.RAGEvaluator, 'run', run), patch.object(sys, 'argv', ['evaluation_harness.py','--track','B','--output-dir',output]):
+                    harness.main()
+                factory.assert_called_once_with(region='us-east-1', model=harness.DEFAULT_BEDROCK_MODEL_ID)
+                self.assertEqual(len(list(Path(output).glob('rag_eval_*.csv'))), 1)
 
 if __name__ == '__main__':
     unittest.main()

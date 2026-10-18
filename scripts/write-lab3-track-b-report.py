@@ -154,6 +154,9 @@ run are in `ragas-traces-final-3.json`. They explain each metric's limits:
   advice or the claim that an unused credit is the strongest lever. Those are
   grading commentary, not policy facts. Bronze's reference similarly includes
   proportional-incentive and cross-category strategy beyond the policy corpus.
+  Bronze also misses a real retrievable fact: the $7.95 return-shipping fee in
+  POL-RET-004 section 6.2 was not retrieved. Its low recall therefore reflects
+  both retrieval coverage and reference design, not just a harness defect.
   Adding the profile supports customer facts but cannot add missing policy.
 
 ## Failures and production limitations
@@ -165,6 +168,15 @@ reinstatement. Those checks are narrow request-boundary and rendering tests;
 they do not demonstrate universal jailbreak resistance. Regex validation can
 miss paraphrases. The renderer supports a restricted points/credit offer space;
 unknown policy formats cause omission rather than a guessed entitlement.
+
+Manual review also found residual unsupported wording in the final Silver
+harness offer: "see what's waiting for you" can imply an existing account offer,
+and "items that match your style" assumes preference beyond category history.
+The judge is reasonable to flag those claims. A proposed next revision would
+use a fixed neutral account-check sentence and restrict recommendations to
+observed categories without style or availability claims, followed by a new
+repeated evaluation. The frozen scores here describe the current copy; they are
+not evidence that this proposed revision has been implemented or measured.
 
 The primary production dependency is an authoritative eligibility service for
 current tier, unused credits, destination and product eligibility. The current
@@ -192,6 +204,9 @@ verification commands. Changes to the supplied harness retain its scoring
 metrics/cases: explicit Bedrock judge wiring, a two-worker limit, trace export,
 and labeling old targets as ungraded. The final result records both low scores
 and why they occurred.
+The standalone Track B harness CLI is also wired to the same pipeline. A later
+defensive validator fix rejects malformed tool-response types; all saved valid
+drafts retain their original validation outcomes.
 '''
 (ROOT/'docs/lab3-track-b-report.md').write_text(report,encoding='utf-8')
 

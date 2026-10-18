@@ -12,9 +12,7 @@ Track C (Customer Service Agent):
 
 Usage:
     # Track B — RAG evaluation
-    python evaluation_harness.py --track B \
-        --rag-endpoint https://... \
-        --test-cases tests/offer_test_cases.json
+    python evaluation_harness.py --track B --region us-east-1
 
     # Track C — Agent evaluation
     python evaluation_harness.py --track C \
@@ -702,18 +700,9 @@ def main():
         print("Track B: Offer Generation RAG Evaluation")
         print("=" * 50)
 
-        # TODO: Wire up your actual RAG invocation function here.
-        # The function receives (customer_context: dict, question: str)
-        # and must return {"answer": str, "contexts": list[str]}
-        def placeholder_rag_fn(context, question):
-            """Replace this with your actual RAG system invocation."""
-            raise NotImplementedError(
-                "TODO: Replace this placeholder with your RAG system invocation.\n"
-                "The function should call your Bedrock + vector store pipeline\n"
-                "and return {'answer': str, 'contexts': list[str]}"
-            )
-
-        evaluator = RAGEvaluator(rag_invoke_fn=placeholder_rag_fn,
+        from rag.offer_pipeline import OfferRAG
+        pipeline = OfferRAG(region=args.region, model=args.bedrock_model_id)
+        evaluator = RAGEvaluator(rag_invoke_fn=pipeline.generate,
                                  bedrock_model_id=args.bedrock_model_id,
                                  region=args.region)
         results = evaluator.run(OFFER_TEST_CASES)

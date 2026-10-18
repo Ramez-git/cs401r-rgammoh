@@ -1,0 +1,1096 @@
+{
+  "scope": "Every file introduced or modified since the pre-Lab-3 commit; numeric records checked programmatically, not claimed as hand arithmetic.",
+  "inventory": [
+    {
+      "path": ".gitignore",
+      "bytes": 257,
+      "sha256": "1b7a4cf6edb9c869201bf8c20eeb0d6d38f23e7361e5e59c4928019071c106a4",
+      "lines": 24,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11186,
+      "sha256": "051e8fb55a2d5b47f9cc1469be8b20f258299437056ea71886b2989c697f49c4",
+      "lines": 221,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "churn_training_skeleton.py",
+      "bytes": 16356,
+      "sha256": "0327686700ebbb30d45f2eed25e7376293aee5bdfc8e02a4c6ad743b2b13f550",
+      "lines": 286,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "docs/bedrock-access-verification.txt",
+      "bytes": 160,
+      "sha256": "fd52583e726e2795122cef0687edd6ed39c3587a7b7b9a87feedc0d1c7feb76b",
+      "lines": 6,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-checks.md",
+      "bytes": 4427,
+      "sha256": "d43f2b90617b95cf74bc3781ba5db7c92456c7c897cd0c5a445aa59acef4616d",
+      "lines": 93,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-data-restore.log",
+      "bytes": 1219,
+      "sha256": "32e2484391712465c21a79f8fea9bb54867fd4531c8c17410a4e4d202e79954f",
+      "lines": 17,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-demo-execution.log",
+      "bytes": 807,
+      "sha256": "13ad1fdfbd04193108b6db3036f481c7440e3c3b4e1156d4b7fc7206ef9e0862",
+      "lines": 4,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evaluation-report.md",
+      "bytes": 7616,
+      "sha256": "5dcd52c18f70104b6280e780ce3bec4e588d0b940a577812af7007f0a1d79ff1",
+      "lines": 143,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/account.json",
+      "bytes": 176,
+      "sha256": "9af9d36b5338e1bef94f810f71056dafac6f15b9203950c8b4200200a3199726",
+      "lines": 6,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/athena-query.json",
+      "bytes": 1333,
+      "sha256": "a1cfb96932712c3d67e981861c028e7c9c36a61a31c86757c08b3fd6c200ac60",
+      "lines": 9,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/baseline.json",
+      "bytes": 313056,
+      "sha256": "9bffa841c448c4b3643cafc7cda0ac95989718fc9363e5abc956b100917dd437",
+      "lines": 1,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/bedrock-price-reference.json",
+      "bytes": 13069,
+      "sha256": "d773d3d43f9d6a6f65ba34f8e455974a80a04de96b23327ed3679f774e2d9ad5",
+      "lines": 365,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/collect-output.txt",
+      "bytes": 2193,
+      "sha256": "39a6096cab30318be1defa2aa3164fd04cf1c7800b6162e07cdd2008040c2560",
+      "lines": 34,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/confusion-matrix.png",
+      "bytes": 34736,
+      "sha256": "f662bc3de9e4f9d88347941ed43f46864b09b41e90eff69459db12dfde290f9c",
+      "dimensions": [
+        960,
+        720
+      ],
+      "check": "PNG integrity"
+    },
+    {
+      "path": "docs/lab3-evidence/evaluation_metrics.json",
+      "bytes": 324,
+      "sha256": "d1f31f28b9bcb34e0fec82700152ad15c457da37a09561913213462a1d38ceb8",
+      "lines": 14,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiment-comparison.json",
+      "bytes": 1262,
+      "sha256": "12395918618bbb02f1188f945ac5dd69ce03fd762f294e709bdcf4cb2283983d",
+      "lines": 53,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/balanced-depth4/baseline.json",
+      "bytes": 307146,
+      "sha256": "57872c2dde1e0dc4010156ce30efbe34ff6c6c7e76ca310c1f2c2646e80081f6",
+      "lines": 1,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/balanced-depth4/confusion-matrix.png",
+      "bytes": 34743,
+      "sha256": "7d36569eedd2399774d298a257200efe86dbe27afb620c978912e16cf8de7b1a",
+      "dimensions": [
+        960,
+        720
+      ],
+      "check": "PNG integrity"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/balanced-depth4/evaluation_metrics.json",
+      "bytes": 324,
+      "sha256": "042b75928885b0989cc3ff4443cacaa5b49bc7c795a601ed74262f0f8c403457",
+      "lines": 14,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/balanced-depth4/feature-importance.csv",
+      "bytes": 459,
+      "sha256": "911f777a7a274b7dc2b9575db8899023a44add22f3bc66ae3f7b6a41923b1b89",
+      "lines": 12,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 11
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/balanced-depth4/feature-importance.png",
+      "bytes": 54007,
+      "sha256": "73ff693cbdbb30df1abd2da43f4b9d7f11114b53839d4942c8e1dc4b8a10288a",
+      "dimensions": [
+        1350,
+        900
+      ],
+      "check": "PNG integrity"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/balanced-depth4/holdout-predictions.csv",
+      "bytes": 157948,
+      "sha256": "2d9e4a891f20d617641e814a8c222adcf41833ca84e267a6f58039a004e94411",
+      "lines": 1401,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 1400
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/balanced-depth4/model.json",
+      "bytes": 67961,
+      "sha256": "1191b20a82fbf1eab4dcbca8c9552fa4cb5e5950a52f19ee19b1b53a03e3b382",
+      "lines": 1,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/balanced-depth4/run-metadata.json",
+      "bytes": 2981,
+      "sha256": "13a0ba0ae2fa5d4c9bb4253f1882e8eece360bc22b7025af4b7401f3595247a9",
+      "lines": 101,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/balanced-depth4/slice-evaluation.csv",
+      "bytes": 289,
+      "sha256": "91485a85b898186f4e7ca80731bcdb51964f47de494a9f04d3cf1385b11a76a5",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/balanced-depth4/split-membership.csv",
+      "bytes": 227999,
+      "sha256": "f2a3cee2629414d93b7aaf184d0d7fa2efb3873882ddf42ce352a3af853f39b3",
+      "lines": 10000,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 9999
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/balanced-depth4/train.log",
+      "bytes": 2573,
+      "sha256": "9340492d592211f5ed463ccda7563138f2afb86e82e595bb92181e3d70db7a96",
+      "lines": 34,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/complex-depth6/baseline.json",
+      "bytes": 307146,
+      "sha256": "57872c2dde1e0dc4010156ce30efbe34ff6c6c7e76ca310c1f2c2646e80081f6",
+      "lines": 1,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/complex-depth6/confusion-matrix.png",
+      "bytes": 34822,
+      "sha256": "4af9be417462b5cd093de8199ea2351d489c53729284155d44e4a09cf7c4f85c",
+      "dimensions": [
+        960,
+        720
+      ],
+      "check": "PNG integrity"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/complex-depth6/evaluation_metrics.json",
+      "bytes": 320,
+      "sha256": "1bc3c93c6faff86610281326b0d17e494ade9547fcd3e18f8e7cc15bb7a99880",
+      "lines": 14,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/complex-depth6/feature-importance.csv",
+      "bytes": 452,
+      "sha256": "3d52738a073f7d689205ce03e01fff7bb36a968a55d29a514a5c190e5e85cff8",
+      "lines": 12,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 11
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/complex-depth6/feature-importance.png",
+      "bytes": 55605,
+      "sha256": "f887adfc93324dfbcf5f64bc0e7f66dded064326397720f3c5832fb28e606ec2",
+      "dimensions": [
+        1350,
+        900
+      ],
+      "check": "PNG integrity"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/complex-depth6/holdout-predictions.csv",
+      "bytes": 157942,
+      "sha256": "2c9621ef173f7d3539f1429e1148be5b76882b0136dd52ac8d8f52f37bb83dd6",
+      "lines": 1401,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 1400
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/complex-depth6/model.json",
+      "bytes": 22059,
+      "sha256": "8dc578c58dfdb8c6c77543b1cdab5e320a47f2c270b252e1df6eda6104ec33ef",
+      "lines": 1,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/complex-depth6/run-metadata.json",
+      "bytes": 2974,
+      "sha256": "7fe524ba6c281b1b550bd21ec473cd73e2e6b209b59defb4d7566d44d0491c89",
+      "lines": 101,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/complex-depth6/slice-evaluation.csv",
+      "bytes": 290,
+      "sha256": "faea9a6a4c5cc799688f9b56fb04481ece5c2bef0c0b14e438c8931230265b4d",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/complex-depth6/split-membership.csv",
+      "bytes": 227999,
+      "sha256": "f2a3cee2629414d93b7aaf184d0d7fa2efb3873882ddf42ce352a3af853f39b3",
+      "lines": 10000,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 9999
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/complex-depth6/train.log",
+      "bytes": 2456,
+      "sha256": "6f2859a80f7afe35b80b05db3f8beb9097cfac5da595686cea01c5bef9fe3b43",
+      "lines": 32,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/shallow-depth3/baseline.json",
+      "bytes": 307146,
+      "sha256": "57872c2dde1e0dc4010156ce30efbe34ff6c6c7e76ca310c1f2c2646e80081f6",
+      "lines": 1,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/shallow-depth3/confusion-matrix.png",
+      "bytes": 34480,
+      "sha256": "86531c667c501804dd0260a2e5e58bffa2123b270b1e646224e7e314fb255086",
+      "dimensions": [
+        960,
+        720
+      ],
+      "check": "PNG integrity"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/shallow-depth3/evaluation_metrics.json",
+      "bytes": 325,
+      "sha256": "fca5916c451605409ae9068fc1294e12cd26f21eebce7bc031bbc6ed29cc9506",
+      "lines": 14,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/shallow-depth3/feature-importance.csv",
+      "bytes": 456,
+      "sha256": "d6dda5882471a2ecbb6b0caaa7b612a5ba4d6f004eddce869d4031564158e5be",
+      "lines": 12,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 11
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/shallow-depth3/feature-importance.png",
+      "bytes": 54856,
+      "sha256": "3a4f9d7db48ecbb4bdc0a09aac84ddbdf80a4c059f06821d73cb3101e9b59ba3",
+      "dimensions": [
+        1350,
+        900
+      ],
+      "check": "PNG integrity"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/shallow-depth3/holdout-predictions.csv",
+      "bytes": 158017,
+      "sha256": "90608299f25565905475e572f62de96185ee523f1b616f308bbc3844266e9539",
+      "lines": 1401,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 1400
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/shallow-depth3/model.json",
+      "bytes": 178758,
+      "sha256": "19626dd564938a0e01c6bebf118556c7e34d7c2efc879a5e122d869b6c87f8da",
+      "lines": 1,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/shallow-depth3/run-metadata.json",
+      "bytes": 2981,
+      "sha256": "5ae5973470ff935a63f7c4407b37a35ed3cb398b124fd782f043f10b310304e9",
+      "lines": 101,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/shallow-depth3/slice-evaluation.csv",
+      "bytes": 288,
+      "sha256": "be255d41b84a4fcb88c64a38f2cb140a28ed08fe16652546730f14a3e14e3bd0",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/shallow-depth3/split-membership.csv",
+      "bytes": 227999,
+      "sha256": "f2a3cee2629414d93b7aaf184d0d7fa2efb3873882ddf42ce352a3af853f39b3",
+      "lines": 10000,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 9999
+    },
+    {
+      "path": "docs/lab3-evidence/experiments/shallow-depth3/train.log",
+      "bytes": 2934,
+      "sha256": "fc219122769cca0676a99af1a02a8fe2b7fa6a70017d908db43351fe86daeab0",
+      "lines": 39,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/feature-importance.csv",
+      "bytes": 455,
+      "sha256": "ac2002c10c40b5fbee28a364d57666ecf8a984e48510b795b19cb7062b707c49",
+      "lines": 12,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 11
+    },
+    {
+      "path": "docs/lab3-evidence/feature-importance.png",
+      "bytes": 55930,
+      "sha256": "266f8960bce835c3df66606aaee28ef7973cedda6c6f5a0997a5e49fd1c93f16",
+      "dimensions": [
+        1350,
+        900
+      ],
+      "check": "PNG integrity"
+    },
+    {
+      "path": "docs/lab3-evidence/high-risk-offers.json",
+      "bytes": 39205,
+      "sha256": "87226f4b300d7fd39324bc807a5c0b7a5a503f15f4c12ffc45714463642f7627",
+      "lines": 330,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/high-risk-profiles.json",
+      "bytes": 2340,
+      "sha256": "efbe5922ba99db09e1ef99624deee247d765f63fd8c73adb6d15c4b57bbfe0cb",
+      "lines": 75,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/holdout-predictions.csv",
+      "bytes": 339129,
+      "sha256": "0618313ffe963ab975b6de0133089b823713c64e4ac1ecbf03778014aa1dd1ca",
+      "lines": 3001,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 3000
+    },
+    {
+      "path": "docs/lab3-evidence/mlflow-app.json",
+      "bytes": 767,
+      "sha256": "df5574348bf3d309d4f2006cd9298fff6a6a4dc93e27c49318a8c55139fa74a7",
+      "lines": 22,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/mlflow-runs.csv",
+      "bytes": 5349,
+      "sha256": "d73071bdc1914404950a3e409c4e808eefc2b71b5acca5d0cde6d025f1ebc687",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/model-compatibility.txt",
+      "bytes": 192,
+      "sha256": "b33076b98b33710a3876d20a4c8b89e3775da30f42b93eaa11b6acc2fe4d92f9",
+      "lines": 2,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/model-registry.json",
+      "bytes": 1104,
+      "sha256": "0e28fd199e84ab242b1162242b806436da27aff21a4b55f41d5dbcb5bba78825",
+      "lines": 29,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/model.json",
+      "bytes": 180053,
+      "sha256": "cf0d8579ea5a3a9440622bdd0d01cfd30bc46d4fe0bb534066c033ecd26fafd8",
+      "lines": 1,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/notebook-live-offers.json",
+      "bytes": 39205,
+      "sha256": "025cfec4b5f68cf459c27226c286cb880c30c0986d6e0e66477a32566e5a87bf",
+      "lines": 330,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/offers-constraint.json",
+      "bytes": 24681,
+      "sha256": "b0d3b9e241726fc795b6d6b0cbaadd2d9eeb3f39e9dd6493ac99e2b5cb7840f3",
+      "lines": 178,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/offers-final.json",
+      "bytes": 31394,
+      "sha256": "7f111c7afdbe6c7a4414475d6c3cccf557fb21a22975c967f4695349bdea3f50",
+      "lines": 269,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/offers-hybrid.json",
+      "bytes": 26258,
+      "sha256": "4ebd8d4081e7936f9f35c0f1f6e86dd331ce3b30dc4a127316efa5cb3ebd6c8f",
+      "lines": 194,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/offers-tier.json",
+      "bytes": 24533,
+      "sha256": "a618458f16b388f5e8054a66697bfda2f1b392fbae1aa3b6ca21f73d401d2b06",
+      "lines": 178,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/profile-only-audit/rag_eval.csv",
+      "bytes": 48261,
+      "sha256": "da6cb29c6d5df63ac051b8bfdc1eeef704a55e41dac5ac9a4f16d906ee0e06ab",
+      "lines": 9,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 8
+    },
+    {
+      "path": "docs/lab3-evidence/profile-only-audit/rag_eval_all.csv",
+      "bytes": 110836,
+      "sha256": "05f24518f5587948fc48b8c81f7980907867d1d5621a7c50957e9b4fd525d65f",
+      "lines": 21,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 20
+    },
+    {
+      "path": "docs/lab3-evidence/profile-only-audit/rag_eval_final-1.csv",
+      "bytes": 24206,
+      "sha256": "e871edc27ddae0f120d0ac526ef3a8ab85e8b69f17a07738e7993e483edaddcd",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/profile-only-audit/rag_eval_final-2.csv",
+      "bytes": 24206,
+      "sha256": "51373f35861b7435b792f2e39321214ba0c7a067165359e07ff1fdb971f0a219",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/profile-only-audit/rag_eval_run_means.csv",
+      "bytes": 182,
+      "sha256": "0f3d90569139a7be6396ee1d5b788fa30a1b2ebcc509d3c9a9c57e857836a4e3",
+      "lines": 3,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 2
+    },
+    {
+      "path": "docs/lab3-evidence/rag-chunk-manifest.json",
+      "bytes": 36223,
+      "sha256": "9c0527bb693ad8e035ad06725c0e784dae53f59f53ce577787877fe3012d600b",
+      "lines": 387,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/rag-cost-assumptions.json",
+      "bytes": 597,
+      "sha256": "b4e47297b5e89774cec8bbf3b2240378d5eacc06411e5a4fedb413fc96b50470",
+      "lines": 11,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/rag-cost-summary.csv",
+      "bytes": 340,
+      "sha256": "6b0c8297b43de9898a413ad5378ed0beaec69157f20a13a4439f423d84df4ef7",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/rag-judge-usage.jsonl",
+      "bytes": 84950,
+      "sha256": "c1a9e6d9495278c49a3f93ddc1a9694e5e770e38155f95810530e0e8aa25afc9",
+      "lines": 320,
+      "check": "Every JSONL record parsed",
+      "records": 320
+    },
+    {
+      "path": "docs/lab3-evidence/rag-per-case-summary.csv",
+      "bytes": 621,
+      "sha256": "fc3374b5fce7ec101beb68c3b56bfd1ca38c4867a940031022a066c8cf7fde9a",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/rag-safety-tests.json",
+      "bytes": 21158,
+      "sha256": "d3b2bf6ce56a238ed6eb5835bd6cc2bd65d15086db755536985c278b612ba008",
+      "lines": 140,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/rag-usage.jsonl",
+      "bytes": 27009,
+      "sha256": "6201d752b306907dfe613bffc9deabfccdc7538dca93e295b5d42a946c1a01e2",
+      "lines": 103,
+      "check": "Every JSONL record parsed",
+      "records": 103
+    },
+    {
+      "path": "docs/lab3-evidence/rag_eval.csv",
+      "bytes": 71421,
+      "sha256": "8a3293070733acc7832e49d35cbc90a03e8aec3e8d4421e1afb775776e149484",
+      "lines": 13,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 12
+    },
+    {
+      "path": "docs/lab3-evidence/rag_eval_all.csv",
+      "bytes": 133990,
+      "sha256": "d232bd2f4f649be56cf4ad5634c0c20e739209489712f60b1f1c158eca6615af",
+      "lines": 25,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 24
+    },
+    {
+      "path": "docs/lab3-evidence/rag_eval_baseline-constraint.csv",
+      "bytes": 20708,
+      "sha256": "e14202096cad5df8220807a57c1f3ead3231905c353078435ecff4556706a04e",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/rag_eval_baseline-hybrid.csv",
+      "bytes": 21870,
+      "sha256": "c208c596c87a97236765e675b4a889fac84bfa98ad286857dfee29d53077342d",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/rag_eval_baseline-tier.csv",
+      "bytes": 20450,
+      "sha256": "d281a1363fe60d7625036d353db1dbe9c56aceaf1c62302e691a08babe31e317",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/rag_eval_final-1.csv",
+      "bytes": 23907,
+      "sha256": "b350f3c42be18b7469b21ffe70768b17a7419a77318aeaa75d578b71e35dc732",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/rag_eval_final-2.csv",
+      "bytes": 23909,
+      "sha256": "07bbd7bc03d8102f76b9703025170a264f377dcc6a3b8165a85bb0b3ff60cceb",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/rag_eval_final-3.csv",
+      "bytes": 23909,
+      "sha256": "98920cae9f2aef7451e67864288c97bc6011b6e00b806015b6bd429efd3601de",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/rag_eval_run_means.csv",
+      "bytes": 217,
+      "sha256": "5f86d82590c86b0108bb93b9bf5629d91d8a8e33124b83e4968fd24d462910f0",
+      "lines": 4,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 3
+    },
+    {
+      "path": "docs/lab3-evidence/ragas-traces-final-3.json",
+      "bytes": 67653,
+      "sha256": "5cd5d17b22275d8132c708d077316b3afd36824f96d32733ba3aa02830c0b4bc",
+      "lines": 98,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/registration.json",
+      "bytes": 754,
+      "sha256": "863657c3cba68812b1ab79b35c88ce7b416bd49149625496b2edfc6af7a4fc4a",
+      "lines": 19,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/run-metadata.json",
+      "bytes": 2933,
+      "sha256": "3c024c4b8e8070d0534ff1338fd1127d0502210882c7a26ad3f5a68af5565792",
+      "lines": 101,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/slice-evaluation.csv",
+      "bytes": 321,
+      "sha256": "3861f7bc6a8b38b8787358c31eac22b278175c98ce481feb23153a2af0422875",
+      "lines": 5,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 4
+    },
+    {
+      "path": "docs/lab3-evidence/split-membership.csv",
+      "bytes": 227999,
+      "sha256": "f2a3cee2629414d93b7aaf184d0d7fa2efb3873882ddf42ce352a3af853f39b3",
+      "lines": 10000,
+      "check": "Every CSV record parsed; column widths consistent",
+      "records": 9999
+    },
+    {
+      "path": "docs/lab3-evidence/task1-collect-output.txt",
+      "bytes": 1261,
+      "sha256": "eb9a82a7bd3b82e0bc5c65b735fec4830f60aa61a950dcdd45869ecc2a4ec65a",
+      "lines": 13,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/task1-verification.txt",
+      "bytes": 893,
+      "sha256": "4a2debc216e68c7cad8426e99b4e1d870024dcd974b4417e90c99ea04441130b",
+      "lines": 9,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/terraform-config.json",
+      "bytes": 265,
+      "sha256": "c0b4f8ca46d7f0704ad44741de719e0562221ea5dae2ba26626840464f90e291",
+      "lines": 6,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "docs/lab3-evidence/track-b-examples.md",
+      "bytes": 8354,
+      "sha256": "15cda7569967e3911ca4f1d20b783943a2cc1aaf9965f065c3d33f952b038d00",
+      "lines": 206,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/track-b-tests.txt",
+      "bytes": 1790,
+      "sha256": "9369c7d3be4507c7bbbb5ca49ae3af251e2a8640ada036c483af824087355bf7",
+      "lines": 16,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/track-b-verification.txt",
+      "bytes": 448,
+      "sha256": "6f84534a43adde30d41cd1698b9bc66c94300bdb5ac929f38d90542e813ae5d5",
+      "lines": 6,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/train-final.log",
+      "bytes": 2471,
+      "sha256": "94cae4072077915d734eb3a0d4af59bdcb61a7c749093ebf5a43637b4980cbc1",
+      "lines": 31,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-evidence/unit-tests.txt",
+      "bytes": 107,
+      "sha256": "f04d316157027199b94cdfde548cffb1eb91069617b79ee909e66cc17cbf5d17",
+      "lines": 5,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-experiments-output.log",
+      "bytes": 10602,
+      "sha256": "6fe99a7e4102e56761a19b3b43b53078d4958f57fe3828bd53123ea2c5e5cac3",
+      "lines": 139,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-manual-review.md",
+      "bytes": 7039,
+      "sha256": "c02ccfeebf8ea98077ed11a89a518c8b90116b199d7353a08569d44b502f86f9",
+      "lines": 111,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-mlflow-setup.log",
+      "bytes": 632,
+      "sha256": "231ba02f62e7782f5130975bb3597af30d2e59022d5f3587d7e7226603f13464",
+      "lines": 20,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-model-design.md",
+      "bytes": 5231,
+      "sha256": "5b93234f89cfcea61af9d9ecfc98866ed7429e3462291256bbda0a931f1d4c6f",
+      "lines": 77,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-network-cleanup-output.txt",
+      "bytes": 5785,
+      "sha256": "3f5c096e1c241e31a20cb67500268630e63d2cb5766b270b87f6ebdfa777d3bb",
+      "lines": 85,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-network-cleanup-plan.txt",
+      "bytes": 30724,
+      "sha256": "c3151904dc99f6bf81f005b4affecd405f7f2393f05881c9522350f310805119",
+      "lines": 629,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-offer-examples.log",
+      "bytes": 1730,
+      "sha256": "7c23da5eef6a5b787f79051493b4a80e08159f029834ca66646a2bb24046405a",
+      "lines": 8,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-restore-output.txt",
+      "bytes": 8796,
+      "sha256": "81005e5099e38fd42cdbf1cc36df4d909d61af2a6aaf100de41155feaa93678b",
+      "lines": 125,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-restore-plan.txt",
+      "bytes": 52835,
+      "sha256": "6740df0db2e337b4a065bb488ab14f467a0cdeda27857738ad38d467fd97ecc8",
+      "lines": 1353,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-submission-audit.md",
+      "bytes": 4014,
+      "sha256": "e6048e67f95c742988296d38e8f2589f33afb10935788d508d038f6a6d0703e7",
+      "lines": 56,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-task1-checks.md",
+      "bytes": 3750,
+      "sha256": "8879d0340d61e9b5b92da8fe3ec29b178e578439d8c82a77fe507bb5660c9dc0",
+      "lines": 88,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-teardown-output.txt",
+      "bytes": 685,
+      "sha256": "f7104450890db25e63c0e2811c6277d06f9b3f2d2fc9f0bd4e814c31f050b3a2",
+      "lines": 15,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-track-b-audit-run.log",
+      "bytes": 2292,
+      "sha256": "f6818c17d43ae9f599beb85aaff48dc359cce9a772ac4c5306ac56d127041e2f",
+      "lines": 45,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-track-b-final-run.log",
+      "bytes": 4796,
+      "sha256": "5b98c9c687fe601429151d87d750b315c90431da4099ae2870f457d7c5ee3ae1",
+      "lines": 73,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-track-b-report.md",
+      "bytes": 12043,
+      "sha256": "672bc55442d2dfb8dbfaf74d6871226b188ea238b5b0c597217c747b84588484",
+      "lines": 197,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "docs/lab3-track-b-run.log",
+      "bytes": 10777,
+      "sha256": "b06412e1c3d15f960fda7a2c50d2c310314b6409158310d6d634db453d5f0116",
+      "lines": 136,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "evaluation_harness.py",
+      "bytes": 33719,
+      "sha256": "25bf994ccf1c729ca14820c321b3b1e1be6c837cc926387a7d73186d3b281cfb",
+      "lines": 748,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "models/churn/inference.py",
+      "bytes": 933,
+      "sha256": "46315e1d0574fe4d335c9e4e0e521caa01c9f739f0d4b0ebce27c578d6d2f2a8",
+      "lines": 30,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "northstar-policy-docs/customer-faq.md",
+      "bytes": 6343,
+      "sha256": "df1721868ad9cd2d5281d58843f8ce5200fc20ffa13415665e8967e9ed1820cc",
+      "lines": 117,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "northstar-policy-docs/loyalty-program-terms.md",
+      "bytes": 6107,
+      "sha256": "0571737f35b7250305e1dd510bda4cec427b079cb16206c07f75aa6a45a6bd44",
+      "lines": 127,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "northstar-policy-docs/return-policy.md",
+      "bytes": 6316,
+      "sha256": "ee5000399106934a86dc74912890e1e2ce20f9e048668e5d6c1eaeca578d320b",
+      "lines": 127,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "northstar-policy-docs/shipping-policy.md",
+      "bytes": 4702,
+      "sha256": "b9c82245d7567f101229b2f42a54d04c7327011dd9f16ee6ae6b1f238c4b1ce9",
+      "lines": 105,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "notebooks/lab3-demo.ipynb",
+      "bytes": 42867,
+      "sha256": "6d70c47caac3495240aad340e779a2fa1bc8d9b4f1e79be486f8f3fecee39868",
+      "lines": 1166,
+      "check": "JSON parsed in full"
+    },
+    {
+      "path": "prompt_templates/final_offer_system.md",
+      "bytes": 615,
+      "sha256": "8724b6492ad8ae411f57bc34160023894911d3fbb72f47daa939113b6d691e4f",
+      "lines": 6,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "prompt_templates/freeform_offer_system.md",
+      "bytes": 2900,
+      "sha256": "6fe0d9a72c363c5c59d662c77a58bc92129a4c9fd3c0503ad9bda4e0677bd0a9",
+      "lines": 13,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "prompt_templates/offer_generation_prompts.md",
+      "bytes": 11738,
+      "sha256": "f685a931ac7f4c7238e9425aa2395b6f980028120fdce3a5c13e39cb41640fcd",
+      "lines": 253,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "prompt_templates/offer_generation_prompts.starter.md",
+      "bytes": 11562,
+      "sha256": "a9da02f3fbb2b634caa201149faabb6eb4b2b9d1941f90a8c775e1419647c896",
+      "lines": 248,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "rag/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "lines": 1,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "rag/metering.py",
+      "bytes": 2113,
+      "sha256": "4bdb020f21f17b99b3184e3470a758bcb538a2bc06551d3c6fe2b4e77c0d2cbb",
+      "lines": 48,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "rag/offer_pipeline.py",
+      "bytes": 14746,
+      "sha256": "87981a2817a8642f521e04231d56402029e42b3be922b8f5fd96c640b138f78d",
+      "lines": 239,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "requirements-lab3-task1.txt",
+      "bytes": 2295,
+      "sha256": "55f7a12a66125663c1c7ba6ec9bd08250c0a25ba2e2f14162507c7c8560d287d",
+      "lines": 121,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "requirements-lab3-track-b.txt",
+      "bytes": 2489,
+      "sha256": "2b741ba5c0851b50b0cb07de2b01654dab196ebefdf644035d5abd0686ce3269",
+      "lines": 130,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "scripts/audit-lab3-evidence.py",
+      "bytes": 6736,
+      "sha256": "1a403219ff50e382105896153c6788500f2997aed6105cfbbc22294dfaa7438a",
+      "lines": 121,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/build-lab3-demo.py",
+      "bytes": 6736,
+      "sha256": "b149afc811b5f16d3206cd23346bbd2beb6a789bbfaeacc63f6e82446beb56a7",
+      "lines": 123,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/build-lab3-offer-examples.py",
+      "bytes": 3561,
+      "sha256": "0a9fad7b0d5ffa9424ccd0654389d0aa0d5f2639bb4b36856982b8cdcdced1e5",
+      "lines": 56,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/collect-lab3-evidence.sh",
+      "bytes": 687,
+      "sha256": "881d509f10ffd9f03c9bd6a557c799141ae685c7214323d62201577405e00379",
+      "lines": 13,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "scripts/collect-lab3-task1.py",
+      "bytes": 899,
+      "sha256": "9c5c400991f7a32abedcaed5174c7d4685ad469ba1ef078c702d05d9628fa031",
+      "lines": 21,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/collect_lab3_evidence.py",
+      "bytes": 21485,
+      "sha256": "d9aa4654585c8652c162030df9932d0a8677ae6da6fe21cd494be2f2eef679b3",
+      "lines": 432,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/run-lab3-task1.py",
+      "bytes": 3257,
+      "sha256": "7c63ea54110024dabc95c791759c5a1def9625f1c0dc7a2356075f344c842ec0",
+      "lines": 67,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/run-lab3-track-b.py",
+      "bytes": 5188,
+      "sha256": "e8d99b081817cdb1045a5c318602d371f6017e615839fa63cef56ee349681ba8",
+      "lines": 100,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/teardown-lab3.sh",
+      "bytes": 6669,
+      "sha256": "00dfbbe9d8dac73eca1004520ae777e64c62c2f8bc79f41216fb544de72ccf40",
+      "lines": 107,
+      "check": "UTF-8 text decoded in full"
+    },
+    {
+      "path": "scripts/test-lab3-task1.py",
+      "bytes": 1142,
+      "sha256": "ffb6c3c0b0a8f0b6251041a99e4442804d857d180b33a5e4a98a25c3df2f7a8c",
+      "lines": 26,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/test-lab3-track-b.py",
+      "bytes": 3622,
+      "sha256": "050c3383733365c56ce86cd8ce43c440f3b2c9b4bee035e2ed04464e672fcc0f",
+      "lines": 59,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/verify-bedrock-access.py",
+      "bytes": 1427,
+      "sha256": "0c2c230ca29cf29bbc441f5aff6920bf3e86e4b2394ede61cc442358b0cad8f4",
+      "lines": 27,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/verify-lab3-task1.py",
+      "bytes": 5025,
+      "sha256": "46382fea952d1c308a9f286cf884fabb5255f3944ae13e9708a65cb6b467f682",
+      "lines": 83,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/verify-lab3-track-b.py",
+      "bytes": 3113,
+      "sha256": "0c6117e2564d946c302258df938eb4af1b7bfa4db620a944e59169cbf6f7c23a",
+      "lines": 54,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/write-lab3-task1-report.py",
+      "bytes": 8327,
+      "sha256": "da4e90c00fdbe1ebd5837e84b7c6a8d210dfaf99f7cd839664d6c7b9cf4a8641",
+      "lines": 149,
+      "check": "Python syntax parsed"
+    },
+    {
+      "path": "scripts/write-lab3-track-b-report.py",
+      "bytes": 21246,
+      "sha256": "c352a146e84192e8e7e68f860ac41780865da71868fc385f1ec427eec964b6c7",
+      "lines": 312,
+      "check": "Python syntax parsed"
+    }
+  ],
+  "checks": [
+    "docs\\lab3-evidence: every prediction, top-decile membership, metrics, slice and outer split checked",
+    "docs\\lab3-evidence\\experiments\\balanced-depth4: every prediction, top-decile membership, metrics, slice and outer split checked",
+    "docs\\lab3-evidence\\experiments\\complex-depth6: every prediction, top-decile membership, metrics, slice and outer split checked",
+    "docs\\lab3-evidence\\experiments\\shallow-depth3: every prediction, top-decile membership, metrics, slice and outer split checked",
+    "All 26 saved offers: retrieved text matches canonical chunks; draft verdicts unchanged by defensive fix",
+    "All 24 baseline/final evaluation rows reconcile; responses match frozen generation evidence",
+    "rag-usage.jsonl: 103 unique requests; all token counts and latencies nonnegative",
+    "rag-judge-usage.jsonl: 320 unique requests; all token counts and latencies nonnegative"
+  ]
+}
