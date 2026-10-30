@@ -351,6 +351,16 @@ Resources:
     Type: AWS::CodePipeline::Pipeline
     Properties:
       Name: !Sub "${ProjectName}-pipeline"
+      PipelineType: V2
+      ExecutionMode: SUPERSEDED
+      Triggers:
+        - ProviderType: CodeStarSourceConnection
+          GitConfiguration:
+            SourceActionName: GitHubSource
+            Push:
+              - Branches:
+                  Includes:
+                    - !Ref GitHubBranch
       RoleArn: !GetAtt CodePipelineRole.Arn
       ArtifactStore:
         Type: S3
@@ -372,7 +382,7 @@ Resources:
                 FullRepositoryId: !Sub "${GitHubOwner}/${GitHubRepo}"
                 BranchName: !Ref GitHubBranch
                 OutputArtifactFormat: CODE_ZIP
-                DetectChanges: true
+                # The explicit push trigger above owns change detection.
               OutputArtifacts:
                 - Name: SourceArtifact
 
