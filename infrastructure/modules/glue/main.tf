@@ -82,9 +82,17 @@ resource "aws_glue_job" "jobs" {
     "--table_name"    = "customers"
     "--output_path"   = "s3://${var.bucket_name}/processed/customers/"
     } : {
+    "--extra-py-files"     = "s3://${var.bucket_name}/${aws_s3_object.feature_module.key}"
     "--input_path"         = "s3://${var.bucket_name}/processed/customers/"
     "--output_path"        = "s3://${var.bucket_name}/features/customers/"
     "--feature_group_name" = var.feature_group_name
     "--region"             = var.region
   })
+}
+
+resource "aws_s3_object" "feature_module" {
+  bucket      = var.bucket_name
+  key         = "artifacts/glue/feature_engineering.py"
+  source      = "${path.module}/../../../data/feature_engineering.py"
+  source_hash = filemd5("${path.module}/../../../data/feature_engineering.py")
 }

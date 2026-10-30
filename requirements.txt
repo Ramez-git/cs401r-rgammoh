@@ -1,0 +1,18 @@
+# Installed by buildspec.yml (install phase) and for local work:
+#     pip install -r requirements.txt
+#
+# buildspec.yml's install phase runs `pip install -r requirements.txt`; without
+# this file CodeBuild fails before a single test runs. Add to it if your own
+# tests import something else. MLflow is deliberately absent: it is only needed
+# on your laptop (Lab 3 tracking, Task 3), never in CI.
+boto3>=1.34.0
+pandas==2.3.3
+pyarrow==17.0.0
+numpy==1.26.4
+scikit-learn==1.5.2
+scipy==1.15.3
+xgboost==1.7.6
+# pipeline_definition.py uses the v2 SDK (sagemaker.workflow, sagemaker.xgboost).
+# sagemaker 3.x removed those modules, so the upsert fails with ImportError.
+sagemaker==2.257.7
+pytest>=8.3.0,<10

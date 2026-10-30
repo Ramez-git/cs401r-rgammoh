@@ -24,6 +24,32 @@ resource "aws_iam_role" "ml_engineer" {
 
 data "aws_iam_policy_document" "ml_engineer" {
   statement {
+    sid       = "PassSelfToSageMaker"
+    effect    = "Allow"
+    actions   = ["iam:PassRole"]
+    resources = [aws_iam_role.ml_engineer.arn]
+    condition {
+      test     = "StringEquals"
+      variable = "iam:PassedToService"
+      values   = ["sagemaker.amazonaws.com"]
+    }
+  }
+
+  statement {
+    sid    = "PipelineTrainingAndLineage"
+    effect = "Allow"
+    actions = [
+      "sagemaker:AddTags", "sagemaker:ListTags",
+      "sagemaker:CreateModelPackageGroup", "sagemaker:DescribeModelPackageGroup",
+      "sagemaker:CreateExperiment", "sagemaker:DescribeExperiment",
+      "sagemaker:CreateTrial", "sagemaker:DescribeTrial",
+      "sagemaker:CreateTrialComponent", "sagemaker:DescribeTrialComponent",
+      "sagemaker:UpdateTrialComponent", "sagemaker:AssociateTrialComponent",
+    ]
+    resources = ["arn:aws:sagemaker:*:*:*"]
+  }
+
+  statement {
     sid    = "SageMakerCore"
     effect = "Allow"
     actions = [

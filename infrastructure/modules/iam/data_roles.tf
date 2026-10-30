@@ -26,6 +26,7 @@ resource "aws_iam_role_policy" "data_engineer" {
       { Effect = "Allow", Action = ["ec2:CreateNetworkInterface", "ec2:DeleteNetworkInterface", "ec2:DescribeNetworkInterfaces", "ec2:DescribeVpcEndpoints", "ec2:DescribeRouteTables", "ec2:DescribeSubnets", "ec2:DescribeSecurityGroups", "ec2:DescribeVpcAttribute"], Resource = "*" },
       { Effect = "Allow", Action = ["ec2:CreateTags", "ec2:DeleteTags"], Resource = "arn:aws:ec2:*:*:network-interface/*" },
       { Effect = "Allow", Action = ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"], Resource = [for prefix in ["raw", "processed", "features"] : "${local.bucket_arn}/${prefix}/*"] },
+      { Effect = "Allow", Action = ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"], Resource = [for prefix in ["raw", "processed", "features"] : "${local.bucket_arn}/${prefix}_$folder$"] },
       { Effect = "Allow", Action = ["s3:GetObject"], Resource = "${local.bucket_arn}/artifacts/glue/*" },
       { Effect = "Allow", Action = ["s3:GetBucketLocation", "s3:GetBucketAcl", "s3:ListBucket"], Resource = local.bucket_arn },
       { Effect = "Allow", Action = ["s3:PutObjectAcl"], Resource = "${local.bucket_arn}/features/*" },

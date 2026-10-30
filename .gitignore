@@ -22,3 +22,9 @@ output/
 evaluation_results/
 
 .venv-lab3-rag312/
+.lab4-cache/
+.venv-lab4/
+data/processed/
+data/features/
+data/northstar-raw-sample.csv
+reports/
