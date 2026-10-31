@@ -1,0 +1,32 @@
+{
+  "ModelPackageSummaryList": [
+    {
+      "ModelPackageGroupName": "northstar-churn-models",
+      "ModelPackageVersion": 3,
+      "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/3",
+      "CreationTime": "2026-10-30 18:49:12.961000-06:00",
+      "ModelPackageStatus": "Completed",
+      "ModelApprovalStatus": "PendingManualApproval",
+      "ModelPackageRegistrationType": "Registered"
+    },
+    {
+      "ModelPackageGroupName": "northstar-churn-models",
+      "ModelPackageVersion": 2,
+      "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/2",
+      "CreationTime": "2026-10-30 10:21:44.060000-06:00",
+      "ModelPackageStatus": "Completed",
+      "ModelApprovalStatus": "Approved",
+      "ModelPackageRegistrationType": "Registered"
+    },
+    {
+      "ModelPackageGroupName": "northstar-churn-models",
+      "ModelPackageVersion": 1,
+      "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/1",
+      "ModelPackageDescription": "XGBoost 3.2.0; Athena d1709914-6f10-45ef-a2aa-8e9461bb290d; final held-out evaluation",
+      "CreationTime": "2026-10-17 18:01:12.079000-06:00",
+      "ModelPackageStatus": "Completed",
+      "ModelApprovalStatus": "PendingManualApproval",
+      "ModelPackageRegistrationType": "Registered"
+    }
+  ]
+}

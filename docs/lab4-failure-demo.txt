@@ -1,0 +1,666 @@
+
+===== BEFORE =====
+{
+  "captured_at": "2026-10-31T00:27:14.405066+00:00",
+  "build": {
+    "id": "northstar-ci:6ed85fa8-94d5-4866-92eb-07fc863e0809",
+    "resolvedSourceVersion": "a8c61e011cd44863c298356892f4640d8698efe5",
+    "buildStatus": "SUCCEEDED",
+    "startTime": "2026-10-30 10:17:26.263000-06:00",
+    "endTime": "2026-10-30 10:21:55.610000-06:00",
+    "phases": [
+      {
+        "phaseType": "SUBMITTED",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 10:17:26.263000-06:00",
+        "endTime": "2026-10-30 10:17:26.385000-06:00",
+        "durationInSeconds": 0
+      },
+      {
+        "phaseType": "QUEUED",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 10:17:26.385000-06:00",
+        "endTime": "2026-10-30 10:17:27.138000-06:00",
+        "durationInSeconds": 0
+      },
+      {
+        "phaseType": "PROVISIONING",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 10:17:27.138000-06:00",
+        "endTime": "2026-10-30 10:17:31.203000-06:00",
+        "durationInSeconds": 4,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "DOWNLOAD_SOURCE",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 10:17:31.203000-06:00",
+        "endTime": "2026-10-30 10:17:33.954000-06:00",
+        "durationInSeconds": 2,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "INSTALL",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 10:17:33.954000-06:00",
+        "endTime": "2026-10-30 10:18:24.132000-06:00",
+        "durationInSeconds": 50,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "PRE_BUILD",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 10:18:24.132000-06:00",
+        "endTime": "2026-10-30 10:18:30.161000-06:00",
+        "durationInSeconds": 6,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "BUILD",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 10:18:30.161000-06:00",
+        "endTime": "2026-10-30 10:21:52.467000-06:00",
+        "durationInSeconds": 202,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "POST_BUILD",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 10:21:52.467000-06:00",
+        "endTime": "2026-10-30 10:21:53.110000-06:00",
+        "durationInSeconds": 0,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "UPLOAD_ARTIFACTS",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 10:21:53.110000-06:00",
+        "endTime": "2026-10-30 10:21:55.335000-06:00",
+        "durationInSeconds": 2,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "FINALIZING",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 10:21:55.335000-06:00",
+        "endTime": "2026-10-30 10:21:55.610000-06:00",
+        "durationInSeconds": 0,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "COMPLETED",
+        "startTime": "2026-10-30 10:21:55.610000-06:00"
+      }
+    ]
+  },
+  "model_packages": [
+    {
+      "ModelPackageGroupName": "northstar-churn-models",
+      "ModelPackageVersion": 2,
+      "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/2",
+      "CreationTime": "2026-10-30 10:21:44.060000-06:00",
+      "ModelPackageStatus": "Completed",
+      "ModelApprovalStatus": "Approved",
+      "ModelPackageRegistrationType": "Registered"
+    },
+    {
+      "ModelPackageGroupName": "northstar-churn-models",
+      "ModelPackageVersion": 1,
+      "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/1",
+      "ModelPackageDescription": "XGBoost 3.2.0; Athena d1709914-6f10-45ef-a2aa-8e9461bb290d; final held-out evaluation",
+      "CreationTime": "2026-10-17 18:01:12.079000-06:00",
+      "ModelPackageStatus": "Completed",
+      "ModelApprovalStatus": "PendingManualApproval",
+      "ModelPackageRegistrationType": "Registered"
+    }
+  ],
+  "alarm": [
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmArn": "arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure",
+      "AlarmDescription": "A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.",
+      "AlarmConfigurationUpdatedTimestamp": "2026-10-30 00:35:30.546000-06:00",
+      "ActionsEnabled": true,
+      "OKActions": [
+        "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals"
+      ],
+      "AlarmActions": [
+        "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals"
+      ],
+      "InsufficientDataActions": [],
+      "StateValue": "OK",
+      "StateReason": "Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].",
+      "StateReasonData": "{\"version\":\"1.0\",\"queryDate\":\"2026-10-30T06:53:49.553+0000\",\"statistic\":\"Sum\",\"period\":300,\"recentDatapoints\":[],\"threshold\":1.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-30T06:48:00.000+0000\"}]}",
+      "StateUpdatedTimestamp": "2026-10-30 00:53:49.554000-06:00",
+      "MetricName": "FailedBuilds",
+      "Namespace": "AWS/CodeBuild",
+      "Statistic": "Sum",
+      "Dimensions": [
+        {
+          "Name": "ProjectName",
+          "Value": "northstar-ci"
+        }
+      ],
+      "Period": 300,
+      "EvaluationPeriods": 1,
+      "Threshold": 1.0,
+      "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+      "TreatMissingData": "notBreaching",
+      "StateTransitionedTimestamp": "2026-10-30 00:53:49.554000-06:00"
+    }
+  ],
+  "alarm_action_history": [
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 00:53:49.605000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793343229554,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-30T06:53:49.554+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"ALARM\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"OK: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the OK state, because \\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\" at \\\\\\\"Friday 30 October, 2026 06:53:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               ALARM -> OK\\\\n- Reason for State Change:    Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\n- Timestamp:                  Friday 30 October, 2026 06:53:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 00:38:49.594000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793342329551,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"ALARM\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: 1 datapoint [1.0 (30/10/26 06:33:00)] was greater than or equal to the threshold (1.0).\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-30T06:38:49.551+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"ALARM: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the ALARM state, because \\\\\\\"Threshold Crossed: 1 datapoint [1.0 (30/10/26 06:33:00)] was greater than or equal to the threshold (1.0).\\\\\\\" at \\\\\\\"Friday 30 October, 2026 06:38:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               OK -> ALARM\\\\n- Reason for State Change:    Threshold Crossed: 1 datapoint [1.0 (30/10/26 06:33:00)] was greater than or equal to the threshold (1.0).\\\\n- Timestamp:                  Friday 30 October, 2026 06:38:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 00:36:49.601000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793342209552,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-30T06:36:49.552+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"INSUFFICIENT_DATA\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"OK: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the OK state, because \\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\" at \\\\\\\"Friday 30 October, 2026 06:36:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               INSUFFICIENT_DATA -> OK\\\\n- Reason for State Change:    Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\n- Timestamp:                  Friday 30 October, 2026 06:36:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    }
+  ],
+  "subscriptions": [
+    {
+      "Protocol": "email",
+      "SubscriptionArn": "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals:2bc00528-ad1f-49eb-bd94-84c3eb07afa9"
+    }
+  ]
+}
+
+===== AFTER FAILED RUN =====
+{
+  "captured_at": "2026-10-31T00:44:32.529577+00:00",
+  "build": {
+    "id": "northstar-ci:397d9b57-b319-4388-91de-42f1fc9017d6",
+    "resolvedSourceVersion": "969e8b829d7fd70de743c6f96f521f0f8f177c41",
+    "buildStatus": "FAILED",
+    "startTime": "2026-10-30 18:41:27.921000-06:00",
+    "endTime": "2026-10-30 18:42:32.153000-06:00",
+    "phases": [
+      {
+        "phaseType": "SUBMITTED",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:41:27.921000-06:00",
+        "endTime": "2026-10-30 18:41:28.045000-06:00",
+        "durationInSeconds": 0
+      },
+      {
+        "phaseType": "QUEUED",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:41:28.045000-06:00",
+        "endTime": "2026-10-30 18:41:28.821000-06:00",
+        "durationInSeconds": 0
+      },
+      {
+        "phaseType": "PROVISIONING",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:41:28.821000-06:00",
+        "endTime": "2026-10-30 18:41:32.503000-06:00",
+        "durationInSeconds": 3,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "DOWNLOAD_SOURCE",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:41:32.503000-06:00",
+        "endTime": "2026-10-30 18:41:35.087000-06:00",
+        "durationInSeconds": 2,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "INSTALL",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:41:35.087000-06:00",
+        "endTime": "2026-10-30 18:42:25.843000-06:00",
+        "durationInSeconds": 50,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "PRE_BUILD",
+        "phaseStatus": "FAILED",
+        "startTime": "2026-10-30 18:42:25.843000-06:00",
+        "endTime": "2026-10-30 18:42:31.857000-06:00",
+        "durationInSeconds": 6,
+        "contexts": [
+          {
+            "statusCode": "COMMAND_EXECUTION_ERROR",
+            "message": "Error while executing command: python -m pytest tests/ --ignore=tests/test_model.py --ignore=tests/test_fairness.py -v --tb=short --junitxml=reports/prebuild_tests.xml. Reason: exit status 1"
+          }
+        ]
+      },
+      {
+        "phaseType": "FINALIZING",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:42:31.857000-06:00",
+        "endTime": "2026-10-30 18:42:32.153000-06:00",
+        "durationInSeconds": 0,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "COMPLETED",
+        "startTime": "2026-10-30 18:42:32.153000-06:00"
+      }
+    ]
+  },
+  "model_packages": [
+    {
+      "ModelPackageGroupName": "northstar-churn-models",
+      "ModelPackageVersion": 2,
+      "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/2",
+      "CreationTime": "2026-10-30 10:21:44.060000-06:00",
+      "ModelPackageStatus": "Completed",
+      "ModelApprovalStatus": "Approved",
+      "ModelPackageRegistrationType": "Registered"
+    },
+    {
+      "ModelPackageGroupName": "northstar-churn-models",
+      "ModelPackageVersion": 1,
+      "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/1",
+      "ModelPackageDescription": "XGBoost 3.2.0; Athena d1709914-6f10-45ef-a2aa-8e9461bb290d; final held-out evaluation",
+      "CreationTime": "2026-10-17 18:01:12.079000-06:00",
+      "ModelPackageStatus": "Completed",
+      "ModelApprovalStatus": "PendingManualApproval",
+      "ModelPackageRegistrationType": "Registered"
+    }
+  ],
+  "alarm": [
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmArn": "arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure",
+      "AlarmDescription": "A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.",
+      "AlarmConfigurationUpdatedTimestamp": "2026-10-30 00:35:30.546000-06:00",
+      "ActionsEnabled": true,
+      "OKActions": [
+        "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals"
+      ],
+      "AlarmActions": [
+        "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals"
+      ],
+      "InsufficientDataActions": [],
+      "StateValue": "ALARM",
+      "StateReason": "Threshold Crossed: 1 datapoint [1.0 (31/10/26 00:38:00)] was greater than or equal to the threshold (1.0).",
+      "StateReasonData": "{\"version\":\"1.0\",\"queryDate\":\"2026-10-31T00:43:49.550+0000\",\"startDate\":\"2026-10-31T00:38:00.000+0000\",\"statistic\":\"Sum\",\"period\":300,\"recentDatapoints\":[1.0],\"threshold\":1.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-31T00:38:00.000+0000\",\"sampleCount\":1.0,\"value\":1.0}]}",
+      "StateUpdatedTimestamp": "2026-10-30 18:43:49.555000-06:00",
+      "MetricName": "FailedBuilds",
+      "Namespace": "AWS/CodeBuild",
+      "Statistic": "Sum",
+      "Dimensions": [
+        {
+          "Name": "ProjectName",
+          "Value": "northstar-ci"
+        }
+      ],
+      "Period": 300,
+      "EvaluationPeriods": 1,
+      "Threshold": 1.0,
+      "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+      "TreatMissingData": "notBreaching",
+      "StateTransitionedTimestamp": "2026-10-30 18:43:49.555000-06:00"
+    }
+  ],
+  "alarm_action_history": [
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 18:43:49.602000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793407429555,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"ALARM\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: 1 datapoint [1.0 (31/10/26 00:38:00)] was greater than or equal to the threshold (1.0).\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-31T00:43:49.555+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"ALARM: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the ALARM state, because \\\\\\\"Threshold Crossed: 1 datapoint [1.0 (31/10/26 00:38:00)] was greater than or equal to the threshold (1.0).\\\\\\\" at \\\\\\\"Saturday 31 October, 2026 00:43:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               OK -> ALARM\\\\n- Reason for State Change:    Threshold Crossed: 1 datapoint [1.0 (31/10/26 00:38:00)] was greater than or equal to the threshold (1.0).\\\\n- Timestamp:                  Saturday 31 October, 2026 00:43:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 00:53:49.605000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793343229554,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-30T06:53:49.554+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"ALARM\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"OK: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the OK state, because \\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\" at \\\\\\\"Friday 30 October, 2026 06:53:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               ALARM -> OK\\\\n- Reason for State Change:    Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\n- Timestamp:                  Friday 30 October, 2026 06:53:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 00:38:49.594000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793342329551,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"ALARM\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: 1 datapoint [1.0 (30/10/26 06:33:00)] was greater than or equal to the threshold (1.0).\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-30T06:38:49.551+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"ALARM: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the ALARM state, because \\\\\\\"Threshold Crossed: 1 datapoint [1.0 (30/10/26 06:33:00)] was greater than or equal to the threshold (1.0).\\\\\\\" at \\\\\\\"Friday 30 October, 2026 06:38:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               OK -> ALARM\\\\n- Reason for State Change:    Threshold Crossed: 1 datapoint [1.0 (30/10/26 06:33:00)] was greater than or equal to the threshold (1.0).\\\\n- Timestamp:                  Friday 30 October, 2026 06:38:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 00:36:49.601000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793342209552,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-30T06:36:49.552+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"INSUFFICIENT_DATA\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"OK: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the OK state, because \\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\" at \\\\\\\"Friday 30 October, 2026 06:36:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               INSUFFICIENT_DATA -> OK\\\\n- Reason for State Change:    Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\n- Timestamp:                  Friday 30 October, 2026 06:36:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    }
+  ],
+  "subscriptions": [
+    {
+      "Protocol": "email",
+      "SubscriptionArn": "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals:2bc00528-ad1f-49eb-bd94-84c3eb07afa9"
+    }
+  ]
+}
+
+===== AFTER REVERT =====
+{
+  "captured_at": "2026-10-31T05:33:50.752442+00:00",
+  "build": {
+    "id": "northstar-ci:657ec14d-624b-4b55-b41e-e362d270ff73",
+    "resolvedSourceVersion": "3ad1bee629916bae74f5117766f6a04951420df1",
+    "buildStatus": "SUCCEEDED",
+    "startTime": "2026-10-30 18:44:42.385000-06:00",
+    "endTime": "2026-10-30 18:49:50.969000-06:00",
+    "phases": [
+      {
+        "phaseType": "SUBMITTED",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:44:42.385000-06:00",
+        "endTime": "2026-10-30 18:44:42.497000-06:00",
+        "durationInSeconds": 0
+      },
+      {
+        "phaseType": "QUEUED",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:44:42.497000-06:00",
+        "endTime": "2026-10-30 18:44:43.140000-06:00",
+        "durationInSeconds": 0
+      },
+      {
+        "phaseType": "PROVISIONING",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:44:43.140000-06:00",
+        "endTime": "2026-10-30 18:44:47.314000-06:00",
+        "durationInSeconds": 4,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "DOWNLOAD_SOURCE",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:44:47.314000-06:00",
+        "endTime": "2026-10-30 18:44:49.872000-06:00",
+        "durationInSeconds": 2,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "INSTALL",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:44:49.872000-06:00",
+        "endTime": "2026-10-30 18:45:46.572000-06:00",
+        "durationInSeconds": 56,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "PRE_BUILD",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:45:46.572000-06:00",
+        "endTime": "2026-10-30 18:45:53.401000-06:00",
+        "durationInSeconds": 6,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "BUILD",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:45:53.401000-06:00",
+        "endTime": "2026-10-30 18:49:48.318000-06:00",
+        "durationInSeconds": 234,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "POST_BUILD",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:49:48.318000-06:00",
+        "endTime": "2026-10-30 18:49:49.035000-06:00",
+        "durationInSeconds": 0,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "UPLOAD_ARTIFACTS",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:49:49.035000-06:00",
+        "endTime": "2026-10-30 18:49:50.692000-06:00",
+        "durationInSeconds": 1,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "FINALIZING",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2026-10-30 18:49:50.692000-06:00",
+        "endTime": "2026-10-30 18:49:50.969000-06:00",
+        "durationInSeconds": 0,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "COMPLETED",
+        "startTime": "2026-10-30 18:49:50.969000-06:00"
+      }
+    ]
+  },
+  "model_packages": [
+    {
+      "ModelPackageGroupName": "northstar-churn-models",
+      "ModelPackageVersion": 3,
+      "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/3",
+      "CreationTime": "2026-10-30 18:49:12.961000-06:00",
+      "ModelPackageStatus": "Completed",
+      "ModelApprovalStatus": "PendingManualApproval",
+      "ModelPackageRegistrationType": "Registered"
+    },
+    {
+      "ModelPackageGroupName": "northstar-churn-models",
+      "ModelPackageVersion": 2,
+      "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/2",
+      "CreationTime": "2026-10-30 10:21:44.060000-06:00",
+      "ModelPackageStatus": "Completed",
+      "ModelApprovalStatus": "Approved",
+      "ModelPackageRegistrationType": "Registered"
+    },
+    {
+      "ModelPackageGroupName": "northstar-churn-models",
+      "ModelPackageVersion": 1,
+      "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/1",
+      "ModelPackageDescription": "XGBoost 3.2.0; Athena d1709914-6f10-45ef-a2aa-8e9461bb290d; final held-out evaluation",
+      "CreationTime": "2026-10-17 18:01:12.079000-06:00",
+      "ModelPackageStatus": "Completed",
+      "ModelApprovalStatus": "PendingManualApproval",
+      "ModelPackageRegistrationType": "Registered"
+    }
+  ],
+  "alarm": [
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmArn": "arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure",
+      "AlarmDescription": "A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.",
+      "AlarmConfigurationUpdatedTimestamp": "2026-10-30 00:35:30.546000-06:00",
+      "ActionsEnabled": true,
+      "OKActions": [
+        "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals"
+      ],
+      "AlarmActions": [
+        "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals"
+      ],
+      "InsufficientDataActions": [],
+      "StateValue": "OK",
+      "StateReason": "Threshold Crossed: 1 datapoint [0.0 (31/10/26 00:45:00)] was not greater than or equal to the threshold (1.0).",
+      "StateReasonData": "{\"version\":\"1.0\",\"queryDate\":\"2026-10-31T00:50:49.549+0000\",\"startDate\":\"2026-10-31T00:45:00.000+0000\",\"statistic\":\"Sum\",\"period\":300,\"recentDatapoints\":[0.0],\"threshold\":1.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-31T00:45:00.000+0000\",\"sampleCount\":1.0,\"value\":0.0}]}",
+      "StateUpdatedTimestamp": "2026-10-30 18:50:49.560000-06:00",
+      "MetricName": "FailedBuilds",
+      "Namespace": "AWS/CodeBuild",
+      "Statistic": "Sum",
+      "Dimensions": [
+        {
+          "Name": "ProjectName",
+          "Value": "northstar-ci"
+        }
+      ],
+      "Period": 300,
+      "EvaluationPeriods": 1,
+      "Threshold": 1.0,
+      "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+      "TreatMissingData": "notBreaching",
+      "StateTransitionedTimestamp": "2026-10-30 18:50:49.560000-06:00"
+    }
+  ],
+  "alarm_action_history": [
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 18:50:49.592000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793407849560,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: 1 datapoint [0.0 (31/10/26 00:45:00)] was not greater than or equal to the threshold (1.0).\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-31T00:50:49.560+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"ALARM\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"OK: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the OK state, because \\\\\\\"Threshold Crossed: 1 datapoint [0.0 (31/10/26 00:45:00)] was not greater than or equal to the threshold (1.0).\\\\\\\" at \\\\\\\"Saturday 31 October, 2026 00:50:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               ALARM -> OK\\\\n- Reason for State Change:    Threshold Crossed: 1 datapoint [0.0 (31/10/26 00:45:00)] was not greater than or equal to the threshold (1.0).\\\\n- Timestamp:                  Saturday 31 October, 2026 00:50:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 18:43:49.602000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793407429555,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"ALARM\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: 1 datapoint [1.0 (31/10/26 00:38:00)] was greater than or equal to the threshold (1.0).\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-31T00:43:49.555+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"ALARM: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the ALARM state, because \\\\\\\"Threshold Crossed: 1 datapoint [1.0 (31/10/26 00:38:00)] was greater than or equal to the threshold (1.0).\\\\\\\" at \\\\\\\"Saturday 31 October, 2026 00:43:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               OK -> ALARM\\\\n- Reason for State Change:    Threshold Crossed: 1 datapoint [1.0 (31/10/26 00:38:00)] was greater than or equal to the threshold (1.0).\\\\n- Timestamp:                  Saturday 31 October, 2026 00:43:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 00:53:49.605000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793343229554,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-30T06:53:49.554+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"ALARM\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"OK: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the OK state, because \\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\" at \\\\\\\"Friday 30 October, 2026 06:53:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               ALARM -> OK\\\\n- Reason for State Change:    Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\n- Timestamp:                  Friday 30 October, 2026 06:53:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 00:38:49.594000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793342329551,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"ALARM\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: 1 datapoint [1.0 (30/10/26 06:33:00)] was greater than or equal to the threshold (1.0).\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-30T06:38:49.551+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"ALARM: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the ALARM state, because \\\\\\\"Threshold Crossed: 1 datapoint [1.0 (30/10/26 06:33:00)] was greater than or equal to the threshold (1.0).\\\\\\\" at \\\\\\\"Friday 30 October, 2026 06:38:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               OK -> ALARM\\\\n- Reason for State Change:    Threshold Crossed: 1 datapoint [1.0 (30/10/26 06:33:00)] was greater than or equal to the threshold (1.0).\\\\n- Timestamp:                  Friday 30 October, 2026 06:38:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-30 00:36:49.601000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793342209552,\"notificationResource\":\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"701145280839\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-30T06:35:30.546+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-30T06:36:49.552+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"INSUFFICIENT_DATA\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:701145280839:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"OK: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the OK state, because \\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\" at \\\\\\\"Friday 30 October, 2026 06:36:49 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was left approvable by a failed run. Check NorthStar/CI BuildSucceeded to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               INSUFFICIENT_DATA -> OK\\\\n- Reason for State Change:    Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\n- Timestamp:                  Friday 30 October, 2026 06:36:49 UTC\\\\n- AWS Account:                701145280839\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:701145280839:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:701145280839:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    }
+  ],
+  "subscriptions": [
+    {
+      "Protocol": "email",
+      "SubscriptionArn": "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals:2bc00528-ad1f-49eb-bd94-84c3eb07afa9"
+    }
+  ]
+}

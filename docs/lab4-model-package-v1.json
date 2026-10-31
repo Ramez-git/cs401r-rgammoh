@@ -1,0 +1,100 @@
+{
+  "ModelPackageGroupName": "northstar-churn-models",
+  "ModelPackageVersion": 1,
+  "ModelPackageRegistrationType": "Registered",
+  "ModelPackageArn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/1",
+  "ModelPackageDescription": "XGBoost 3.2.0; Athena d1709914-6f10-45ef-a2aa-8e9461bb290d; final held-out evaluation",
+  "CreationTime": "2026-10-17 18:01:12.079000-06:00",
+  "InferenceSpecification": {
+    "Containers": [
+      {
+        "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.7-1",
+        "ImageDigest": "sha256:b4f13edb198529c460692015797fa1ca6a8ff1ed64a149297174d922121b8fc4",
+        "ModelDataUrl": "s3://northstar-dev-data-701145280839/artifacts/churn/7f73ba1abbe44b998d7f32ed71089cf3/model.tar.gz",
+        "Environment": {
+          "SAGEMAKER_PROGRAM": "inference.py",
+          "SAGEMAKER_SUBMIT_DIRECTORY": "/opt/ml/model/code"
+        },
+        "ModelDataETag": "22e41c54dff3b8d7d12d93ebaa151439",
+        "IsCheckpoint": false
+      }
+    ],
+    "SupportedTransformInstanceTypes": [
+      "ml.m5.large"
+    ],
+    "SupportedRealtimeInferenceInstanceTypes": [
+      "ml.m5.large"
+    ],
+    "SupportedContentTypes": [
+      "application/json"
+    ],
+    "SupportedResponseMIMETypes": [
+      "application/json"
+    ]
+  },
+  "ModelPackageStatus": "Completed",
+  "ModelPackageStatusDetails": {
+    "ValidationStatuses": [],
+    "ImageScanStatuses": []
+  },
+  "CertifyForMarketplace": false,
+  "ModelApprovalStatus": "PendingManualApproval",
+  "CreatedBy": {
+    "IamIdentity": {
+      "Arn": "arn:aws:iam::701145280839:user/cs401r-lab",
+      "PrincipalId": "AIDA2GP4D6FDSAYKALEZY"
+    }
+  },
+  "LastModifiedTime": "2026-10-31 13:51:34.514000-06:00",
+  "LastModifiedBy": {
+    "IamIdentity": {
+      "Arn": "arn:aws:iam::701145280839:user/cs401r-lab",
+      "PrincipalId": "AIDA2GP4D6FDSAYKALEZY"
+    }
+  },
+  "CustomerMetadataProperties": {
+    "athena_query_id": "d1709914-6f10-45ef-a2aa-8e9461bb290d",
+    "auc_roc": "0.7838",
+    "auc_vs_baseline": "0.0609",
+    "baseline_auc": "0.7229",
+    "code_commit_sha": "c7b39137f66bb7e3651e7ae14d71dcac73a5b5ce",
+    "code_commit_sha_source": "Retrospectively verified source snapshot: model and baseline reproduced byte-identically. Original MLflow run Git HEAD is recorded separately.",
+    "lift_ci_high": "0.0791",
+    "lift_ci_low": "0.042",
+    "lineage_verified_at": "2026-10-31T19:51:35.137120+00:00",
+    "mlflow_run_id": "7f73ba1abbe44b998d7f32ed71089cf3",
+    "n_targeted": "300",
+    "n_train_samples": "6999",
+    "n_val_samples": "3000",
+    "original_git_head_sha": "54a48b07aecff761c4999eb73ff92ef57a731d9f",
+    "positive_rate_val": "0.22",
+    "precision_top10": "0.7233",
+    "recall_top10": "0.3288",
+    "registered_model_sha256": "cf0d8579ea5a3a9440622bdd0d01cfd30bc46d4fe0bb534066c033ecd26fafd8",
+    "selected_rounds": "154",
+    "source_file": "churn_training_skeleton.py",
+    "source_sha256": "b4e21c022978094af4bd6a01b1be7760e0c55ef31808dc66658e2e58161dfee2",
+    "training_data_s3_uri": "s3://northstar-dev-data-701145280839/artifacts/athena-results/d1709914-6f10-45ef-a2aa-8e9461bb290d.csv",
+    "training_data_s3_version_id": "LkqWO5sdkU5E2Efd.QeLM.QEvV02LOWj",
+    "training_data_sha256": "325f9999c1f345321c2fb5f1eb3aae7390be08a84587ea495ec505ef94db8589",
+    "training_data_timestamp": "2026-10-18T00:00:49+00:00",
+    "training_data_timestamp_source": "S3 LastModified of original Athena query result",
+    "xgboost_version": "3.2.0"
+  },
+  "ResponseMetadata": {
+    "RequestId": "1872c08d-d9f3-4e27-bedf-e8ebf5f63d15",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "x-amzn-requestid": "1872c08d-d9f3-4e27-bedf-e8ebf5f63d15",
+      "strict-transport-security": "max-age=47304000; includeSubDomains",
+      "x-frame-options": "DENY",
+      "content-security-policy": "frame-ancestors 'none'",
+      "cache-control": "no-cache, no-store, must-revalidate",
+      "x-content-type-options": "nosniff",
+      "content-type": "application/x-amz-json-1.1",
+      "content-length": "2974",
+      "date": "Sat, 31 Oct 2026 19:51:34 GMT"
+    },
+    "RetryAttempts": 0
+  }
+}

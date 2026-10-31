@@ -1,0 +1,126 @@
+{
+  "pipeline": {
+    "name": "northstar-pipeline",
+    "roleArn": "arn:aws:iam::701145280839:role/northstar-codepipeline-role",
+    "artifactStore": {
+      "type": "S3",
+      "location": "northstar-dev-cicd-artifacts-701145280839"
+    },
+    "stages": [
+      {
+        "name": "Source",
+        "actions": [
+          {
+            "name": "GitHubSource",
+            "actionTypeId": {
+              "category": "Source",
+              "owner": "AWS",
+              "provider": "CodeStarSourceConnection",
+              "version": "1"
+            },
+            "runOrder": 1,
+            "configuration": {
+              "BranchName": "main",
+              "ConnectionArn": "arn:aws:codeconnections:us-east-1:701145280839:connection/12cc8696-9109-49b7-b000-746334b324ea",
+              "FullRepositoryId": "Ramez-git/cs401r-rgammoh",
+              "OutputArtifactFormat": "CODE_ZIP"
+            },
+            "outputArtifacts": [
+              {
+                "name": "SourceArtifact"
+              }
+            ],
+            "inputArtifacts": []
+          }
+        ]
+      },
+      {
+        "name": "Build",
+        "actions": [
+          {
+            "name": "RunTestsAndTrain",
+            "actionTypeId": {
+              "category": "Build",
+              "owner": "AWS",
+              "provider": "CodeBuild",
+              "version": "1"
+            },
+            "runOrder": 1,
+            "configuration": {
+              "ProjectName": "northstar-ci"
+            },
+            "outputArtifacts": [
+              {
+                "name": "BuildArtifact"
+              }
+            ],
+            "inputArtifacts": [
+              {
+                "name": "SourceArtifact"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ManualApproval",
+        "actions": [
+          {
+            "name": "ReviewModelMetrics",
+            "actionTypeId": {
+              "category": "Approval",
+              "owner": "AWS",
+              "provider": "Manual",
+              "version": "1"
+            },
+            "runOrder": 1,
+            "configuration": {
+              "CustomData": "The candidate passed every CI gate (precision@10% >= 0.50, recall@10% >= 0.25, AUC lift CI over the recency baseline excludes zero, AUC >= champion - 0.02). Read its metrics and slice_results in the Model Registry, review any fairness flag in the build log, then set the package to Approved or Rejected and approve or reject this action.",
+              "ExternalEntityLink": "https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/model-registry",
+              "NotificationArn": "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals"
+            },
+            "outputArtifacts": [],
+            "inputArtifacts": []
+          }
+        ]
+      }
+    ],
+    "version": 4,
+    "executionMode": "SUPERSEDED",
+    "pipelineType": "V2",
+    "triggers": [
+      {
+        "providerType": "CodeStarSourceConnection",
+        "gitConfiguration": {
+          "sourceActionName": "GitHubSource",
+          "push": [
+            {
+              "branches": {
+                "includes": [
+                  "main"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "pipelineArn": "arn:aws:codepipeline:us-east-1:701145280839:northstar-pipeline",
+    "created": "2026-10-30 00:35:48.324000-06:00",
+    "updated": "2026-10-30 18:40:36.408000-06:00"
+  },
+  "ResponseMetadata": {
+    "RequestId": "8310969b-d3b2-455c-b207-7b81bbe17d43",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "x-amzn-requestid": "8310969b-d3b2-455c-b207-7b81bbe17d43",
+      "date": "Sat, 31 Oct 2026 19:49:12 GMT",
+      "content-type": "application/x-amz-json-1.1",
+      "content-length": "2178",
+      "connection": "keep-alive"
+    },
+    "RetryAttempts": 0
+  }
+}

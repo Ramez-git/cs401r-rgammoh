@@ -1,4 +1,4 @@
-"""Exhaustive file-format and numerical checks supporting the manual Lab 3 audit."""
+"""Check saved Lab 3 file formats, model outputs, and evaluation evidence."""
 import ast
 import csv
 import hashlib
@@ -20,7 +20,7 @@ from rag.offer_pipeline import OfferRAG, chunks_from_corpus
 E = ROOT/'docs/lab3-evidence'
 inventory = []
 paths = subprocess.check_output(['git','diff','--name-only','c7b3913^'], cwd=ROOT, text=True).splitlines()
-paths += ['scripts/audit-lab3-evidence.py', 'docs/lab3-manual-review.md']
+paths += ['scripts/audit-lab3-evidence.py']
 for name in sorted(set(paths)):
     path = ROOT/name
     if not path.is_file() or name.endswith('deep-audit.json'):

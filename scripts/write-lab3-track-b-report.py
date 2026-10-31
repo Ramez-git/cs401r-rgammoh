@@ -199,8 +199,8 @@ Sources: [Claude pricing](https://platform.claude.com/docs/en/about-claude/prici
 No hosted vector store, persistent endpoint or AgentCore stack was created.
 
 The saved notebook ran in a fresh Python 3.12 kernel with consecutive execution
-counts and live Bedrock outputs. See `docs/lab3-checks.md` for replay and live
-verification commands. Changes to the supplied harness retain its scoring
+counts and live Bedrock outputs. `scripts/verify-lab3-track-b.py` checks the saved
+results and notebook outputs. Changes to the supplied harness retain its scoring
 metrics/cases: explicit Bedrock judge wiring, a two-worker limit, trace export,
 and labeling old targets as ungraded. The final result records both low scores
 and why they occurred.

@@ -141,7 +141,7 @@ holdout predictions, metrics, plots, SQL execution evidence, MLflow runs and
 registry metadata are exported under `docs/lab3-evidence/`. The final numbers
 must agree across the report, metrics JSON, MLflow and registry metadata.
 
-Run the checks in [Task 1 verification instructions](lab3-task1-checks.md).
+`scripts/verify-lab3-task1.py` recomputes the saved predictions and metrics.
 No persistent inference endpoint or SageMaker training job is needed. Full
 Lab 3 submission tagging and Tasks 2-4 are separate from this Task 1 result.
 '''

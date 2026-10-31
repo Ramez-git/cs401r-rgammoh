@@ -1,0 +1,109 @@
+{
+  "account": "701145280839",
+  "region": "us-east-1",
+  "stack": "northstar-cicd",
+  "started_at": "2026-10-31T19:52:44.523035+00:00",
+  "stack_id": "arn:aws:cloudformation:us-east-1:701145280839:stack/northstar-cicd/06f1de80-d42c-11f1-841a-12fff42c87f3",
+  "stack_parameters": {
+    "GitHubConnectionArn": "arn:aws:codeconnections:us-east-1:701145280839:connection/12cc8696-9109-49b7-b000-746334b324ea",
+    "ProjectName": "northstar",
+    "GitHubOwner": "Ramez-git",
+    "ArtifactsBucket": "northstar-dev-cicd-artifacts-701145280839",
+    "Environment": "dev",
+    "SageMakerRoleArn": "arn:aws:iam::701145280839:role/northstar-dev-MLEngineer",
+    "SageMakerPipelineName": "northstar-churn-pipeline",
+    "GitHubBranch": "main",
+    "GitHubRepo": "cs401r-rgammoh"
+  },
+  "stack_resources": [
+    {
+      "LogicalResourceId": "BuildFailureAlarm",
+      "PhysicalResourceId": "northstar-ci-build-failure",
+      "ResourceType": "AWS::CloudWatch::Alarm"
+    },
+    {
+      "LogicalResourceId": "CodeBuildProject",
+      "PhysicalResourceId": "northstar-ci",
+      "ResourceType": "AWS::CodeBuild::Project"
+    },
+    {
+      "LogicalResourceId": "CodeBuildRole",
+      "PhysicalResourceId": "northstar-codebuild-role",
+      "ResourceType": "AWS::IAM::Role"
+    },
+    {
+      "LogicalResourceId": "CodePipelineRole",
+      "PhysicalResourceId": "northstar-codepipeline-role",
+      "ResourceType": "AWS::IAM::Role"
+    },
+    {
+      "LogicalResourceId": "ModelApprovalTopic",
+      "PhysicalResourceId": "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "ResourceType": "AWS::SNS::Topic"
+    },
+    {
+      "LogicalResourceId": "ModelApprovalTopicPolicy",
+      "PhysicalResourceId": "arn:aws:sns:us-east-1:701145280839:northstar-model-approvals",
+      "ResourceType": "AWS::SNS::TopicPolicy"
+    },
+    {
+      "LogicalResourceId": "NorthStarPipeline",
+      "PhysicalResourceId": "northstar-pipeline",
+      "ResourceType": "AWS::CodePipeline::Pipeline"
+    }
+  ],
+  "evidence_sha256": {
+    "lab4-build-green.log": "9581645024d1896a3c52e2f2c058fe1e19baf78530d2be63e191dc210183915c",
+    "lab4-build-failed.log": "8e6eceb823324a1c130c1b4b8b5f29db15e9a94184de5e470c7054f6943f3ddc",
+    "lab4-bootstrap-green.log": "e2262baf8052eb6773afba708e01ddd6839635a696e1e1918b5ddc3273a1d846",
+    "lab4-initial-stale-build.log": "b760240868aeafb4b84b8105fed6aaf404249b2a53a61e1ed8ff5f33bc41bb5f",
+    "lab4-failure-demo.txt": "b1700a9a8bafc92f7d27adcf37cbfc9f8a290a79f3b94193b625535c572f9c35",
+    "lab4-pipeline-runs.txt": "9f1eb01029832a761c88d51b8ac5e9e189b34742debc2dbcd8c357d413be95cd",
+    "lab4-pipeline-config.json": "06fb5574808b70590116274eea06d5e77bab3685ed033aa801b18d308750e02b",
+    "lab4-model-registry.json": "0862f632eddc2a3cbfae6cec5059b77fa010558628e3fb489378704671ddf12a",
+    "lab4-model-package.json": "9d5e1448f6313e509650a170314e1d1038dd6c76203a4030f195177ae667ef04",
+    "lab4-alarm-email.png": "15c82b93c03bf29f46204213aeebd2e972a9f499753dc8ac991c7092e0dd2c6d",
+    "lab4-mlflow-runs.txt": "154bb6340a4309b0952c842664d8878df92c0587665d720da9b04192e0c82418",
+    "lab4-model-package-v1.json": "f31ddea2d1d992eb3d409d4a56fa91bbef00f4c239facd77d62b51d0672f29be",
+    "lab4-lineage-verification.json": "aab7ba1a68e6b135293ce72777236d8e72d16b54e1ca38eece645c8a5c673cb3"
+  },
+  "retained": [
+    "northstar-dev-data-701145280839",
+    "northstar-dev-customer-features",
+    "northstar-churn-models",
+    "northstar-churn-pipeline",
+    "MLflow App",
+    "existing Terraform-managed IAM roles",
+    "GitHub connections"
+  ],
+  "actions": [
+    {
+      "timestamp": "2026-10-31T19:52:44.533772+00:00",
+      "action": "verified evidence and deletion scope"
+    },
+    {
+      "timestamp": "2026-10-31T19:52:44.799324+00:00",
+      "action": "requested stack deletion"
+    },
+    {
+      "timestamp": "2026-10-31T19:53:46.807466+00:00",
+      "action": "stack deletion complete"
+    },
+    {
+      "timestamp": "2026-10-31T19:53:47.895318+00:00",
+      "action": "deleted CI artifact bucket",
+      "bucket": "northstar-dev-cicd-artifacts-701145280839",
+      "versions_and_markers_deleted": 6
+    },
+    {
+      "timestamp": "2026-10-31T19:53:48.375608+00:00",
+      "action": "deleted saved CodeBuild log group",
+      "log_group": "/aws/codebuild/northstar-ci"
+    },
+    {
+      "timestamp": "2026-10-31T19:53:49.305264+00:00",
+      "action": "verified retained data, Feature Store and registry",
+      "status": "COMPLETE"
+    }
+  ]
+}

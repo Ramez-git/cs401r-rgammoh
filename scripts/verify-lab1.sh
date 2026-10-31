@@ -186,7 +186,7 @@ grep -q "\.terraform" .gitignore 2>/dev/null \
   || check "S .gitignore covers .terraform/" "MISSING"
 
 # Same scan the TA runs. A bare `git log -S "AKIA"` is wrong here: the word
-# appears in this script, in aws-account-setup.md, and (as AWS's documented
+# appears in this script, in docs/reference/aws-account-setup.md, and (as AWS's documented
 # placeholder AKIAIOSFODNN7EXAMPLE) in every LocalStack output file.
 if bash scripts/check-secrets.sh >/dev/null 2>&1; then
   check "S No AWS credentials in git history (scripts/check-secrets.sh)" "PASS"

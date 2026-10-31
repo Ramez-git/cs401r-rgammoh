@@ -2,3 +2,7 @@
 *.py text eol=lf
 *.tf text eol=lf
 Makefile text eol=lf
+# Preserve captured evidence byte-for-byte, including original line endings.
+docs/lab4-*.log -text
+docs/lab4-*.json -text
+docs/lab4-*.txt -text

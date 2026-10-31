@@ -1,0 +1,32 @@
+{
+  "verified_at": "2026-10-31T19:51:35.137120+00:00",
+  "package_arn": "arn:aws:sagemaker:us-east-1:701145280839:model-package/northstar-churn-models/1",
+  "original_run_git_head": "54a48b07aecff761c4999eb73ff92ef57a731d9f",
+  "provenance_note": "Retrospectively verified source snapshot: model and baseline reproduced byte-identically. Original MLflow run Git HEAD is recorded separately.",
+  "data": {
+    "training_data_s3_uri": "s3://northstar-dev-data-701145280839/artifacts/athena-results/d1709914-6f10-45ef-a2aa-8e9461bb290d.csv",
+    "training_data_timestamp": "2026-10-18T00:00:49+00:00",
+    "training_data_timestamp_source": "S3 LastModified of original Athena query result",
+    "training_data_s3_version_id": "LkqWO5sdkU5E2Efd.QeLM.QEvV02LOWj",
+    "training_data_sha256": "325f9999c1f345321c2fb5f1eb3aae7390be08a84587ea495ec505ef94db8589"
+  },
+  "source_reproduction": {
+    "verified_source_snapshot_commit": "c7b39137f66bb7e3651e7ae14d71dcac73a5b5ce",
+    "source_file": "churn_training_skeleton.py",
+    "source_sha256": "b4e21c022978094af4bd6a01b1be7760e0c55ef31808dc66658e2e58161dfee2",
+    "verification": "Historical committed main() replayed using original Athena result and recorded parameters; cloud registration/tracking disabled.",
+    "training_data_sha256": "325f9999c1f345321c2fb5f1eb3aae7390be08a84587ea495ec505ef94db8589",
+    "files": {
+      "model.json": {
+        "sha256": "cf0d8579ea5a3a9440622bdd0d01cfd30bc46d4fe0bb534066c033ecd26fafd8",
+        "byte_identical": true
+      },
+      "baseline.json": {
+        "sha256": "9bffa841c448c4b3643cafc7cda0ac95989718fc9363e5abc956b100917dd437",
+        "byte_identical": true
+      }
+    },
+    "metrics_identical": true
+  },
+  "registered_artifact_model_sha256": "cf0d8579ea5a3a9440622bdd0d01cfd30bc46d4fe0bb534066c033ecd26fafd8"
+}

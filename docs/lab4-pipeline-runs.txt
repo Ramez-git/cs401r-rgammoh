@@ -1,0 +1,598 @@
+{
+  "captured_at": "2026-10-31T19:49:12.978183+00:00",
+  "CodePipeline": [
+    {
+      "pipelineExecutionId": "d6a30739-1ff9-483c-8081-1ff86d3407db",
+      "status": "InProgress",
+      "startTime": "2026-10-30 18:44:37.244000-06:00",
+      "lastUpdateTime": "2026-10-30 18:44:37.244000-06:00",
+      "sourceRevisions": [
+        {
+          "actionName": "GitHubSource",
+          "revisionId": "3ad1bee629916bae74f5117766f6a04951420df1",
+          "revisionSummary": "{\"ProviderType\":\"GitHub\",\"CommitMessage\":\"Revert \\\"Demonstrate CI gate with a deliberate failing test\\\"\\n\\nThis reverts commit f0df5aba8d6ce298d024142e69fbeaf295f61df6.\"}",
+          "revisionUrl": "https://us-east-1.console.aws.amazon.com/codesuite/settings/connections/redirect?connectionArn=arn:aws:codeconnections:us-east-1:701145280839:connection/12cc8696-9109-49b7-b000-746334b324ea&referenceType=COMMIT&FullRepositoryId=Ramez-git/cs401r-rgammoh&Commit=3ad1bee629916bae74f5117766f6a04951420df1"
+        }
+      ],
+      "trigger": {
+        "triggerType": "WebhookV2",
+        "triggerDetail": "{\"connectionArn\":\"arn:aws:codeconnections:us-east-1:701145280839:connection/12cc8696-9109-49b7-b000-746334b324ea\",\"repositoryId\":\"Ramez-git/cs401r-rgammoh\",\"branchName\":\"main\",\"commitId\":\"3ad1bee629916bae74f5117766f6a04951420df1\",\"type\":\"PUSH_BRANCH\"}"
+      },
+      "executionMode": "SUPERSEDED"
+    },
+    {
+      "pipelineExecutionId": "ff373de2-d2c8-4a93-8728-8f5d307a9771",
+      "status": "Failed",
+      "startTime": "2026-10-30 18:41:22.611000-06:00",
+      "lastUpdateTime": "2026-10-30 18:43:01.022000-06:00",
+      "sourceRevisions": [
+        {
+          "actionName": "GitHubSource",
+          "revisionId": "969e8b829d7fd70de743c6f96f521f0f8f177c41",
+          "revisionSummary": "{\"ProviderType\":\"GitHub\",\"CommitMessage\":\"Document the GitHub app installation connection\"}",
+          "revisionUrl": "https://us-east-1.console.aws.amazon.com/codesuite/settings/connections/redirect?connectionArn=arn:aws:codeconnections:us-east-1:701145280839:connection/12cc8696-9109-49b7-b000-746334b324ea&referenceType=COMMIT&FullRepositoryId=Ramez-git/cs401r-rgammoh&Commit=969e8b829d7fd70de743c6f96f521f0f8f177c41"
+        }
+      ],
+      "trigger": {
+        "triggerType": "WebhookV2",
+        "triggerDetail": "{\"connectionArn\":\"arn:aws:codeconnections:us-east-1:701145280839:connection/12cc8696-9109-49b7-b000-746334b324ea\",\"repositoryId\":\"Ramez-git/cs401r-rgammoh\",\"branchName\":\"main\",\"commitId\":\"969e8b829d7fd70de743c6f96f521f0f8f177c41\",\"type\":\"PUSH_BRANCH\"}"
+      },
+      "executionMode": "SUPERSEDED"
+    },
+    {
+      "pipelineExecutionId": "ad79c96c-cf0f-4941-99e6-77059ba2c8c8",
+      "status": "Cancelled",
+      "statusSummary": "Pipeline definition was updated",
+      "startTime": "2026-10-30 10:16:26.083000-06:00",
+      "lastUpdateTime": "2026-10-30 10:32:46.425000-06:00",
+      "sourceRevisions": [
+        {
+          "actionName": "GitHubSource",
+          "revisionId": "a8c61e011cd44863c298356892f4640d8698efe5",
+          "revisionSummary": "{\"ProviderType\":\"GitHub\",\"CommitMessage\":\"Implement Lab 4 CI pipeline, model gates, and lineage\"}",
+          "revisionUrl": "https://us-east-1.console.aws.amazon.com/codesuite/settings/connections/redirect?connectionArn=arn:aws:codeconnections:us-east-1:701145280839:connection/09ca1dfe-4a6b-492f-a8f4-497e0daa852c&referenceType=COMMIT&FullRepositoryId=Ramez-git/cs401r-rgammoh&Commit=a8c61e011cd44863c298356892f4640d8698efe5"
+        }
+      ],
+      "trigger": {
+        "triggerType": "StartPipelineExecution",
+        "triggerDetail": "arn:aws:iam::701145280839:user/cs401r-lab"
+      },
+      "executionMode": "SUPERSEDED"
+    },
+    {
+      "pipelineExecutionId": "ca55272e-baf5-45cb-ad35-fba4f7fb7407",
+      "status": "Failed",
+      "startTime": "2026-10-30 00:35:48.620000-06:00",
+      "lastUpdateTime": "2026-10-30 00:37:32.343000-06:00",
+      "sourceRevisions": [
+        {
+          "actionName": "GitHubSource",
+          "revisionId": "a8c61e011cd44863c298356892f4640d8698efe5",
+          "revisionSummary": "{\"ProviderType\":\"GitHub\",\"CommitMessage\":\"Implement Lab 4 CI pipeline, model gates, and lineage\"}",
+          "revisionUrl": "https://us-east-1.console.aws.amazon.com/codesuite/settings/connections/redirect?connectionArn=arn:aws:codeconnections:us-east-1:701145280839:connection/09ca1dfe-4a6b-492f-a8f4-497e0daa852c&referenceType=COMMIT&FullRepositoryId=Ramez-git/cs401r-rgammoh&Commit=a8c61e011cd44863c298356892f4640d8698efe5"
+        }
+      ],
+      "trigger": {
+        "triggerType": "CreatePipeline",
+        "triggerDetail": "arn:aws:iam::701145280839:user/cs401r-lab"
+      },
+      "executionMode": "SUPERSEDED"
+    }
+  ],
+  "CodeBuild": [
+    {
+      "id": "northstar-ci:657ec14d-624b-4b55-b41e-e362d270ff73",
+      "resolvedSourceVersion": "3ad1bee629916bae74f5117766f6a04951420df1",
+      "buildStatus": "SUCCEEDED",
+      "startTime": "2026-10-30 18:44:42.385000-06:00",
+      "endTime": "2026-10-30 18:49:50.969000-06:00",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:44:42.385000-06:00",
+          "endTime": "2026-10-30 18:44:42.497000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:44:42.497000-06:00",
+          "endTime": "2026-10-30 18:44:43.140000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:44:43.140000-06:00",
+          "endTime": "2026-10-30 18:44:47.314000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:44:47.314000-06:00",
+          "endTime": "2026-10-30 18:44:49.872000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:44:49.872000-06:00",
+          "endTime": "2026-10-30 18:45:46.572000-06:00",
+          "durationInSeconds": 56,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:45:46.572000-06:00",
+          "endTime": "2026-10-30 18:45:53.401000-06:00",
+          "durationInSeconds": 6,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:45:53.401000-06:00",
+          "endTime": "2026-10-30 18:49:48.318000-06:00",
+          "durationInSeconds": 234,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:49:48.318000-06:00",
+          "endTime": "2026-10-30 18:49:49.035000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:49:49.035000-06:00",
+          "endTime": "2026-10-30 18:49:50.692000-06:00",
+          "durationInSeconds": 1,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:49:50.692000-06:00",
+          "endTime": "2026-10-30 18:49:50.969000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2026-10-30 18:49:50.969000-06:00"
+        }
+      ],
+      "logs": {
+        "groupName": "/aws/codebuild/northstar-ci",
+        "streamName": "657ec14d-624b-4b55-b41e-e362d270ff73",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Faws$252Fcodebuild$252Fnorthstar-ci/log-events/657ec14d-624b-4b55-b41e-e362d270ff73",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-1:701145280839:log-group:/aws/codebuild/northstar-ci:log-stream:657ec14d-624b-4b55-b41e-e362d270ff73",
+        "cloudWatchLogs": {
+          "status": "ENABLED",
+          "groupName": "/aws/codebuild/northstar-ci"
+        }
+      },
+      "pytest_summaries": [
+        "======================== 51 passed, 1 warning in 1.77s =========================",
+        "======================= 21 passed, 618 warnings in 1.12s ======================="
+      ]
+    },
+    {
+      "id": "northstar-ci:397d9b57-b319-4388-91de-42f1fc9017d6",
+      "resolvedSourceVersion": "969e8b829d7fd70de743c6f96f521f0f8f177c41",
+      "buildStatus": "FAILED",
+      "startTime": "2026-10-30 18:41:27.921000-06:00",
+      "endTime": "2026-10-30 18:42:32.153000-06:00",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:41:27.921000-06:00",
+          "endTime": "2026-10-30 18:41:28.045000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:41:28.045000-06:00",
+          "endTime": "2026-10-30 18:41:28.821000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:41:28.821000-06:00",
+          "endTime": "2026-10-30 18:41:32.503000-06:00",
+          "durationInSeconds": 3,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:41:32.503000-06:00",
+          "endTime": "2026-10-30 18:41:35.087000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:41:35.087000-06:00",
+          "endTime": "2026-10-30 18:42:25.843000-06:00",
+          "durationInSeconds": 50,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "FAILED",
+          "startTime": "2026-10-30 18:42:25.843000-06:00",
+          "endTime": "2026-10-30 18:42:31.857000-06:00",
+          "durationInSeconds": 6,
+          "contexts": [
+            {
+              "statusCode": "COMMAND_EXECUTION_ERROR",
+              "message": "Error while executing command: python -m pytest tests/ --ignore=tests/test_model.py --ignore=tests/test_fairness.py -v --tb=short --junitxml=reports/prebuild_tests.xml. Reason: exit status 1"
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 18:42:31.857000-06:00",
+          "endTime": "2026-10-30 18:42:32.153000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2026-10-30 18:42:32.153000-06:00"
+        }
+      ],
+      "logs": {
+        "groupName": "/aws/codebuild/northstar-ci",
+        "streamName": "397d9b57-b319-4388-91de-42f1fc9017d6",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Faws$252Fcodebuild$252Fnorthstar-ci/log-events/397d9b57-b319-4388-91de-42f1fc9017d6",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-1:701145280839:log-group:/aws/codebuild/northstar-ci:log-stream:397d9b57-b319-4388-91de-42f1fc9017d6",
+        "cloudWatchLogs": {
+          "status": "ENABLED",
+          "groupName": "/aws/codebuild/northstar-ci"
+        }
+      },
+      "pytest_summaries": [
+        "=================== 1 failed, 51 passed, 1 warning in 1.64s ===================="
+      ]
+    },
+    {
+      "id": "northstar-ci:6ed85fa8-94d5-4866-92eb-07fc863e0809",
+      "resolvedSourceVersion": "a8c61e011cd44863c298356892f4640d8698efe5",
+      "buildStatus": "SUCCEEDED",
+      "startTime": "2026-10-30 10:17:26.263000-06:00",
+      "endTime": "2026-10-30 10:21:55.610000-06:00",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 10:17:26.263000-06:00",
+          "endTime": "2026-10-30 10:17:26.385000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 10:17:26.385000-06:00",
+          "endTime": "2026-10-30 10:17:27.138000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 10:17:27.138000-06:00",
+          "endTime": "2026-10-30 10:17:31.203000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 10:17:31.203000-06:00",
+          "endTime": "2026-10-30 10:17:33.954000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 10:17:33.954000-06:00",
+          "endTime": "2026-10-30 10:18:24.132000-06:00",
+          "durationInSeconds": 50,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 10:18:24.132000-06:00",
+          "endTime": "2026-10-30 10:18:30.161000-06:00",
+          "durationInSeconds": 6,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 10:18:30.161000-06:00",
+          "endTime": "2026-10-30 10:21:52.467000-06:00",
+          "durationInSeconds": 202,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 10:21:52.467000-06:00",
+          "endTime": "2026-10-30 10:21:53.110000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 10:21:53.110000-06:00",
+          "endTime": "2026-10-30 10:21:55.335000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 10:21:55.335000-06:00",
+          "endTime": "2026-10-30 10:21:55.610000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2026-10-30 10:21:55.610000-06:00"
+        }
+      ],
+      "logs": {
+        "groupName": "/aws/codebuild/northstar-ci",
+        "streamName": "6ed85fa8-94d5-4866-92eb-07fc863e0809",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Faws$252Fcodebuild$252Fnorthstar-ci/log-events/6ed85fa8-94d5-4866-92eb-07fc863e0809",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-1:701145280839:log-group:/aws/codebuild/northstar-ci:log-stream:6ed85fa8-94d5-4866-92eb-07fc863e0809",
+        "cloudWatchLogs": {
+          "status": "ENABLED",
+          "groupName": "/aws/codebuild/northstar-ci"
+        }
+      },
+      "pytest_summaries": [
+        "======================== 51 passed, 1 warning in 1.40s =========================",
+        "================= 20 passed, 1 skipped, 617 warnings in 0.99s =================="
+      ]
+    },
+    {
+      "id": "northstar-ci:83a12915-5318-43eb-afde-65959a2000be",
+      "resolvedSourceVersion": "a8c61e011cd44863c298356892f4640d8698efe5",
+      "buildStatus": "FAILED",
+      "startTime": "2026-10-30 00:35:59.203000-06:00",
+      "endTime": "2026-10-30 00:37:08.892000-06:00",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 00:35:59.203000-06:00",
+          "endTime": "2026-10-30 00:35:59.327000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 00:35:59.327000-06:00",
+          "endTime": "2026-10-30 00:36:00.089000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 00:36:00.089000-06:00",
+          "endTime": "2026-10-30 00:36:02.921000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 00:36:02.921000-06:00",
+          "endTime": "2026-10-30 00:36:05.362000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 00:36:05.362000-06:00",
+          "endTime": "2026-10-30 00:37:01.906000-06:00",
+          "durationInSeconds": 56,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "FAILED",
+          "startTime": "2026-10-30 00:37:01.906000-06:00",
+          "endTime": "2026-10-30 00:37:08.591000-06:00",
+          "durationInSeconds": 6,
+          "contexts": [
+            {
+              "statusCode": "COMMAND_EXECUTION_ERROR",
+              "message": "Error while executing command: python -m pytest tests/ --ignore=tests/test_model.py --ignore=tests/test_fairness.py -v --tb=short --junitxml=reports/prebuild_tests.xml. Reason: exit status 1"
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-30 00:37:08.591000-06:00",
+          "endTime": "2026-10-30 00:37:08.892000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2026-10-30 00:37:08.892000-06:00"
+        }
+      ],
+      "logs": {
+        "groupName": "/aws/codebuild/northstar-ci",
+        "streamName": "83a12915-5318-43eb-afde-65959a2000be",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Faws$252Fcodebuild$252Fnorthstar-ci/log-events/83a12915-5318-43eb-afde-65959a2000be",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-1:701145280839:log-group:/aws/codebuild/northstar-ci:log-stream:83a12915-5318-43eb-afde-65959a2000be",
+        "cloudWatchLogs": {
+          "status": "ENABLED",
+          "groupName": "/aws/codebuild/northstar-ci"
+        }
+      },
+      "pytest_summaries": [
+        "=================== 1 failed, 50 passed, 1 warning in 1.96s ===================="
+      ]
+    }
+  ],
+  "SageMakerPipeline": [
+    {
+      "PipelineExecutionArn": "arn:aws:sagemaker:us-east-1:701145280839:pipeline/northstar-churn-pipeline/execution/fmihejv0zzou",
+      "StartTime": "2026-10-30 18:46:05.166000-06:00",
+      "PipelineExecutionStatus": "Succeeded",
+      "PipelineExecutionDisplayName": "codebuild-3ad1bee629916bae74f5117766f6a04951420df1"
+    },
+    {
+      "PipelineExecutionArn": "arn:aws:sagemaker:us-east-1:701145280839:pipeline/northstar-churn-pipeline/execution/adjbfymv28vu",
+      "StartTime": "2026-10-30 10:18:41.031000-06:00",
+      "PipelineExecutionStatus": "Succeeded",
+      "PipelineExecutionDisplayName": "codebuild-a8c61e011cd44863c298356892f4640d8698efe5"
+    }
+  ]
+}
