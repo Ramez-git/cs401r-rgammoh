@@ -32,7 +32,7 @@ network routes before running Glue. The MLEngineer role must pass itself to
 SageMaker; the DataEngineer role needs the scoped S3 folder-marker keys used
 by Glue.
 
-Authorize northstar-github-app through AWS CodeConnections. Select the installed
+Authorize northstar-github-installation through AWS CodeConnections. Select the installed
 AWS Connector for GitHub app for Ramez-git; leaving App installation empty
 creates a user-token connection. Confirm repository access and verify a real
 push produces a Webhook or WebhookV2 execution before claiming automatic CI.
