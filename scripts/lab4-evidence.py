@@ -15,15 +15,20 @@ def write_json(path, value):
     path.write_text(json.dumps(value, indent=2, default=str) + "\n", encoding="utf-8")
 
 
-def save_log(session, build_id, path):
-    build = session.client("codebuild").batch_get_builds(ids=[build_id])["builds"][0]
+def log_messages(session, build):
     logs = build["logs"]
     pages = session.client("logs").get_paginator("filter_log_events").paginate(
         logGroupName=logs["groupName"], logStreamNames=[logs["streamName"]]
     )
     messages = [event["message"].rstrip("\n") for page in pages for event in page["events"]]
     if not messages:
-        raise ValueError(f"No log events for {build_id}")
+        raise ValueError(f"No log events for {build['id']}")
+    return messages
+
+
+def save_log(session, build_id, path):
+    build = session.client("codebuild").batch_get_builds(ids=[build_id])["builds"][0]
+    messages = log_messages(session, build)
     path.write_text("\n".join(messages) + "\n", encoding="utf-8")
     return build
 
@@ -69,9 +74,14 @@ def capture(session, args):
     builds = []
     for build_id in build_ids:
         build = cb.batch_get_builds(ids=[build_id])["builds"][0]
-        builds.append({key: build.get(key) for key in [
+        record = {key: build.get(key) for key in [
             "id", "resolvedSourceVersion", "buildStatus", "startTime", "endTime", "phases", "logs",
-        ]})
+        ]}
+        record["pytest_summaries"] = [
+            line for message in log_messages(session, build) for line in message.splitlines()
+            if line.startswith("=") and any(word in line for word in ("passed", "failed", "error"))
+        ]
+        builds.append(record)
     pipeline_runs = [item for page in cp.get_paginator("list_pipeline_executions").paginate(
         pipelineName="northstar-pipeline") for item in page["pipelineExecutionSummaries"]]
     sm_runs = [item for page in sm.get_paginator("list_pipeline_executions").paginate(
@@ -80,6 +90,7 @@ def capture(session, args):
         "captured_at": datetime.now(timezone.utc).isoformat(),
         "CodePipeline": pipeline_runs, "CodeBuild": builds, "SageMakerPipeline": sm_runs,
     })
+    write_json(DOCS / "lab4-pipeline-config.json", cp.get_pipeline(name="northstar-pipeline"))
     green = save_log(session, args.green, DOCS / "lab4-build-green.log")
     failed = save_log(session, args.failed, DOCS / "lab4-build-failed.log")
     assert green["buildStatus"] == "SUCCEEDED"
