@@ -1,5 +1,4 @@
-# Surface what later labs need. scripts/verify-lab1.sh reads all five with
-# `terraform output -raw` while the stack is up.
+# Shared outputs for infrastructure verification, data processing, and training.
 
 output "vpc_id" {
   description = "ID of the VPC"
