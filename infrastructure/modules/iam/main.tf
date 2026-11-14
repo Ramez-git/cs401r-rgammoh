@@ -2,7 +2,7 @@
 # MLEngineer role, trusted by sagemaker.amazonaws.com, with the same
 # least-privilege inline-policy shape built manually in Part A: full access to
 # SageMaker training/endpoint/MLflow/model-registry actions and Studio
-# self-service, read/write on only the artifacts/ and features/ S3 prefixes,
+# self-service, read/write on artifacts/ and features/, write on datacapture/,
 # CloudWatch Logs write, and ECR read.
 
 data "aws_iam_policy_document" "trust" {
@@ -92,6 +92,13 @@ data "aws_iam_policy_document" "ml_engineer" {
       "arn:aws:s3:::${var.project}-${var.environment}-data-*/artifacts/*",
       "arn:aws:s3:::${var.project}-${var.environment}-data-*/features/*",
     ]
+  }
+
+  statement {
+    sid       = "S3DataCaptureWrite"
+    effect    = "Allow"
+    actions   = ["s3:PutObject", "s3:AbortMultipartUpload"]
+    resources = ["${local.bucket_arn}/datacapture/*"]
   }
 
   statement {
