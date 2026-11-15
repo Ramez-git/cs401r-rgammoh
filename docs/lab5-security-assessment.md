@@ -1,6 +1,6 @@
 # NorthStar churn security and privacy assessment
 
-The lab uses synthetic retail data. The current platform stores raw transactions, derived features, model artifacts, and inference capture in a private, versioned S3 bucket with SSE-S3 (AES-256) default encryption and S3 Block Public Access. S3 reported SSE-KMS under the AWS-managed S3 key for sampled SageMaker capture files. Three IAM roles separate ingestion, model work, and monitoring. SageMaker serves the churn model with v2 and v3 as production variants during the rehearsal. This assessment applies enterprise controls to the equivalent real-customer workflow.
+The lab uses synthetic retail data. The current platform stores raw transactions, derived features, model artifacts, and inference capture in a private, versioned S3 bucket with SSE-S3 (AES-256) default encryption and S3 Block Public Access. S3 reported SSE-KMS under the AWS-managed S3 key for sampled SageMaker capture files. Three IAM roles separate ingestion, model work, and monitoring. The deployment used SageMaker production variants for model versions 2 and 3. The assessment covers the controls needed to use this system with real customer data.
 
 ## STRIDE threat model
 
@@ -18,7 +18,7 @@ Likelihood and impact use H (high), M (medium), and L (low). The AWS Control col
 
 ## Data classification
 
-These are the minimum protection standards for the enterprise design. SSE-S3 gives S3-managed encryption. SSE-KMS with a customer-managed key adds a separately administered key policy and auditable key use. Production controls involving a vendor require a scoped identity, a processing agreement where applicable, and a review of purpose and transfers.
+The table lists the proposed protection for each asset in a production deployment. SSE-S3 uses keys managed by S3. SSE-KMS with a customer-managed key lets NorthStar control key permissions separately and audit key use. Vendors need access limited to their task, a processing agreement where applicable, and a review of how they will use and transfer the data.
 
 | Asset | Tier | Encryption standard and rationale | IAM access policy | Third-party sharing |
 | --- | --- | --- | --- | --- |

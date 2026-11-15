@@ -2,7 +2,7 @@
 
 ## 1. Deployment strategy and rationale
 
-NorthStar ranks active customers by their 90-day churn risk. Scores are due by Monday at 6 a.m. Eastern for the weekly retention campaign. The production scoring workload fits a scheduled batch job that publishes the whole ranking before the campaign cutoff. For the lab release rehearsal, a SageMaker real-time endpoint lets us observe routing, test rollback, and collect inference records for Lab 6. The rehearsal uses synthetic features and has no customer outreach. Model Registry v2 serves as champion and v3 starts at 10% of requests on one shared endpoint. The offer generator stays in staging.
+NorthStar ranks active customers by their 90-day churn risk. Scores are due by Monday at 6 a.m. Eastern for the weekly retention campaign. A scheduled batch job suits this weekly workload because the retention team needs the full ranking before the campaign starts. This lab uses a SageMaker real-time endpoint to test traffic routing and rollback and collect inference records for Lab 6. Requests use synthetic customer features, and the scores are used only for the lab. Model Registry v2 serves as champion and v3 starts at 10% of requests on one shared endpoint. The offer generator stays in staging.
 
 ## 2. Pre-deployment checklist
 
@@ -30,7 +30,7 @@ aws s3api get-bucket-lifecycle-configuration --bucket northstar-dev-data-7011452
 
 The model owner approved v3 on November 13, 2026 (Mountain time), for the synthetic canary only. The reviewed holdout AUC was 0.7846, matching v2. Top-decile precision was 71.7% and recall was 32.6%, against gates of 50% and 25%. The paired 95% AUC-lift interval over recency was [0.0434, 0.0824]. The model files matched byte for byte. Gold recall was 13.5% versus Bronze at 44.9%, a 31.4-point gap above the 10-point review threshold. Require a separate fairness and release review before any customer use.
 
-Check the live instance quota and run the secret scan. The bundled runner checks for a dedicated lab account with an empty inference inventory because the starter teardown operates across the region. It deploys from the checked-in configs, reuses the headerless 11-feature synthetic row, and captures the seven evidence sections.
+Check the instance quota and run the secret scan. The deployment script checks that the lab account has no existing inference resources because the teardown script deletes these resources across the region. It reads the configuration files from deployment/configs/, sends the sample row with 11 features and no header, and saves the deployment evidence.
 
 ```bash
 aws service-quotas get-service-quota --service-code sagemaker --quota-code L-614B09FD
@@ -41,7 +41,7 @@ python scripts/deploy-lab5.py
 
 ## 3. Rollback criteria
 
-The release operator rolls back if CloudWatch reports canary `AWS/SageMaker` `ModelLatency` p95 greater than **200,000 microseconds (200 ms)** for three consecutive one-minute periods. The runner checks the alarm during observation and calls the rollback script at the end of the exercise or when the alarm trips. During manual operation, run the same script and wait for `InService`.
+The release operator rolls back if CloudWatch reports canary `AWS/SageMaker` `ModelLatency` p95 greater than **200,000 microseconds (200 ms)** for three consecutive one-minute periods. The deployment script checks the alarm every minute and runs the rollback command when the alarm trips or the observation period ends. During manual operation, run the same script and wait for `InService`.
 
 ```bash
 bash deployment/configs/rollback-action.sh
@@ -52,11 +52,11 @@ Confirm champion weight 1 and canary weight 0, then send 100 untargeted invocati
 
 ## 4. Monitoring window
 
-Observe for 60 minutes instead of the 48 hours planned for a production canary. Begin with 200 untargeted calls, then continue probes every minute. A clean exercise sees both variants serve, successful probe responses, an OK latency alarm, and JSONL capture for both variants. The champion can scale between one and two instances at a target of 1,000 invocations per instance per minute, with 60-second scale-out and 600-second scale-in cooldowns. The lab concludes with a rollback drill. Forty-eight hours would sample overnight traffic, upstream refreshes, and delayed errors. In production, track errors, input drift, labeled performance by loyalty tier, and whether the weekly scoring job meets its deadline.
+Observe for 60 minutes instead of the 48 hours planned for a production canary. Begin with 200 untargeted calls, then continue probes every minute. Before ending the window, confirm that both variants have served requests, the requests succeeded, the latency alarm is OK, and both variants have written JSONL capture files. The champion can scale between one and two instances at a target of 1,000 invocations per instance per minute, with 60-second scale-out and 600-second scale-in cooldowns. The lab concludes with a rollback drill. Forty-eight hours would sample overnight traffic, upstream refreshes, and delayed errors. In production, track errors, input drift, labeled performance by loyalty tier, and whether the weekly scoring job meets its deadline.
 
 ## 5. Stakeholder notifications
 
-At start, the release operator sends ML Engineering, Model Monitoring, and the retention owner the versions, allocation, window, and outreach restrictions. At promotion, send those roles the measured guardrails, approval record, and effective time. On rollback, notify those roles and the on-call lead with the trigger, customer impact, restored weights, and verification result. Use the team incident channel for an unexpected rollback.
+At deployment start, the release operator tells ML Engineering, Model Monitoring, and the retention owner which versions are running, the traffic split, the monitoring period, and the limits on customer outreach. At promotion, send the same roles the latency and error results, approval record, and time of the change. On rollback, notify those roles and the on-call lead with the trigger, customer impact, restored weights, and verification result. Use the team incident channel for an unexpected rollback.
 
 ## 6. Post-deployment review
 
